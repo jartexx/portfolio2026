@@ -1,0 +1,10 @@
+# Ignore everything in home directory by default
+/*
+!.gitignore
+
+# Allow the portfolio iterations folder
+!Desktop/
+Desktop/*
+!Desktop/PortfolioClaudeCode/
+Desktop/PortfolioClaudeCode/*
+!Desktop/PortfolioClaudeCode/Portfolio iterations/
