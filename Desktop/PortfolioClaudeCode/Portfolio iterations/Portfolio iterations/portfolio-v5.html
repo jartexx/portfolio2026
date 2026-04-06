@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<!-- saved from url=(0093)file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v5.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juana Meyer — Product Designer</title>
+<meta name="description" content="Product Designer — Translating intricate business requirements into user &amp; customer centered designs.">
+<meta property="og:title" content="Juana Meyer — Product Designer">
+<meta property="og:description" content="Translating intricate business requirements into user &amp; customer centered designs.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./portfolio-v5_files/css2" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 32 32&#39;&gt;&lt;rect width=&#39;32&#39; height=&#39;32&#39; rx=&#39;8&#39; fill=&#39;%23E04B2F&#39;/&gt;&lt;text x=&#39;50%25&#39; y=&#39;55%25&#39; dominant-baseline=&#39;middle&#39; text-anchor=&#39;middle&#39; fill=&#39;white&#39; font-size=&#39;18&#39; font-family=&#39;serif&#39;&gt;J&lt;/text&gt;&lt;/svg&gt;">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#E04B2F;--primary-hover:#C7402A;--primary-soft:rgba(224,75,47,0.07);--primary-border:rgba(224,75,47,0.18);
+  --sage:#B8CCBC;--sage-deep:#6B9B76;--plum:#5C2750;--plum-soft:rgba(92,39,80,0.06);
+  --cream:#F5F0EB;--warm-gray:#C8C1B8;
+  --bg-primary:#FAF8F5;--bg-secondary:#F0ECE6;--bg-elevated:#FFFFFF;--bg-dark:#1A1418;
+  --text-primary:#1A1418;--text-secondary:#5C5550;--text-tertiary:#9B9590;--text-on-dark:#F0ECE6;
+  --figma-blue:#0C8CE9;--figma-purple:#9747FF;
+  --cursor-anon:#8B9B8B;--cursor-juana:#0C8CE9;
+  --canvas-dots:rgba(0,0,0,0.04);--border-light:rgba(0,0,0,0.06);--border-medium:rgba(0,0,0,0.10);
+  --shadow-soft:0 1px 3px rgba(26,20,24,0.04),0 6px 20px rgba(26,20,24,0.03);
+  --shadow-elevated:0 4px 12px rgba(26,20,24,0.06),0 16px 40px rgba(26,20,24,0.05);
+  --font-serif:'Playfair Display',Georgia,serif;--font-sans:'Outfit',sans-serif;--font-mono:'IBM Plex Mono',monospace;
+  --header-h:64px;--max-w:1100px;--max-w-narrow:740px;
+}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg-primary);color:var(--text-primary);font-family:var(--font-sans);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+@media(hover:hover)and (pointer:fine){body,a,button{cursor:none}}
+::selection{background:rgba(224,75,47,0.12)}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+
+body::after{content:'';position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0.015;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:256px 256px}
+.dot-grid{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(circle,var(--canvas-dots) .7px,transparent .7px);background-size:20px 20px}
+
+/* ===== CURSOR ===== */
+.fc{position:fixed;z-index:10000;pointer-events:none;will-change:transform;transition:opacity .3s}
+.fc svg{width:15px;height:19px;transition:fill .3s}
+.fc-label{position:absolute;top:17px;left:9px;color:#fff;font-family:var(--font-mono);font-size:10.5px;font-weight:500;padding:2px 8px 3px;border-radius:3px;white-space:nowrap;line-height:1.3;transition:background .3s}
+
+/* ===== HEADER ===== */
+.header{position:fixed;top:0;left:0;right:0;z-index:500;height:var(--header-h);display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:rgba(250,248,245,.88);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border-bottom:1px solid var(--border-light);transition:box-shadow .3s}
+.header.scrolled{box-shadow:0 1px 12px rgba(0,0,0,.04)}
+.header-name{font-family:var(--font-serif);font-weight:500;font-size:17px}
+.header-nav{display:flex;align-items:center;gap:30px}
+.header-nav a{font-size:14px;color:var(--text-secondary);transition:color .2s;position:relative}
+.header-nav a:hover{color:var(--text-primary)}
+.header-nav a.active{color:var(--text-primary);font-weight:500}
+.header-nav a.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1.5px;background:var(--primary);border-radius:1px}
+.hdr-cta{font-size:13px!important;font-weight:500!important;color:var(--primary)!important;border:1.5px solid var(--primary-border);padding:7px 20px;border-radius:8px;transition:all .25s}
+.hdr-cta:hover{background:var(--primary);color:#fff!important;border-color:var(--primary)}
+.hdr-cta::after{display:none!important}
+.mob-tog{display:none;background:none;border:none;width:32px;height:32px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+.mob-tog span{display:block;width:20px;height:1.5px;background:var(--text-primary)}
+@media(max-width:768px){.header{padding:0 20px}.header-nav{position:fixed;top:var(--header-h);left:0;right:0;flex-direction:column;background:rgba(250,248,245,.97);backdrop-filter:blur(20px);padding:20px;gap:16px;border-bottom:1px solid var(--border-light);transform:translateY(-120%);opacity:0;transition:all .35s ease}.header-nav.open{transform:translateY(0);opacity:1}.mob-tog{display:flex}}
+
+/* ===== SHARED ===== */
+.section{padding:120px 40px;position:relative;z-index:1}
+.container{max-width:var(--max-w);margin:0 auto}
+.container-narrow{max-width:var(--max-w-narrow);margin:0 auto}
+.slabel{font-family:var(--font-mono);font-size:12px;color:var(--text-tertiary);letter-spacing:.4px;margin-bottom:14px;display:inline-flex;align-items:center;gap:7px}
+.slabel .dot{width:6px;height:6px;border-radius:50%;background:var(--primary)}
+.stitle{font-family:var(--font-serif);font-size:clamp(30px,4vw,42px);font-weight:400;margin-bottom:48px;letter-spacing:-.01em}
+
+.btn-p{background:var(--primary);color:#fff;border:none;padding:13px 28px;border-radius:10px;font-family:var(--font-sans);font-size:14px;font-weight:500;transition:all .3s cubic-bezier(.4,0,.2,1);text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-p:hover{background:var(--primary-hover);transform:translateY(-2px);box-shadow:0 6px 24px rgba(224,75,47,.2)}
+.btn-g{background:transparent;color:var(--text-primary);border:1.5px solid var(--border-medium);padding:12px 28px;border-radius:10px;font-family:var(--font-sans);font-size:14px;font-weight:500;transition:all .3s;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-g:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px)}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;padding:calc(var(--header-h) + 40px) 40px 80px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center;width:100%;max-width:var(--max-w);margin:0 auto}
+.hero-label{font-family:var(--font-mono);font-size:12.5px;color:var(--text-tertiary);margin-bottom:24px}
+.hero h1{font-family:var(--font-serif);font-size:clamp(33px,4.5vw,54px);line-height:1.18;font-weight:400;margin-bottom:28px;letter-spacing:-.02em}
+.hero h1 .hl{color:var(--primary);font-style:italic}
+.hero-specs{font-size:15px;color:var(--text-secondary);margin-bottom:36px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.hero-specs .sep{color:var(--warm-gray);font-size:8px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hline{opacity:0;transform:translateY(16px);animation:hIn .55s forwards}
+@keyframes hIn{to{opacity:1;transform:translateY(0)}}
+
+/* Terminal */
+.cterm{background:var(--bg-dark);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-elevated);max-width:380px;width:100%}
+.ct-hdr{display:flex;align-items:center;gap:8px;padding:11px 16px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06)}
+.ct-dots{display:flex;gap:6px}
+.ct-dots span{width:10px;height:10px;border-radius:50%}
+.ct-title{font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.3);flex:1;text-align:center;margin-right:30px}
+.ct-body{padding:18px 20px;font-family:var(--font-mono);font-size:12.5px;line-height:1.85;color:var(--text-on-dark)}
+.ct-line{opacity:0;transform:translateY(5px);animation:ctIn .4s forwards}
+@keyframes ctIn{to{opacity:1;transform:translateY(0)}}
+.ct-line .pr{color:var(--primary);font-weight:500}
+.ct-line .ck{color:var(--sage-deep);font-weight:500}
+.ct-cur{display:inline-block;width:7px;height:14px;background:var(--primary);margin-left:2px;animation:blk 1s step-end infinite;vertical-align:middle}
+@keyframes blk{0%,100%{opacity:1}50%{opacity:0}}
+
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}.cterm{max-width:100%}.hero{padding-top:calc(var(--header-h) + 24px);min-height:auto}}
+
+/* ===== ABOUT ===== */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center}
+.about-text h2{font-family:var(--font-serif);font-size:38px;font-weight:400;margin-bottom:22px}
+.about-text p{font-size:15.5px;line-height:1.8;color:var(--text-secondary);margin-bottom:14px}
+.about-text strong{color:var(--text-primary);font-weight:500}
+
+/* ===== SPOTIFY PHONE ===== */
+.phone-wrap{display:flex;justify-content:center}
+.phone{width:280px;background:#fff;border-radius:36px;border:1px solid var(--border-medium);box-shadow:var(--shadow-elevated);overflow:hidden;padding:16px;position:relative}
+.phone-notch{width:80px;height:6px;background:var(--bg-secondary);border-radius:3px;margin:0 auto 20px}
+.sp-art{width:100%;aspect-ratio:1;border-radius:14px;margin-bottom:20px;transition:all .5s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.1)}
+.sp-art-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:36px;transition:all .4s ease;position:absolute;inset:0}
+.sp-art-inner.out-left{transform:translateX(-110%);opacity:0}
+.sp-art-inner.out-right{transform:translateX(110%);opacity:0}
+.sp-art-inner.in-left{animation:slideInLeft .4s forwards}
+.sp-art-inner.in-right{animation:slideInRight .4s forwards}
+@keyframes slideInLeft{from{transform:translateX(-100%);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes slideInRight{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
+.sp-title{font-family:var(--font-serif);font-size:17px;font-weight:600;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:opacity .3s}
+.sp-artist{font-family:var(--font-sans);font-size:13px;color:var(--text-secondary);margin-bottom:18px;transition:opacity .3s}
+.sp-progress{position:relative;height:3px;background:var(--border-light);border-radius:2px;margin-bottom:6px}
+.sp-bar{height:100%;background:var(--primary);border-radius:2px;width:35%;transition:width 20s linear}
+.sp-dot{position:absolute;top:50%;right:0;transform:translate(50%,-50%);width:10px;height:10px;background:var(--primary);border-radius:50%;opacity:0;transition:opacity .2s}
+.phone:hover .sp-dot{opacity:1}
+.sp-times{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:10px;color:var(--text-tertiary);margin-bottom:20px}
+.sp-controls{display:flex;align-items:center;justify-content:center;gap:28px;margin-bottom:16px}
+.sp-ctrl{background:none;border:none;font-size:18px;color:var(--text-secondary);transition:color .2s;padding:4px}
+.sp-ctrl:hover{color:var(--text-primary)}
+.sp-play{width:42px;height:42px;border-radius:50%;background:var(--text-primary);color:#fff;border:none;font-size:16px;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.sp-play:hover{transform:scale(1.06)}
+.sp-footer{font-family:var(--font-mono);font-size:10.5px;color:var(--text-tertiary);text-align:center;margin-top:8px;line-height:1.4}
+
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:48px}.phone{width:260px}}
+
+/* ===== PROJECTS (3-col compact) ===== */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pcard{background:var(--bg-elevated);border-radius:14px;overflow:hidden;position:relative;box-shadow:var(--shadow-soft);border:1px solid var(--border-light);transition:box-shadow .4s,border-color .4s;transform-style:preserve-3d;will-change:transform}
+.pcard:hover{box-shadow:0 8px 28px rgba(224,75,47,.08),0 20px 50px rgba(26,20,24,.07);border-color:rgba(12,140,233,.25)}
+.pcard::before,.pcard::after{content:'';position:absolute;width:7px;height:7px;border:1.5px solid var(--figma-blue);border-radius:1px;background:#fff;opacity:0;transition:opacity .3s;z-index:5;pointer-events:none}
+.pcard:hover::before,.pcard:hover::after{opacity:1}
+.pcard::before{top:-4px;left:-4px}.pcard::after{top:-4px;right:-4px}
+.phl,.phb{position:absolute;width:7px;height:7px;border:1.5px solid var(--figma-blue);border-radius:1px;background:#fff;opacity:0;transition:opacity .3s;z-index:5;pointer-events:none}
+.pcard:hover .phl,.pcard:hover .phb{opacity:1}
+.phl{bottom:-4px;left:-4px}.phb{bottom:-4px;right:-4px}
+
+.pc-frame{font-family:var(--font-mono);font-size:10px;color:var(--figma-purple);margin-bottom:7px;display:flex;align-items:center;gap:4px;padding-left:2px;transition:color .3s}
+.pc-frame::before{content:'▢';font-size:8px}
+.pcard:hover + .pc-frame,.pcard:hover ~ .pc-frame{color:var(--figma-blue)}
+
+.pc-tb{display:flex;align-items:center;gap:7px;padding:9px 14px;background:var(--bg-secondary);border-bottom:1px solid var(--border-light)}
+.pc-tb-dots{display:flex;gap:5px}
+.pc-tb-dots span{width:8px;height:8px;border-radius:50%}
+.pc-tb-t{font-family:var(--font-mono);font-size:10px;color:var(--text-tertiary);flex:1;text-align:center;margin-right:28px}
+
+.pc-img{width:100%;aspect-ratio:4/3;overflow:hidden;position:relative}
+.pc-img-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:11px;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.pcard:hover .pc-img-inner{transform:scale(1.04)}
+
+.pc-body{padding:20px 20px 14px}
+.pc-num{font-family:var(--font-mono);font-size:10px;color:var(--primary);letter-spacing:.7px;margin-bottom:8px;font-weight:500}
+.pc-body h3{font-family:var(--font-serif);font-size:20px;font-weight:400;margin-bottom:3px;line-height:1.25}
+.pc-sub{font-size:12.5px;color:var(--text-tertiary);margin-bottom:14px}
+.pc-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px}
+.tag{padding:3px 10px;border-radius:16px;font-size:11px;font-family:var(--font-sans);background:var(--primary-soft);color:var(--primary);border:1px solid var(--primary-border)}
+.tag.sg{background:rgba(107,155,118,.08);color:var(--sage-deep);border-color:rgba(107,155,118,.15)}
+.tag.pl{background:var(--plum-soft);color:var(--plum);border-color:rgba(92,39,80,.12)}
+.rdm{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;border-bottom:1px solid transparent;padding-bottom:2px;transition:all .25s}
+.rdm:hover{color:var(--primary);border-bottom-color:var(--primary)}
+.rdm .arr{transition:transform .25s}
+.rdm:hover .arr{transform:translateX(4px)}
+
+.pc-ft{padding:10px 20px;border-top:1px solid var(--border-light);font-family:var(--font-mono);font-size:10px;color:var(--text-tertiary)}
+
+@media(max-width:900px){.pgrid{grid-template-columns:1fr 1fr;gap:16px}}
+@media(max-width:600px){.pgrid{grid-template-columns:1fr}}
+
+/* ===== CASE STUDIES ===== */
+.cs{padding:0 40px;display:none}.cs.active{display:block}
+.cs-back{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:var(--text-secondary);padding:24px 0;transition:color .2s}
+.cs-back:hover{color:var(--primary)}
+.cs-hero{width:100%;max-width:var(--max-w);margin:0 auto 56px;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-elevated);border:1px solid var(--border-light)}
+.cs-hero-tb{display:flex;align-items:center;gap:8px;padding:10px 16px;background:var(--bg-secondary);border-bottom:1px solid var(--border-light)}
+.cs-hero-tb .url{font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary);flex:1;text-align:center;margin-right:34px}
+.cs-hero-inner{aspect-ratio:16/8;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:14px}
+.cs-hdr{max-width:var(--max-w-narrow);margin:0 auto 44px}
+.cs-hdr h1{font-family:var(--font-serif);font-size:clamp(30px,4vw,46px);font-weight:400;line-height:1.2;margin-bottom:16px}
+.cs-tl{font-family:var(--font-serif);font-size:19px;font-style:italic;color:var(--text-secondary);line-height:1.5}
+.cs-meta{display:flex;gap:36px;padding:24px 0;border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);margin-bottom:52px;max-width:var(--max-w-narrow);margin-left:auto;margin-right:auto;flex-wrap:wrap}
+.cs-mi .lb{font-family:var(--font-mono);font-size:10.5px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:4px}
+.cs-mi .vl{font-size:14px;font-weight:500}
+.cs-body{max-width:var(--max-w-narrow);margin:0 auto}
+.cs-body h2{font-family:var(--font-serif);font-size:26px;font-weight:400;margin:52px 0 18px}.cs-body h2:first-child{margin-top:0}
+.cs-body p{font-size:15.5px;line-height:1.85;color:var(--text-secondary);margin-bottom:16px}
+.cs-body p strong{color:var(--text-primary);font-weight:500}
+.cs-body p em{color:var(--primary);font-style:italic}
+.cs-body ol{list-style:none;counter-reset:s;margin:18px 0 24px;padding:0}
+.cs-body ol li{counter-increment:s;padding:12px 0 12px 46px;position:relative;font-size:15.5px;line-height:1.7;color:var(--text-secondary);border-left:1px solid var(--border-light);margin-left:13px}
+.cs-body ol li::before{content:counter(s);position:absolute;left:-13px;top:12px;width:26px;height:26px;background:var(--bg-elevated);border:1.5px solid var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:11px;color:var(--primary);font-weight:500}
+.cs-body ol li strong{color:var(--text-primary);font-weight:600}
+.iph{width:100%;aspect-ratio:16/9;background:var(--bg-secondary);border:1.5px dashed var(--border-medium);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;margin:32px 0}
+.iph svg{width:28px;height:28px;color:var(--text-tertiary);opacity:.4}
+.iph span{font-family:var(--font-mono);font-size:12px;color:var(--text-tertiary);text-align:center;padding:0 16px}
+.cs-iw{max-width:var(--max-w);margin:44px auto}.cs-iw .iph{aspect-ratio:16/7;margin:0}
+.mtbl{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.mtbl th{text-align:left;padding:11px 16px;background:var(--bg-secondary);color:var(--text-tertiary);font-weight:500;font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border-light)}
+.mtbl td{padding:13px 16px;border-bottom:1px solid var(--border-light);color:var(--text-secondary)}
+.mtbl tr:last-child td{border-bottom:none}
+.mp{color:var(--sage-deep);font-weight:600}
+.cs-co{background:var(--primary-soft);border-left:3px solid var(--primary);border-radius:0 10px 10px 0;padding:22px 26px;margin:24px 0}
+.cs-co p{margin:0;font-size:15px;line-height:1.8}.cs-co strong{color:var(--text-primary);font-weight:600}
+.cs-af{font-family:var(--font-mono);font-size:12px;color:var(--text-tertiary);padding:24px 0;border-top:1px solid var(--border-light);margin-top:44px}
+.cs-af strong{color:var(--text-secondary)}
+.cs-nx{display:flex;align-items:center;justify-content:space-between;padding:44px 0 80px;border-top:1px solid var(--border-light);margin-top:52px;max-width:var(--max-w-narrow);margin-left:auto;margin-right:auto}
+.cs-nx a{font-weight:500;font-size:15px;display:inline-flex;align-items:center;gap:8px;transition:color .2s}
+.cs-nx a:hover{color:var(--primary)}
+.cs-nx .nl{font-family:var(--font-mono);font-size:10.5px;color:var(--text-tertiary);display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
+
+/* ===== PROCESS ===== */
+.proc{background:var(--bg-secondary);border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light)}
+.proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;margin-top:44px}
+.pstep{background:var(--bg-elevated);padding:28px 22px;border-radius:12px;position:relative;transition:all .3s}
+.pstep:hover{box-shadow:var(--shadow-soft);transform:translateY(-2px)}
+.pstep-n{font-family:var(--font-mono);font-size:11px;color:var(--primary);font-weight:500;margin-bottom:12px}
+.pstep h3{font-family:var(--font-sans);font-size:17px;font-weight:600;margin-bottom:10px}
+.pstep p{font-size:13.5px;color:var(--text-secondary);line-height:1.65}
+.pstep:not(:last-child)::after{content:'→';position:absolute;right:-14px;top:50%;transform:translateY(-50%);font-size:15px;color:var(--text-tertiary);z-index:2}
+@media(max-width:900px){.proc-grid{grid-template-columns:1fr;gap:10px}.pstep::after{display:none}}
+
+/* ===== CONTACT ===== */
+.cta-sec{text-align:center;max-width:540px;margin:0 auto}
+.cta-sec h2{font-family:var(--font-serif);font-size:clamp(30px,4vw,44px);font-weight:400;margin-bottom:16px}
+.cta-sec p{font-size:15.5px;color:var(--text-secondary);line-height:1.7;margin-bottom:36px}
+.clinks{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.clk{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;border-radius:10px;font-size:14px;font-weight:500;transition:all .25s;color:var(--text-secondary);border:1.5px solid var(--border-medium);background:var(--bg-elevated)}
+.clk:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px);box-shadow:var(--shadow-soft)}
+.clk.cp{background:var(--primary);border-color:var(--primary);color:#fff}
+.clk.cp:hover{background:var(--primary-hover);border-color:var(--primary-hover);transform:translateY(-2px)}
+.footer{padding:36px 40px;text-align:center;border-top:1px solid var(--border-light)}
+.footer-m{font-size:13px;color:var(--text-tertiary)}
+.footer-t{font-family:var(--font-serif);font-style:italic;color:var(--text-tertiary);font-size:14px;margin-top:5px}
+
+/* ===== REVEAL ===== */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.rv.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+
+@media(max-width:768px){.section{padding:80px 20px}.hero{padding:calc(var(--header-h) + 20px) 20px 60px}.cs{padding:0 20px}.cs-meta{gap:20px}.clinks{flex-direction:column;align-items:center}.clk{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+<div class="dot-grid"></div>
+
+<!-- Cursor -->
+<div class="fc" id="fc" style="transform: translate(1071.64px, 443.333px); opacity: 1;">
+  <svg viewBox="0 0 16 20" fill="none"><path id="fcPath" d="M1 1L1 15.5L4.5 12L8.5 19L11 17.5L7 11L12 11L1 1Z" fill="#8B9B8B" stroke="#fff" stroke-width=".7"></path></svg>
+  <div class="fc-label" id="fcLabel" style="background:#8B9B8B">Anonymous</div>
+</div>
+
+<div id="mainPage" style="">
+<header class="header scrolled" id="hdr">
+  <a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v4.html#" class="header-name" onclick="showMain();return false">Juana Meyer</a>
+  <button class="mob-tog" onclick="document.getElementById(&#39;hnav&#39;).classList.toggle(&#39;open&#39;)" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav class="header-nav" id="hnav">
+    <a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v4.html#work" onclick="showMain();cM()" class="">Work</a>
+    <a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v4.html#about" onclick="showMain();cM()" class="">About</a>
+    <a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v4.html#process" onclick="showMain();cM()">Process</a>
+    <a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v4.html#contact" class="hdr-cta" onclick="showMain();cM()">Let's Talk</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="section hero" id="home">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-label hline" style="animation-delay:0s">Product Designer — UX/CX Strategy</div>
+      <h1>
+        <span class="hline" style="animation-delay:.12s">Translating intricate</span><br>
+        <span class="hline" style="animation-delay:.24s">business requirements into</span><br>
+        <span class="hline" style="animation-delay:.36s"><span class="hl">user &amp; customer centered</span></span><br>
+        <span class="hline" style="animation-delay:.48s">designs.</span>
+      </h1>
+      <div class="hero-specs hline" style="animation-delay:.64s"><span>E-commerce</span><span class="sep">◆</span><span>Banking</span><span class="sep">◆</span><span>Crypto &amp; Tech</span></div>
+      <div class="hero-ctas hline" style="animation-delay:.78s">
+        <a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v4.html#work" class="btn-p">View Selected Work ↓</a>
+        <a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v4.html#contact" class="btn-g">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hline" style="animation-delay:.4s">
+      <div class="cterm">
+        <div class="ct-hdr"><div class="ct-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div><span class="ct-title">strategy</span></div>
+        <div class="ct-body">
+          <div class="ct-line" style="animation-delay:.9s"><span class="pr">&gt;</span> juana.approach --first-principles</div>
+          <div class="ct-line" style="animation-delay:1.6s"><span class="ck">✓</span> Understand the business, not just the brief</div>
+          <div class="ct-line" style="animation-delay:2.2s"><span class="ck">✓</span> Map the system, not just the screen</div>
+          <div class="ct-line" style="animation-delay:2.8s"><span class="ck">✓</span> Design for autonomy, not dependency</div>
+          <div class="ct-line" style="animation-delay:3.4s"><span class="pr">&gt;</span> Shipping with intention.<span class="ct-cur"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="slabel rv vis"><span class="dot"></span> About</div>
+        <h2 class="rv d1 vis">Hello, I'm Juana.</h2>
+        <p class="rv d2 vis">I'm a <strong>product designer</strong> who translates complex business requirements into clear, user-centered experiences.</p>
+        <p class="rv d3 vis">My background in <strong>fine art</strong> trained my eye for composition and detail. My work across <strong>e-commerce, banking, and emerging tech</strong> sharpened my strategic thinking.</p>
+        <p class="rv d4 vis">Originally from <strong>Argentina</strong> 🇦🇷, I work primarily with US-based teams and products. I love to travel and embrace new perspectives — and I'm <strong>open to relocation</strong> for the right opportunity.</p>
+      </div>
+      <!-- Spotify Phone -->
+      <div class="phone-wrap rv d3 vis">
+        <div class="phone" id="spPhone">
+          <div class="phone-notch"></div>
+          <div class="sp-art" id="spArt"><div class="sp-art-inner" id="spArtInner" style="background: linear-gradient(135deg, rgb(139, 105, 20), rgb(212, 148, 58), rgb(92, 58, 10));">🎹</div></div>
+          <div class="sp-title" id="spTitle">Promesas Sobre el Bidet</div>
+          <div class="sp-artist" id="spArtist">Charly García</div>
+          <div class="sp-progress"><div class="sp-bar" id="spBar"></div><div class="sp-dot" style="left:35%"></div></div>
+          <div class="sp-times"><span id="spTime">1:42</span><span id="spDur">4:18</span></div>
+          <div class="sp-controls">
+            <button class="sp-ctrl" onclick="prevSong()">⏮</button>
+            <button class="sp-play" id="spPlay">▶</button>
+            <button class="sp-ctrl" onclick="nextSong()">⏭</button>
+          </div>
+          <div class="sp-footer">🎧 What Juana plays<br>while designing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="work">
+  <div class="container">
+    <div class="slabel rv vis"><span class="dot"></span> Selected Work</div>
+    <h2 class="stitle rv d1 vis">Case Studies</h2>
+    <div class="pgrid">
+
+      <div class="rv d1 vis">
+        <div class="pc-frame">Frame: "Case Study 01"</div>
+        <div class="pcard" onclick="showCS(&#39;cs1&#39;)" onmousemove="tilt(this,event)" onmouseleave="untilt(this)" style="transition: transform 0.45s; transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px);">
+          <div class="phl"></div><div class="phb"></div>
+          <div class="pc-tb"><div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div><span class="pc-tb-t">case_study_01.fig</span></div>
+          <div class="pc-img"><div class="pc-img-inner thumb-1" style="color:rgba(0,0,0,.18)">📷 Shopify storefront</div></div>
+          <div class="pc-body">
+            <div class="pc-num">CASE STUDY 01</div>
+            <h3>E-Commerce Migration</h3>
+            <div class="pc-sub">Magento → Shopify</div>
+            <div class="pc-tags"><span class="tag">UX Strategy</span><span class="tag sg">IA</span><span class="tag pl">Design System</span></div>
+            <span class="rdm">View Case Study <span class="arr">→</span></span>
+          </div>
+          <div class="pc-ft">◇ 4 layers · Sep 2024 - Apr 2025</div>
+        </div>
+      </div>
+
+      <div class="rv d2 vis">
+        <div class="pc-frame">Frame: "Case Study 02"</div>
+        <div class="pcard" onclick="showCS(&#39;cs2&#39;)" onmousemove="tilt(this,event)" onmouseleave="untilt(this)" style="transition: transform 0.45s; transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px);">
+          <div class="phl"></div><div class="phb"></div>
+          <div class="pc-tb"><div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div><span class="pc-tb-t">miden_wallet.fig</span></div>
+          <div class="pc-img"><div class="pc-img-inner thumb-2" style="color:rgba(255,255,255,.4)">📷 Miden wallet</div></div>
+          <div class="pc-body">
+            <div class="pc-num">CASE STUDY 02</div>
+            <h3>Miden Crypto Wallet</h3>
+            <div class="pc-sub">Privacy-First Wallet</div>
+            <div class="pc-tags"><span class="tag">Product Design</span><span class="tag sg">Research</span><span class="tag pl">Strategy</span></div>
+            <span class="rdm">View Case Study <span class="arr">→</span></span>
+          </div>
+          <div class="pc-ft">◇ 6 layers · April 2025</div>
+        </div>
+      </div>
+
+      <div class="rv d3 vis">
+        <div class="pc-frame">Frame: "Case Study 03"</div>
+        <div class="pcard" onclick="showCS(&#39;cs3&#39;)" onmousemove="tilt(this,event)" onmouseleave="untilt(this)" style="transition: transform 0.45s; transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px);">
+          <div class="phl"></div><div class="phb"></div>
+          <div class="pc-tb"><div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div><span class="pc-tb-t">tires_ecosystem.fig</span></div>
+          <div class="pc-img"><div class="pc-img-inner thumb-3" style="color:rgba(255,255,255,.35)">📷 Tires marketplace</div></div>
+          <div class="pc-body">
+            <div class="pc-num">CASE STUDY 03</div>
+            <h3>Tires &amp; Rims Ecosystem</h3>
+            <div class="pc-sub">B2C &amp; B2B Business Strategy</div>
+            <div class="pc-tags"><span class="tag">UX Lead</span><span class="tag sg">Design System</span><span class="tag pl">End-to-end Workflow</span></div>
+            <span class="rdm">View Case Study <span class="arr">→</span></span>
+          </div>
+          <div class="pc-ft">◇ 5 layers · Sep 2025 - Ongoing</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section proc" id="process">
+  <div class="container">
+    <div class="slabel rv vis"><span class="dot"></span> Approach</div>
+    <h2 class="stitle rv d1 vis">How I Design</h2>
+    <p class="rv d2 vis" style="color:var(--text-secondary);font-size:15.5px;max-width:560px;margin-bottom:0">My process adapts to each project, but the foundations stay consistent.</p>
+    <div class="proc-grid">
+      <div class="pstep rv d1 vis"><div class="pstep-n">◇ 01</div><h3>Discover</h3><p>Stakeholder interviews, competitive analysis, data audits. Understand the constraints before proposing solutions.</p></div>
+      <div class="pstep rv d2 vis"><div class="pstep-n">◇ 02</div><h3>Define</h3><p>Information architecture, user flows, service blueprints. Translate research into clear strategic direction.</p></div>
+      <div class="pstep rv d3 vis"><div class="pstep-n">◇ 03</div><h3>Design</h3><p>Design systems, component libraries, high-fidelity prototypes. Build modular solutions, not one-off screens.</p></div>
+      <div class="pstep rv d4 vis"><div class="pstep-n">◇ 04</div><h3>Validate</h3><p>Usability testing, stakeholder reviews, data analysis. Iterate based on evidence, not assumptions.</p></div>
+      <div class="pstep rv d5 vis"><div class="pstep-n">◇ 05</div><h3>Ship &amp; Iterate</h3><p>Launch, monitor metrics, refine. Design doesn't end at handoff.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="cta-sec">
+    <h2 class="rv vis">Let's build something together.</h2>
+    <p class="rv d1 vis">I'm exploring new opportunities and would love to discuss how I can contribute to your team.</p>
+    <div class="clinks rv d2 vis">
+      <a class="clk cp" href="mailto:jm@jmeyerdesign.com">✉ jm@jmeyerdesign.com</a>
+      <a href="https://www.linkedin.com/in/juana-meyer/" class="clk" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      
+      <a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v4.html#" class="clk">↓ Resume</a>
+    </div>
+  </div>
+</section>
+<footer class="footer"><div class="footer-m">© 2026 Juana Meyer — Designed in Figma, built with intention.</div><div class="footer-t">"Every pixel is a decision."</div></footer>
+</div>
+
+<!-- CS1 -->
+<div class="cs" id="cs1">
+<div style="height:var(--header-h)"></div>
+<div class="container-narrow" style="padding-top:20px"><a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v4.html#" class="cs-back" onclick="showMain();return false">← Back to Work</a></div>
+<div class="cs-hero" style="max-width:var(--max-w);margin:0 auto 56px"><div class="cs-hero-tb"><div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div><span class="url">curacao.com — Shopify Plus</span></div><div class="cs-hero-inner thumb-1" style="color:rgba(0,0,0,.2)">📷 Shopify storefront key screens</div></div>
+<div class="cs-hdr"><div class="pc-num">CASE STUDY 01</div><h1>E-Commerce Platform Migration</h1><p class="cs-tl">Migrating an e-commerce operation from Magento to Shopify and turning a "traffic loss" into a profitability win.</p></div>
+<div class="cs-meta"><div class="cs-mi"><span class="lb">Role</span><span class="vl">Lead UX Strategist &amp; Architect</span></div><div class="cs-mi"><span class="lb">Timeline</span><span class="vl">8 months</span></div><div class="cs-mi"><span class="lb">Year</span><span class="vl">2024-2025</span></div><div class="cs-mi"><span class="lb">Team</span><span class="vl">Cross-functional, 12 people</span></div></div>
+<div class="cs-body">
+<h2>The Challenge</h2><p>Curacao's legacy Magento platform had become a growth bottleneck. The monolithic architecture meant even minor UI updates required developer intervention.</p><p>But the deeper problem? The Information Architecture mirrored the company's org chart, not the customer's mental model.</p>
+<div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Before/after site map comparison</span></div>
+<h2>What I Did</h2><p>I reframed the project from a "redesign" to a <em>re-platforming strategy</em> — treating it as an operations transformation.</p>
+<ol><li><strong>Audit &amp; Benchmark</strong> — Mapped the operational friction in the legacy stack.</li><li><strong>IA Restructuring</strong> — Rebuilt navigation based on purchasing behaviors, not inventory taxonomy.</li><li><strong>Component-Based Design System</strong> — Created a modular UI library for Shopify.</li></ol>
+</div>
+<div class="cs-iw"><div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Component library &amp; design system overview</span></div></div>
+<div class="cs-body">
+<h2>The Hard Parts</h2><p><em>Scope creep:</em> Maintaining feature parity with a decade of custom Magento features.</p><p><em>Culture shift:</em> Moving stakeholders from "Dev-led updates" to "Design-system-led updates."</p>
+<h2>The Results</h2>
+<table class="mtbl"><thead><tr><th>Metric</th><th>Before</th><th>After</th><th>Change</th></tr></thead><tbody>
+<tr><td>Bounce Rate</td><td>42%</td><td>32.67%</td><td class="mp">-22%</td></tr>
+<tr><td>ROAS (Q4)</td><td>$21</td><td>$29.18</td><td class="mp">+39% YoY</td></tr>
+<tr><td>Revenue (Oct)</td><td>Baseline</td><td>+6.6% YoY</td><td class="mp">↑ Despite lower traffic</td></tr>
+<tr><td>Dev dependency</td><td>High</td><td>Near-zero</td><td class="mp">Team autonomy</td></tr>
+</tbody></table>
+<div class="cs-co"><p><strong>The Narrative:</strong> Even though traffic dropped 38% post-migration it was expected due to <strong>re-platforming</strong>. Revenue still grew, ROAS hit all-time highs. We stopped buying window shoppers and started converting buyers.</p></div>
+<div class="cs-af"><strong>Artifacts:</strong> Site Maps · Migration Strategy Deck · Component Library · Checkout Flow Prototypes</div>
+</div>
+<div class="cs-nx"><div></div><div><span class="nl">Next Project</span><a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v4.html#" onclick="showCS(&#39;cs2&#39;);return false">Miden Crypto Wallet →</a></div></div>
+</div>
+
+<!-- CS2 -->
+<div class="cs" id="cs2">
+<div style="height:var(--header-h)"></div>
+<div class="container-narrow" style="padding-top:20px"><a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v4.html#" class="cs-back" onclick="showMain();return false">← Back to Work</a></div>
+<div class="cs-hero" style="max-width:var(--max-w);margin:0 auto 56px"><div class="cs-hero-tb"><div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div><span class="url">miden.io — Privacy Wallet</span></div><div class="cs-hero-inner thumb-2">📷 Miden wallet main screen</div></div>
+<div class="cs-hdr"><div class="pc-num">CASE STUDY 02</div><h1>Miden Crypto Wallet</h1><p class="cs-tl">Designing a privacy-first crypto wallet that onboards users through their messaging platforms.</p></div>
+<div class="cs-meta"><div class="cs-mi"><span class="lb">Role</span><span class="vl">Lead Product Designer</span></div><div class="cs-mi"><span class="lb">Timeline</span><span class="vl">4 months</span></div><div class="cs-mi"><span class="lb">Team</span><span class="vl">Core team of 5</span></div></div>
+<div class="cs-body">
+<h2>The Challenge</h2><p>Miden is a privacy-first blockchain built on Zero-Knowledge proofs. The technology is revolutionary — but the UX has historically been hostile.</p>
+<h2>The Insight</h2><p><em>The Privacy Paradox:</em> Users say they value privacy, but choose convenience. The wallet should ride existing "social rails" — encrypted messaging apps users already trust.</p>
+<div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Competitive analysis — 5 wallet comparison</span></div>
+<h2>What I Did</h2>
+<ol><li><strong>Competitive Analysis</strong> — Audited 5 wallets to map friction points.</li><li><strong>Mental Model Mapping</strong> — Reframed "Miden Notes" as text-message analogues.</li><li><strong>Network Effect Design</strong> — Users first <em>receive</em> funds via chat link, then set up the wallet.</li></ol>
+</div>
+<div class="cs-iw"><div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Share-to-wallet onboarding flow</span></div></div>
+<div class="cs-body">
+<h2>The Result</h2><p>A "Social Wallet" vision integrating note dispatching into the OS share sheet. Every messaging app becomes a crypto distribution channel.</p>
+<div class="cs-af"><strong>Artifacts:</strong> Competitive Analysis · Share-to-Wallet Flows · Dark Mode UI System · Toggle Prototypes</div>
+</div>
+<div class="cs-nx"><div><span class="nl">Previous</span><a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v4.html#" onclick="showCS(&#39;cs1&#39;);return false">← E-Commerce</a></div><div><span class="nl">Next Project</span><a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v4.html#" onclick="showCS(&#39;cs3&#39;);return false">Tires &amp; Rims →</a></div></div>
+</div>
+
+<!-- CS3 -->
+<div class="cs" id="cs3">
+<div style="height:var(--header-h)"></div>
+<div class="container-narrow" style="padding-top:20px"><a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v4.html#" class="cs-back" onclick="showMain();return false">← Back to Work</a></div>
+<div class="cs-hero" style="max-width:var(--max-w);margin:0 auto 56px"><div class="cs-hero-tb"><div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div><span class="url">tires-ecosystem — Marketplace</span></div><div class="cs-hero-inner thumb-3">📷 Storefront with Year/Make/Model</div></div>
+<div class="cs-hdr"><div class="pc-num">CASE STUDY 03</div><h1>Tires &amp; Rims Ecosystem</h1><p class="cs-tl">Orchestrating a multi-sided marketplace where inventory, sales, and fulfillment work as one system.</p></div>
+<div class="cs-meta"><div class="cs-mi"><span class="lb">Role</span><span class="vl">UX Lead &amp; Service Designer</span></div><div class="cs-mi"><span class="lb">Timeline</span><span class="vl">5 months</span></div><div class="cs-mi"><span class="lb">Team</span><span class="vl">Cross-functional, 6 people</span></div></div>
+<div class="cs-body">
+<h2>The Challenge</h2><p>Selling tires online is a <em>service logistics</em> challenge — handling the <strong>Match</strong>, the <strong>Sale</strong>, and the <strong>Installation</strong> simultaneously.</p>
+<div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Service blueprint — API + journey map</span></div>
+<h2>What I Did</h2>
+<ol><li><strong>Logic-First Design</strong> — Year → Make → Model funnel prevents dead ends.</li><li><strong>Ecosystem Design</strong> — B2C storefront and B2B dashboard as a single system.</li></ol>
+</div>
+<div class="cs-iw"><div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Filter logic flows &amp; B2B dashboard</span></div></div>
+<div class="cs-body">
+<h2>The Result</h2><p>A cohesive ecosystem handling high-complexity logic invisibly. Users get transparency, operations gets control.</p>
+<div class="cs-af"><strong>Artifacts:</strong> Service Blueprints · B2B Dashboard · Search/Filter Logic Flows</div>
+</div>
+<div class="cs-nx"><div><span class="nl">Previous</span><a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v4.html#" onclick="showCS(&#39;cs2&#39;);return false">← Miden Wallet</a></div><div></div></div>
+</div>
+
+<script>
+// ===== CURSOR =====
+const fc=document.getElementById('fc'),fcPath=document.getElementById('fcPath'),fcLabel=document.getElementById('fcLabel');
+let cx=-100,cy=-100,ax=-100,ay=-100,isJuana=false;
+document.addEventListener('mousemove',e=>{cx=e.clientX;cy=e.clientY});
+function animC(){ax+=(cx-ax)*.14;ay+=(cy-ay)*.14;fc.style.transform=`translate(${ax}px,${ay}px)`;requestAnimationFrame(animC)}
+animC();
+if('ontouchstart'in window)fc.style.display='none';
+document.addEventListener('mouseleave',()=>fc.style.opacity='0');
+document.addEventListener('mouseenter',()=>fc.style.opacity='1');
+
+function setCursorJuana(){if(!isJuana){isJuana=true;fcPath.setAttribute('fill','#0C8CE9');fcLabel.style.background='#0C8CE9';fcLabel.textContent='Juana'}}
+function setCursorAnon(){if(isJuana){isJuana=false;fcPath.setAttribute('fill','#8B9B8B');fcLabel.style.background='#8B9B8B';fcLabel.textContent='Anonymous'}}
+
+// Phone zone
+const spPhone=document.getElementById('spPhone');
+if(spPhone){spPhone.addEventListener('mouseenter',setCursorJuana);spPhone.addEventListener('mouseleave',setCursorAnon)}
+
+// ===== SPOTIFY =====
+const songs=[
+  {title:"Promesas Sobre el Bidet",artist:"Charly García",grad:"linear-gradient(135deg,#8B6914,#D4943A,#5C3A0A)",dur:"4:18",emoji:"🎹"},
+  {title:"No Me Importa",artist:"Lali",grad:"linear-gradient(135deg,#C74B8B,#E87BA8,#8B2054)",dur:"3:24",emoji:"💃"},
+  {title:"Mariposa Tecknicolor",artist:"Fito Páez",grad:"linear-gradient(135deg,#1A2A5C,#4B3A8B,#2A1A4A)",dur:"5:02",emoji:"🦋"},
+  {title:"La Fuerza",artist:"Nathy Peluso",grad:"linear-gradient(135deg,#C74B2F,#E0874B,#8B3A1A)",dur:"3:45",emoji:"🔥"},
+  {title:"Te Amo",artist:"Gustavo Cerati",grad:"linear-gradient(135deg,#4B7BA8,#8BB8D4,#2A5C8B)",dur:"4:56",emoji:"🌊"}
+];
+let cur=0,animating=false;
+
+function renderSong(dir){
+  const s=songs[cur];
+  const art=document.getElementById('spArt');
+  const inner=document.getElementById('spArtInner');
+  const title=document.getElementById('spTitle');
+  const artist=document.getElementById('spArtist');
+  const dur=document.getElementById('spDur');
+  const bar=document.getElementById('spBar');
+  const time=document.getElementById('spTime');
+
+  if(dir!==undefined&&!animating){
+    animating=true;
+    // Animate out
+    inner.classList.add(dir>0?'out-left':'out-right');
+    title.style.opacity='0';artist.style.opacity='0';
+    setTimeout(()=>{
+      inner.style.background=s.grad;
+      inner.textContent=s.emoji;
+      inner.classList.remove('out-left','out-right');
+      inner.classList.add(dir>0?'in-right':'in-left');
+      title.textContent=s.title;title.style.opacity='1';
+      artist.textContent=s.artist;artist.style.opacity='1';
+      dur.textContent=s.dur;time.textContent='0:00';
+      bar.style.transition='none';bar.style.width='0%';
+      setTimeout(()=>{bar.style.transition='width 20s linear';bar.style.width='35%'},50);
+      setTimeout(()=>{inner.classList.remove('in-right','in-left');animating=false},450);
+    },350);
+  } else {
+    inner.style.background=s.grad;inner.textContent=s.emoji;
+    title.textContent=s.title;artist.textContent=s.artist;
+    dur.textContent=s.dur;time.textContent='1:42';
+  }
+}
+function nextSong(){cur=(cur+1)%songs.length;renderSong(1)}
+function prevSong(){cur=(cur-1+songs.length)%songs.length;renderSong(-1)}
+renderSong();
+
+// ===== 3D TILT =====
+function tilt(el,e){const r=el.getBoundingClientRect();const x=(e.clientX-r.left)/r.width;const y=(e.clientY-r.top)/r.height;const tX=(y-.5)*-5;const tY=(x-.5)*5;el.style.transition='transform .08s ease';el.style.transform=`perspective(800px) rotateX(${tX}deg) rotateY(${tY}deg) translateY(-6px)`}
+function untilt(el){el.style.transition='transform .45s ease';el.style.transform='perspective(800px) rotateX(0) rotateY(0) translateY(0)'}
+
+// ===== HEADER =====
+window.addEventListener('scroll',()=>document.getElementById('hdr').classList.toggle('scrolled',window.scrollY>20));
+function cM(){document.getElementById('hnav').classList.remove('open')}
+
+// ===== REVEAL =====
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.07,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+
+// ===== NAV =====
+const nIds=['home','work','about','process','contact'];
+const nLks=document.querySelectorAll('.header-nav a:not(.hdr-cta)');
+const no=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){nLks.forEach(l=>l.classList.remove('active'));const m=document.querySelector(`.header-nav a[href="#${e.target.id}"]`);if(m)m.classList.add('active')}})},{threshold:.25});
+nIds.forEach(id=>{const el=document.getElementById(id);if(el)no.observe(el)});
+
+// ===== CASE STUDY NAV =====
+const mp=document.getElementById('mainPage');const csps=document.querySelectorAll('.cs');
+function showCS(id){mp.style.display='none';csps.forEach(p=>p.classList.remove('active'));const t=document.getElementById(id);if(t){t.classList.add('active');window.scrollTo({top:0,behavior:'instant'})}}
+function showMain(){csps.forEach(p=>p.classList.remove('active'));mp.style.display='';const w=document.getElementById('work');if(w){const r=w.getBoundingClientRect();if(r.top<0||r.top>window.innerHeight)w.scrollIntoView({behavior:'instant'})}}
+</script>
+
+
+</body></html>
