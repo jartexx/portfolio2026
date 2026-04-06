@@ -1,0 +1,2990 @@
+<!DOCTYPE html>
+<!-- saved from url=(0093)file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v6.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juana Meyer, Product Designer</title>
+<meta name="description" content="Product Designer. Translating intricate business requirements into user &amp; customer centered designs.">
+<meta property="og:title" content="Juana Meyer, Product Designer">
+<meta property="og:description" content="Translating intricate business requirements into user &amp; customer centered designs.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./portfolio-v6_files/css2" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 32 32&#39;&gt;&lt;rect width=&#39;32&#39; height=&#39;32&#39; rx=&#39;8&#39; fill=&#39;%23E04B2F&#39;/&gt;&lt;text x=&#39;50%25&#39; y=&#39;55%25&#39; dominant-baseline=&#39;middle&#39; text-anchor=&#39;middle&#39; fill=&#39;white&#39; font-size=&#39;18&#39; font-family=&#39;serif&#39;&gt;J&lt;/text&gt;&lt;/svg&gt;">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#C0391B;--primary-hover:#A52F14;--primary-soft:rgba(192,57,27,0.08);--primary-border:rgba(192,57,27,0.22);
+  --sage:#B8CCBC;--sage-deep:#6B9B76;--plum:#5C2750;--plum-soft:rgba(92,39,80,0.06);
+  --cream:#F5F0EB;--warm-gray:#C8C1B8;
+  --bg-primary:#FAF8F5;--bg-secondary:#F0ECE6;--bg-elevated:#FFFFFF;--bg-dark:#1A1418;
+  --text-primary:#1A1418;--text-secondary:#5C5550;--text-tertiary:#6B6560;--text-on-dark:#F0ECE6;
+  --figma-blue:#0C8CE9;--figma-purple:#9747FF;
+  --cursor-anon:#8B9B8B;--cursor-juana:#0C8CE9;
+  --canvas-dots:rgba(0,0,0,0.04);--border-light:rgba(0,0,0,0.06);--border-medium:rgba(0,0,0,0.10);
+  --shadow-soft:0 1px 3px rgba(26,20,24,0.04),0 6px 20px rgba(26,20,24,0.03);
+  --shadow-elevated:0 4px 12px rgba(26,20,24,0.06),0 16px 40px rgba(26,20,24,0.05);
+  --font-serif:'Playfair Display',Georgia,serif;
+  --font-sans:'Outfit',sans-serif;
+  --font-mono:'IBM Plex Mono',monospace;
+  --header-h:64px;--max-w:1100px;--max-w-narrow:740px;
+}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg-primary);color:var(--text-primary);font-family:var(--font-sans);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+@media(hover:hover)and (pointer:fine){body,a,button{cursor:none}}
+::selection{background:rgba(224,75,47,0.14)}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+
+/* Noise grain */
+body::after{content:'';position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0.018;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:256px 256px}
+.dot-grid{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(circle,var(--canvas-dots) .7px,transparent .7px);background-size:20px 20px}
+
+/* ===== CURSOR ===== */
+.fc{position:fixed;z-index:10000;pointer-events:none;will-change:transform;transition:opacity .3s}
+.fc svg{width:15px;height:19px;transition:fill .3s}
+.fc-label{position:absolute;top:17px;left:9px;color:#fff;font-family:var(--font-mono);font-size:10.5px;font-weight:500;padding:2px 8px 3px;border-radius:3px;white-space:nowrap;line-height:1.3;transition:background .3s}
+
+/* ===== HEADER ===== */
+.header{position:fixed;top:0;left:0;right:0;z-index:500;height:var(--header-h);display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:rgba(250,248,245,.88);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border-bottom:1px solid var(--border-light);transition:box-shadow .3s}
+.header.scrolled{box-shadow:0 1px 12px rgba(0,0,0,.04)}
+.header-name{font-family:var(--font-serif);font-weight:500;font-size:17px;letter-spacing:-.01em}
+.header-nav{display:flex;align-items:center;gap:30px}
+.header-nav a{font-size:14px;color:var(--text-secondary);transition:color .2s;position:relative}
+.header-nav a:hover{color:var(--text-primary)}
+.header-nav a.active{color:var(--text-primary);font-weight:500}
+.header-nav a.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1.5px;background:var(--primary);border-radius:1px}
+.hdr-cta{font-size:13px!important;font-weight:500!important;color:var(--primary)!important;border:1.5px solid var(--primary-border);padding:7px 20px;border-radius:8px;transition:all .25s}
+.hdr-cta:hover{background:var(--primary);color:#fff!important;border-color:var(--primary)}
+.hdr-cta::after{display:none!important}
+.mob-tog{display:none;background:none;border:none;width:32px;height:32px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+.mob-tog span{display:block;width:20px;height:1.5px;background:var(--text-primary)}
+@media(max-width:768px){.header{padding:0 20px}.header-nav{position:fixed;top:var(--header-h);left:0;right:0;flex-direction:column;background:rgba(250,248,245,.97);backdrop-filter:blur(20px);padding:20px;gap:16px;border-bottom:1px solid var(--border-light);transform:translateY(-120%);opacity:0;transition:all .35s ease}.header-nav.open{transform:translateY(0);opacity:1}.mob-tog{display:flex}}
+
+/* ===== SHARED ===== */
+.section{padding:120px 40px;position:relative;z-index:1}
+.container{max-width:var(--max-w);margin:0 auto}
+.container-narrow{max-width:var(--max-w-narrow);margin:0 auto}
+.slabel{font-family:var(--font-mono);font-size:12px;color:var(--text-tertiary);letter-spacing:.5px;margin-bottom:14px;display:inline-flex;align-items:center;gap:7px;text-transform:uppercase}
+.slabel .dot{width:5px;height:5px;border-radius:50%;background:var(--primary)}
+.stitle{font-family:var(--font-serif);font-size:clamp(32px,4vw,46px);font-weight:400;margin-bottom:52px;letter-spacing:-.02em;line-height:1.1}
+
+.btn-p{background:var(--primary);color:#fff;border:none;padding:14px 30px;border-radius:10px;font-family:var(--font-sans);font-size:14px;font-weight:500;transition:all .3s cubic-bezier(.4,0,.2,1);text-decoration:none;display:inline-flex;align-items:center;gap:8px;letter-spacing:.01em}
+.btn-p:hover{background:var(--primary-hover);transform:translateY(-2px);box-shadow:0 8px 28px rgba(224,75,47,.25)}
+.btn-g{background:transparent;color:var(--text-primary);border:1.5px solid var(--border-medium);padding:13px 30px;border-radius:10px;font-family:var(--font-sans);font-size:14px;font-weight:500;transition:all .3s;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-g:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px)}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;padding:calc(var(--header-h) + 40px) 40px 80px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center;width:100%;max-width:var(--max-w);margin:0 auto}
+.hero-label{font-family:var(--font-mono);font-size:12.5px;color:var(--text-tertiary);margin-bottom:24px}
+.hero h1{font-family:var(--font-serif);font-size:clamp(33px,4.5vw,54px);line-height:1.18;font-weight:400;margin-bottom:28px;letter-spacing:-.02em}
+.hero h1 .hl{color:var(--primary);font-style:italic}
+.hero-specs{font-size:15px;color:var(--text-secondary);margin-bottom:36px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.hero-specs .sep{color:var(--warm-gray);font-size:8px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hline{opacity:0;transform:translateY(16px);animation:hIn .55s forwards}
+@keyframes hIn{to{opacity:1;transform:translateY(0)}}
+
+/* Terminal */
+.cterm{background:var(--bg-dark);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-elevated);max-width:380px;width:100%}
+.ct-hdr{display:flex;align-items:center;gap:8px;padding:11px 16px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06)}
+.ct-dots{display:flex;gap:6px}
+.ct-dots span{width:10px;height:10px;border-radius:50%}
+.ct-title{font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.3);flex:1;text-align:center;margin-right:30px}
+.ct-body{padding:18px 20px;font-family:var(--font-mono);font-size:12.5px;line-height:1.85;color:var(--text-on-dark)}
+.ct-line{opacity:0;transform:translateY(5px);animation:ctIn .4s forwards}
+@keyframes ctIn{to{opacity:1;transform:translateY(0)}}
+.ct-line .pr{color:var(--primary);font-weight:500}
+.ct-line .ck{color:var(--sage-deep);font-weight:500}
+.ct-cur{display:inline-block;width:7px;height:14px;background:var(--primary);margin-left:2px;animation:blk 1s step-end infinite;vertical-align:middle}
+@keyframes blk{0%,100%{opacity:1}50%{opacity:0}}
+
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}.cterm{max-width:100%}.hero{padding-top:calc(var(--header-h) + 24px);min-height:auto}}
+@media(max-width:768px){.hero{padding:calc(var(--header-h) + 20px) 20px 60px}}
+
+/* ===== MARQUEE STRIP ===== */
+.marquee-strip{border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);background:var(--bg-secondary);overflow:hidden;padding:12px 0;position:relative;z-index:1}
+.marquee-track{display:flex;gap:0;white-space:nowrap;animation:marqueeScroll 28s linear infinite}
+.marquee-track:hover{animation-play-state:paused}
+.marquee-inner{display:flex;gap:0;flex-shrink:0}
+.mq-item{font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary);padding:0 20px;display:inline-flex;align-items:center;gap:16px;letter-spacing:.3px;white-space:nowrap}
+.mq-item .mq-dot{width:4px;height:4px;border-radius:50%;background:var(--primary);opacity:.6;flex-shrink:0}
+@keyframes marqueeScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== ABOUT ===== */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
+.about-text h2{font-family:var(--font-serif);font-size:clamp(32px,3.5vw,44px);font-weight:400;margin-bottom:24px;letter-spacing:-.02em;line-height:1.15}
+.about-text p{font-size:15.5px;line-height:1.85;color:var(--text-secondary);margin-bottom:16px}
+.about-text strong{color:var(--text-primary);font-weight:500}
+
+/* ===== SPOTIFY PHONE ===== */
+.phone-wrap{display:flex;justify-content:center}
+.phone{width:280px;background:#fff;border-radius:36px;border:1px solid var(--border-medium);box-shadow:var(--shadow-elevated);overflow:hidden;padding:16px;position:relative}
+.phone-notch{width:80px;height:6px;background:var(--bg-secondary);border-radius:3px;margin:0 auto 20px}
+.sp-art{width:100%;aspect-ratio:1;border-radius:14px;margin-bottom:20px;transition:all .5s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.12)}
+.sp-art-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:36px;transition:all .4s ease;position:absolute;inset:0}
+.sp-art-inner.out-left{transform:translateX(-110%);opacity:0}
+.sp-art-inner.out-right{transform:translateX(110%);opacity:0}
+.sp-art-inner.in-left{animation:slideInLeft .4s forwards}
+.sp-art-inner.in-right{animation:slideInRight .4s forwards}
+@keyframes slideInLeft{from{transform:translateX(-100%);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes slideInRight{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
+.sp-title{font-family:var(--font-serif);font-size:17px;font-weight:600;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:opacity .3s}
+.sp-artist{font-family:var(--font-sans);font-size:13px;color:var(--text-secondary);margin-bottom:18px;transition:opacity .3s}
+.sp-progress{position:relative;height:3px;background:var(--border-light);border-radius:2px;margin-bottom:6px}
+.sp-bar{height:100%;background:var(--primary);border-radius:2px;width:35%;transition:width 20s linear}
+.sp-dot{position:absolute;top:50%;right:0;transform:translate(50%,-50%);width:10px;height:10px;background:var(--primary);border-radius:50%;opacity:0;transition:opacity .2s}
+.phone:hover .sp-dot{opacity:1}
+.sp-times{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:10px;color:var(--text-tertiary);margin-bottom:20px}
+.sp-controls{display:flex;align-items:center;justify-content:center;gap:28px;margin-bottom:16px}
+.sp-ctrl{background:none;border:none;font-size:18px;color:var(--text-secondary);transition:color .2s;padding:4px}
+.sp-ctrl:hover{color:var(--text-primary)}
+.sp-play{width:44px;height:44px;border-radius:50%;background:var(--text-primary);color:#fff;border:none;font-size:16px;display:flex;align-items:center;justify-content:center;transition:transform .2s,box-shadow .2s}
+.sp-play:hover{transform:scale(1.07);box-shadow:0 4px 16px rgba(26,20,24,.2)}
+.sp-footer{font-family:var(--font-mono);font-size:10.5px;color:var(--text-tertiary);text-align:center;margin-top:8px;line-height:1.5}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:52px}.phone{width:260px}}
+
+/* ===== PROJECTS ===== */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pcard{background:var(--bg-elevated);border-radius:16px;overflow:hidden;position:relative;box-shadow:var(--shadow-soft);border:1px solid var(--border-light);transition:box-shadow .4s,border-color .4s,transform .4s;transform-style:preserve-3d;will-change:transform}
+.pcard:hover{box-shadow:0 8px 28px rgba(224,75,47,.08),0 24px 56px rgba(26,20,24,.08);border-color:rgba(12,140,233,.22);transform:translateY(-4px)}
+
+/* Figma selection handles */
+.pcard::before,.pcard::after{content:'';position:absolute;width:7px;height:7px;border:1.5px solid var(--figma-blue);border-radius:1px;background:#fff;opacity:0;transition:opacity .3s;z-index:5;pointer-events:none}
+.pcard:hover::before,.pcard:hover::after{opacity:1}
+.pcard::before{top:-4px;left:-4px}.pcard::after{top:-4px;right:-4px}
+.phl,.phb{position:absolute;width:7px;height:7px;border:1.5px solid var(--figma-blue);border-radius:1px;background:#fff;opacity:0;transition:opacity .3s;z-index:5;pointer-events:none}
+.pcard:hover .phl,.pcard:hover .phb{opacity:1}
+.phl{bottom:-4px;left:-4px}.phb{bottom:-4px;right:-4px}
+
+.pc-frame{font-family:var(--font-mono);font-size:10px;color:var(--figma-purple);margin-bottom:7px;display:flex;align-items:center;gap:4px;padding-left:2px}
+.pc-frame::before{content:'▢';font-size:8px}
+
+.pc-tb{display:flex;align-items:center;gap:7px;padding:9px 14px;background:var(--bg-secondary);border-bottom:1px solid var(--border-light)}
+.pc-tb-dots{display:flex;gap:5px}
+.pc-tb-dots span{width:8px;height:8px;border-radius:50%}
+.pc-tb-t{font-family:var(--font-mono);font-size:10px;color:var(--text-tertiary);flex:1;text-align:center;margin-right:28px}
+
+.pc-img{width:100%;aspect-ratio:4/3;overflow:hidden;position:relative}
+.pc-img-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;transition:transform .6s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+.pcard:hover .pc-img-inner{transform:scale(1.03)}
+
+/* ===== THUMBNAIL ART ===== */
+
+/* Thumb 1 — E-Commerce: warm golden editorial grid */
+.thumb-1{background:linear-gradient(145deg,#F0D5A0 0%,#E4A96B 45%,#C26038 100%)}
+.thumb-1 .th-svg{position:absolute;inset:0;width:100%;height:100%}
+
+/* Thumb 2 — Miden Wallet: dark cosmic */
+.thumb-2{background:linear-gradient(145deg,#060412 0%,#0E0820 55%,#0A1228 100%)}
+.thumb-2 .th-svg{position:absolute;inset:0;width:100%;height:100%}
+
+/* Thumb 3 — Tires Ecosystem: industrial dark */
+.thumb-3{background:linear-gradient(145deg,#161616 0%,#262626 55%,#1C1C1C 100%)}
+.thumb-3 .th-svg{position:absolute;inset:0;width:100%;height:100%}
+
+.pc-body{padding:22px 22px 16px}
+.pc-num{font-family:var(--font-mono);font-size:10px;color:var(--primary);letter-spacing:.8px;margin-bottom:8px;font-weight:500;text-transform:uppercase}
+.pc-body h3{font-family:var(--font-serif);font-size:21px;font-weight:400;margin-bottom:4px;line-height:1.2;letter-spacing:-.01em}
+.pc-sub{font-size:12.5px;color:var(--text-tertiary);margin-bottom:14px}
+.pc-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:16px}
+.tag{padding:3px 10px;border-radius:16px;font-size:11px;font-family:var(--font-sans);background:var(--primary-soft);color:var(--primary);border:1px solid var(--primary-border)}
+.tag.sg{background:rgba(107,155,118,.08);color:var(--sage-deep);border-color:rgba(107,155,118,.15)}
+.tag.pl{background:var(--plum-soft);color:var(--plum);border-color:rgba(92,39,80,.12)}
+.rdm{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;border-bottom:1px solid transparent;padding-bottom:2px;transition:all .25s}
+.rdm:hover{color:var(--primary);border-bottom-color:var(--primary)}
+.rdm .arr{transition:transform .25s}
+.rdm:hover .arr{transform:translateX(5px)}
+.pc-ft{padding:10px 22px;border-top:1px solid var(--border-light);font-family:var(--font-mono);font-size:10px;color:var(--text-tertiary)}
+@media(max-width:900px){.pgrid{grid-template-columns:1fr 1fr;gap:16px}}
+@media(max-width:600px){.pgrid{grid-template-columns:1fr}}
+
+/* ===== CASE STUDIES ===== */
+.cs{padding:0 40px;display:none}.cs.active{display:block}
+.cs-back{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:var(--text-secondary);padding:24px 0;transition:color .2s;background:none;border:none;font-family:var(--font-sans);cursor:pointer}
+.cs-back:hover{color:var(--primary)}
+.cs-hero{width:100%;max-width:var(--max-w);margin:0 auto 56px;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-elevated);border:1px solid var(--border-light)}
+.cs-hero-tb{display:flex;align-items:center;gap:8px;padding:10px 16px;background:var(--bg-secondary);border-bottom:1px solid var(--border-light)}
+.cs-hero-tb .url{font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary);flex:1;text-align:center;margin-right:34px}
+.cs-hero-inner{aspect-ratio:16/8;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:14px}
+.cs-hdr{max-width:var(--max-w-narrow);margin:0 auto 44px}
+.cs-hdr h1{font-family:var(--font-serif);font-size:clamp(30px,4vw,46px);font-weight:400;line-height:1.2;margin-bottom:16px}
+.cs-tl{font-family:var(--font-serif);font-size:19px;font-style:italic;color:var(--text-secondary);line-height:1.5}
+.cs-meta{display:flex;gap:36px;padding:24px 0;border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);margin-bottom:52px;max-width:var(--max-w-narrow);margin-left:auto;margin-right:auto;flex-wrap:wrap}
+.cs-mi .lb{font-family:var(--font-mono);font-size:10.5px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:4px}
+.cs-mi .vl{font-size:14px;font-weight:500}
+.cs-body{max-width:var(--max-w-narrow);margin:0 auto}
+.cs-body h2{font-family:var(--font-serif);font-size:26px;font-weight:400;margin:52px 0 18px}.cs-body h2:first-child{margin-top:0}
+.cs-body p{font-size:15.5px;line-height:1.85;color:var(--text-secondary);margin-bottom:16px}
+.cs-body p strong{color:var(--text-primary);font-weight:500}
+.cs-body p em{color:var(--primary);font-style:italic}
+.cs-body ol{list-style:none;counter-reset:s;margin:18px 0 24px;padding:0}
+.cs-body ol li{counter-increment:s;padding:12px 0 12px 46px;position:relative;font-size:15.5px;line-height:1.7;color:var(--text-secondary);border-left:1px solid var(--border-light);margin-left:13px}
+.cs-body ol li::before{content:counter(s);position:absolute;left:-13px;top:12px;width:26px;height:26px;background:var(--bg-elevated);border:1.5px solid var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:11px;color:var(--primary);font-weight:500}
+.cs-body ol li strong{color:var(--text-primary);font-weight:600}
+.iph{width:100%;aspect-ratio:16/9;background:var(--bg-secondary);border:1.5px dashed var(--border-medium);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;margin:32px 0}
+.iph svg{width:28px;height:28px;color:var(--text-tertiary);opacity:.4}
+.iph span{font-family:var(--font-mono);font-size:12px;color:var(--text-tertiary);text-align:center;padding:0 16px}
+.cs-iw{max-width:var(--max-w);margin:44px auto}.cs-iw .iph{aspect-ratio:16/7;margin:0}
+.mtbl{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.mtbl th{text-align:left;padding:11px 16px;background:var(--bg-secondary);color:var(--text-tertiary);font-weight:500;font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border-light)}
+.mtbl td{padding:13px 16px;border-bottom:1px solid var(--border-light);color:var(--text-secondary)}
+.mtbl tr:last-child td{border-bottom:none}
+.mp{color:var(--sage-deep);font-weight:600}
+.cs-co{background:var(--primary-soft);border-left:3px solid var(--primary);border-radius:0 10px 10px 0;padding:22px 26px;margin:24px 0}
+.cs-co p{margin:0;font-size:15px;line-height:1.8}.cs-co strong{color:var(--text-primary);font-weight:600}
+.cs-af{font-family:var(--font-mono);font-size:12px;color:var(--text-tertiary);padding:24px 0;border-top:1px solid var(--border-light);margin-top:44px}
+.cs-af strong{color:var(--text-secondary)}
+.cs-nx{display:flex;align-items:center;justify-content:space-between;padding:44px 0 80px;border-top:1px solid var(--border-light);margin-top:52px;max-width:var(--max-w-narrow);margin-left:auto;margin-right:auto}
+.cs-nx a{font-weight:500;font-size:15px;display:inline-flex;align-items:center;gap:8px;transition:color .2s}
+.cs-nx a:hover{color:var(--primary)}
+.cs-nx .nl{font-family:var(--font-mono);font-size:10.5px;color:var(--text-tertiary);display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
+
+/* ===== PROCESS ===== */
+.proc{background:var(--bg-dark);border-top:none;border-bottom:none;position:relative;overflow:hidden}
+.proc::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.025) .7px,transparent .7px);background-size:20px 20px;pointer-events:none}
+.proc .slabel{color:rgba(240,236,230,.35)}
+.proc .stitle{color:var(--text-on-dark)}
+.proc .rv{color:var(--text-on-dark)}
+.proc-intro{font-size:15.5px;color:rgba(240,236,230,.5);max-width:520px;margin-bottom:0;line-height:1.7}
+.proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;margin-top:48px}
+.pstep{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:28px 22px;border-radius:12px;position:relative;transition:all .35s;backdrop-filter:blur(4px)}
+.pstep:hover{background:rgba(255,255,255,.07);border-color:rgba(224,75,47,.3);transform:translateY(-3px)}
+.pstep-n{font-family:var(--font-mono);font-size:11px;color:var(--primary);font-weight:500;margin-bottom:14px;opacity:.8}
+.pstep h3{font-family:var(--font-sans);font-size:16px;font-weight:600;margin-bottom:10px;color:var(--text-on-dark)}
+.pstep p{font-size:13px;color:rgba(240,236,230,.45);line-height:1.7}
+.pstep:not(:last-child)::after{content:'→';position:absolute;right:-13px;top:50%;transform:translateY(-50%);font-size:14px;color:rgba(255,255,255,.15);z-index:2}
+@media(max-width:900px){.proc-grid{grid-template-columns:1fr;gap:8px}.pstep::after{display:none}}
+
+/* ===== CONTACT ===== */
+.cta-sec{text-align:center;max-width:560px;margin:0 auto}
+.cta-sec h2{font-family:var(--font-serif);font-size:clamp(32px,4.5vw,52px);font-weight:400;margin-bottom:18px;letter-spacing:-.02em;line-height:1.1}
+.cta-sec p{font-size:15.5px;color:var(--text-secondary);line-height:1.75;margin-bottom:40px}
+.clinks{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.clk{display:inline-flex;align-items:center;gap:7px;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:500;transition:all .25s;color:var(--text-secondary);border:1.5px solid var(--border-medium);background:var(--bg-elevated)}
+.clk:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px);box-shadow:var(--shadow-soft)}
+.clk.cp{background:var(--primary);border-color:var(--primary);color:#fff}
+.clk.cp:hover{background:var(--primary-hover);border-color:var(--primary-hover);transform:translateY(-2px);box-shadow:0 6px 24px rgba(224,75,47,.25)}
+
+/* ===== FOOTER ===== */
+.footer{padding:40px 40px;border-top:1px solid var(--border-light);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-m{font-size:13px;color:var(--text-tertiary)}
+.footer-t{font-family:var(--font-serif);font-style:italic;color:var(--text-tertiary);font-size:13.5px}
+@media(max-width:600px){.footer{flex-direction:column;text-align:center;padding:32px 20px}}
+
+/* ===== REVEAL ===== */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.rv.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+
+/* proc rv overrides for dark bg */
+.proc .rv{opacity:0;transform:translateY(18px)}
+.proc .rv.vis{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){.section{padding:80px 20px}.hero{padding:calc(var(--header-h) + 20px) 20px 60px}.cs{padding:0 20px}.cs-meta{gap:20px}.clinks{flex-direction:column;align-items:center}.clk{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+<div class="dot-grid"></div>
+
+<!-- Custom Cursor -->
+<div class="fc" id="fc" style="transform: translate(1010.2px, 553.88px); opacity: 1;">
+  <svg viewBox="0 0 16 20" fill="none"><path id="fcPath" d="M1 1L1 15.5L4.5 12L8.5 19L11 17.5L7 11L12 11L1 1Z" fill="#8B9B8B" stroke="#fff" stroke-width=".7"></path></svg>
+  <div class="fc-label" id="fcLabel" style="background: rgb(139, 155, 139);">Anonymous</div>
+</div>
+
+<div id="mainPage" style="display: none;">
+<header class="header" id="hdr">
+  <a href="javascript:void(0)" class="header-name" onclick="showMain();return false">Juana Meyer</a>
+  <button class="mob-tog" onclick="document.getElementById(&#39;hnav&#39;).classList.toggle(&#39;open&#39;)" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav class="header-nav" id="hnav">
+    <a href="javascript:void(0)" onclick="showMain();cM();return false">Work</a>
+    <a href="javascript:void(0)" onclick="showMain();cM();return false">About</a>
+    <a href="javascript:void(0)" onclick="showMain();cM();return false">Process</a>
+    <a href="javascript:void(0)" class="hdr-cta" onclick="showMain();cM();return false">Let's Talk</a>
+  </nav>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="section hero" id="home">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-label hline" style="animation-delay:0s">Product Designer, UX/CX Strategy</div>
+      <h1>
+        <span class="hline" style="animation-delay:.12s">Translating intricate</span><br>
+        <span class="hline" style="animation-delay:.24s">business requirements into</span><br>
+        <span class="hline" style="animation-delay:.36s"><span class="hl">user &amp; customer centered</span></span><br>
+        <span class="hline" style="animation-delay:.48s">designs.</span>
+      </h1>
+      <div class="hero-specs hline" style="animation-delay:.64s"><span>E-commerce</span><span class="sep">◆</span><span>Banking</span><span class="sep">◆</span><span>Crypto &amp; Tech</span></div>
+      <div class="hero-ctas hline" style="animation-delay:.78s">
+        <a href="#work" class="btn-p">View Selected Work ↓</a>
+        <a href="#contact" class="btn-g">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hline" style="animation-delay:.4s">
+      <div class="cterm">
+        <div class="ct-hdr"><div class="ct-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div><span class="ct-title">strategy</span></div>
+        <div class="ct-body">
+          <div class="ct-line" style="animation-delay:.9s"><span class="pr">&gt;</span> juana.approach --first-principles</div>
+          <div class="ct-line" style="animation-delay:1.6s"><span class="ck">✓</span> Understand the business, not just the brief</div>
+          <div class="ct-line" style="animation-delay:2.2s"><span class="ck">✓</span> Map the system, not just the screen</div>
+          <div class="ct-line" style="animation-delay:2.8s"><span class="ck">✓</span> Design for autonomy, not dependency</div>
+          <div class="ct-line" style="animation-delay:3.4s"><span class="pr">&gt;</span> Shipping with intention.<span class="ct-cur"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MARQUEE ==================== -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <!-- Two copies for seamless loop -->
+    <div class="marquee-inner">
+      <span class="mq-item">UX Strategy<span class="mq-dot"></span></span>
+      <span class="mq-item">Information Architecture<span class="mq-dot"></span></span>
+      <span class="mq-item">Design Systems<span class="mq-dot"></span></span>
+      <span class="mq-item">User Research<span class="mq-dot"></span></span>
+      <span class="mq-item">Figma<span class="mq-dot"></span></span>
+      <span class="mq-item">Service Design<span class="mq-dot"></span></span>
+      <span class="mq-item">Prototyping<span class="mq-dot"></span></span>
+      <span class="mq-item">E-Commerce<span class="mq-dot"></span></span>
+      <span class="mq-item">Product Strategy<span class="mq-dot"></span></span>
+      <span class="mq-item">Usability Testing<span class="mq-dot"></span></span>
+      <span class="mq-item">Component Libraries<span class="mq-dot"></span></span>
+      <span class="mq-item">Shopify<span class="mq-dot"></span></span>
+      <span class="mq-item">Banking UX<span class="mq-dot"></span></span>
+      <span class="mq-item">Crypto &amp; Web3<span class="mq-dot"></span></span>
+    </div>
+    <div class="marquee-inner" aria-hidden="true">
+      <span class="mq-item">UX Strategy<span class="mq-dot"></span></span>
+      <span class="mq-item">Information Architecture<span class="mq-dot"></span></span>
+      <span class="mq-item">Design Systems<span class="mq-dot"></span></span>
+      <span class="mq-item">User Research<span class="mq-dot"></span></span>
+      <span class="mq-item">Figma<span class="mq-dot"></span></span>
+      <span class="mq-item">Service Design<span class="mq-dot"></span></span>
+      <span class="mq-item">Prototyping<span class="mq-dot"></span></span>
+      <span class="mq-item">E-Commerce<span class="mq-dot"></span></span>
+      <span class="mq-item">Product Strategy<span class="mq-dot"></span></span>
+      <span class="mq-item">Usability Testing<span class="mq-dot"></span></span>
+      <span class="mq-item">Component Libraries<span class="mq-dot"></span></span>
+      <span class="mq-item">Shopify<span class="mq-dot"></span></span>
+      <span class="mq-item">Banking UX<span class="mq-dot"></span></span>
+      <span class="mq-item">Crypto &amp; Web3<span class="mq-dot"></span></span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== ABOUT ==================== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="slabel rv vis"><span class="dot"></span> About</div>
+        <h2 class="rv d1 vis">Hello, I'm Juana.</h2>
+        <p class="rv d2 vis">I'm a <strong>product designer</strong> who translates complex business requirements into clear, user-centered experiences.</p>
+        <p class="rv d3 vis">My background in <strong>fine art</strong> trained my eye for composition and detail. My work across <strong>e-commerce, banking, and emerging tech</strong> sharpened my strategic thinking.</p>
+        <p class="rv d4 vis">Originally from <strong>Argentina</strong> 🇦🇷, I work primarily with US-based teams and products. I love to travel and embrace new perspectives, and I'm <strong>open to relocation</strong> for the right opportunity.</p>
+      </div>
+      <!-- Spotify Phone -->
+      <div class="phone-wrap rv d3 vis">
+        <div class="phone" id="spPhone">
+          <div class="phone-notch"></div>
+          <div class="sp-art" id="spArt">
+            <div class="sp-art-inner" id="spArtInner" style="background: linear-gradient(135deg, rgb(139, 105, 20), rgb(212, 148, 58), rgb(92, 58, 10));">🎹</div>
+          </div>
+          <div class="sp-title" id="spTitle" style="opacity: 1;">Promesas Sobre el Bidet</div>
+          <div class="sp-artist" id="spArtist" style="opacity: 1;">Charly García</div>
+          <div class="sp-progress"><div class="sp-bar" id="spBar" style="transition: width 20s linear; width: 35%;"></div><div class="sp-dot" style="left:35%"></div></div>
+          <div class="sp-times"><span id="spTime">1:42</span><span id="spDur">4:18</span></div>
+          <div class="sp-controls">
+            <button class="sp-ctrl" onclick="prevSong()">⏮</button>
+            <button class="sp-play" id="spPlay">▶</button>
+            <button class="sp-ctrl" onclick="nextSong()">⏭</button>
+          </div>
+          <div class="sp-footer">🎧 What Juana plays<br>while designing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROJECTS ==================== -->
+<section class="section" id="work" style="background:var(--bg-secondary)">
+  <div class="container">
+    <div class="slabel rv vis"><span class="dot"></span> Selected Work</div>
+    <h2 class="stitle rv d1 vis">Case Studies</h2>
+    <div class="pgrid">
+
+      <!-- Card 1: E-Commerce -->
+      <div class="rv d1 vis">
+        <div class="pc-frame">Frame: "Case Study 01"</div>
+        <div class="pcard" onclick="showCS(&#39;cs1&#39;)" onmousemove="tilt(this,event)" onmouseleave="untilt(this)" style="transition: transform 0.45s; transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px);">
+          <div class="phl"></div><div class="phb"></div>
+          <div class="pc-tb">
+            <div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div>
+            <span class="pc-tb-t">case_study_01.fig</span>
+          </div>
+          <div class="pc-img">
+            <div class="pc-img-inner thumb-1">
+              <!-- E-Commerce SVG art: product grid + warm editorial feel -->
+              <svg class="th-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <!-- ambient light -->
+                <radialgradient id="g1a" cx="75%" cy="20%" r="55%">
+                  <stop offset="0%" stop-color="#fff" stop-opacity=".25"></stop>
+                  <stop offset="100%" stop-color="#fff" stop-opacity="0"></stop>
+                </radialgradient>
+                <rect width="400" height="300" fill="url(#g1a)"></rect>
+                <!-- product cards grid -->
+                <g opacity=".55">
+                  <rect x="28" y="36" width="90" height="110" rx="6" fill="none" stroke="#fff" stroke-width="1.2"></rect>
+                  <rect x="28" y="36" width="90" height="68" rx="6" fill="rgba(255,255,255,.18)"></rect>
+                  <rect x="36" y="116" width="50" height="6" rx="2" fill="rgba(255,255,255,.45)"></rect>
+                  <rect x="36" y="126" width="34" height="5" rx="2" fill="rgba(255,255,255,.25)"></rect>
+
+                  <rect x="132" y="36" width="90" height="110" rx="6" fill="none" stroke="#fff" stroke-width="1.2"></rect>
+                  <rect x="132" y="36" width="90" height="68" rx="6" fill="rgba(255,255,255,.12)"></rect>
+                  <rect x="140" y="116" width="50" height="6" rx="2" fill="rgba(255,255,255,.45)"></rect>
+                  <rect x="140" y="126" width="34" height="5" rx="2" fill="rgba(255,255,255,.25)"></rect>
+
+                  <rect x="236" y="36" width="90" height="110" rx="6" fill="none" stroke="#fff" stroke-width="1.2"></rect>
+                  <rect x="236" y="36" width="90" height="68" rx="6" fill="rgba(255,255,255,.22)"></rect>
+                  <rect x="244" y="116" width="50" height="6" rx="2" fill="rgba(255,255,255,.45)"></rect>
+                  <rect x="244" y="126" width="34" height="5" rx="2" fill="rgba(255,255,255,.25)"></rect>
+                </g>
+                <!-- nav bar suggestion -->
+                <rect x="20" y="12" width="360" height="18" rx="4" fill="rgba(255,255,255,.2)"></rect>
+                <rect x="28" y="17" width="48" height="7" rx="2" fill="rgba(255,255,255,.5)"></rect>
+                <circle cx="370" cy="21" r="5" fill="rgba(255,255,255,.35)"></circle>
+                <!-- bottom CTA bar -->
+                <rect x="28" y="168" width="118" height="28" rx="7" fill="rgba(255,255,255,.3)" stroke="rgba(255,255,255,.5)" stroke-width="1"></rect>
+                <rect x="36" y="177" width="70" height="8" rx="3" fill="rgba(255,255,255,.6)"></rect>
+                <!-- second row product cards (partial) -->
+                <g opacity=".35">
+                  <rect x="28" y="204" width="90" height="80" rx="6" fill="none" stroke="#fff" stroke-width="1"></rect>
+                  <rect x="28" y="204" width="90" height="48" rx="6" fill="rgba(255,255,255,.12)"></rect>
+                  <rect x="132" y="204" width="90" height="80" rx="6" fill="none" stroke="#fff" stroke-width="1"></rect>
+                  <rect x="132" y="204" width="90" height="48" rx="6" fill="rgba(255,255,255,.08)"></rect>
+                  <rect x="236" y="204" width="90" height="80" rx="6" fill="none" stroke="#fff" stroke-width="1"></rect>
+                  <rect x="236" y="204" width="90" height="48" rx="6" fill="rgba(255,255,255,.15)"></rect>
+                </g>
+                <!-- decorative diagonal sweep -->
+                <line x1="340" y1="0" x2="400" y2="300" stroke="rgba(255,255,255,.07)" stroke-width="40"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-num">Case Study 01</div>
+            <h3>E-Commerce Migration</h3>
+            <div class="pc-sub">Magento → Shopify Plus</div>
+            <div class="pc-tags"><span class="tag">UX Strategy</span><span class="tag sg">IA</span><span class="tag pl">Design System</span></div>
+            <span class="rdm">View Case Study <span class="arr">→</span></span>
+          </div>
+          <div class="pc-ft">◇ 4 layers · Sep 2024 – Apr 2025</div>
+        </div>
+      </div>
+
+      <!-- Card 2: Miden Wallet -->
+      <div class="rv d2 vis">
+        <div class="pc-frame">Frame: "Case Study 02"</div>
+        <div class="pcard" onclick="showCS(&#39;cs2&#39;)" onmousemove="tilt(this,event)" onmouseleave="untilt(this)" style="transition: transform 0.45s; transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px);">
+          <div class="phl"></div><div class="phb"></div>
+          <div class="pc-tb">
+            <div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div>
+            <span class="pc-tb-t">miden_wallet.fig</span>
+          </div>
+          <div class="pc-img">
+            <div class="pc-img-inner thumb-2">
+              <!-- Miden SVG art: concentric hexagons, dark cosmic -->
+              <svg class="th-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <radialgradient id="g2core" cx="50%" cy="50%" r="40%">
+                    <stop offset="0%" stop-color="#8B5CF6" stop-opacity=".7"></stop>
+                    <stop offset="60%" stop-color="#3B82F6" stop-opacity=".2"></stop>
+                    <stop offset="100%" stop-color="#000" stop-opacity="0"></stop>
+                  </radialgradient>
+                  <radialgradient id="g2outer" cx="50%" cy="50%" r="70%">
+                    <stop offset="0%" stop-color="#1E1B4B" stop-opacity=".6"></stop>
+                    <stop offset="100%" stop-color="#000" stop-opacity="0"></stop>
+                  </radialgradient>
+                </defs>
+                <!-- outer glow -->
+                <circle cx="200" cy="150" r="160" fill="url(#g2outer)"></circle>
+                <circle cx="200" cy="150" r="90" fill="url(#g2core)"></circle>
+                <!-- concentric rings -->
+                <circle cx="200" cy="150" r="110" fill="none" stroke="rgba(139,92,246,.18)" stroke-width="1"></circle>
+                <circle cx="200" cy="150" r="85" fill="none" stroke="rgba(139,92,246,.22)" stroke-width="1"></circle>
+                <circle cx="200" cy="150" r="60" fill="none" stroke="rgba(139,92,246,.3)" stroke-width="1.5"></circle>
+                <circle cx="200" cy="150" r="38" fill="none" stroke="rgba(139,92,246,.45)" stroke-width="1.5"></circle>
+                <circle cx="200" cy="150" r="20" fill="rgba(139,92,246,.35)" stroke="rgba(139,92,246,.8)" stroke-width="1"></circle>
+                <!-- shield/hex outline -->
+                <polygon points="200,42 282,92 282,208 200,258 118,208 118,92" fill="none" stroke="rgba(139,92,246,.15)" stroke-width="1"></polygon>
+                <polygon points="200,68 260,102 260,198 200,232 140,198 140,102" fill="none" stroke="rgba(99,102,241,.2)" stroke-width="1"></polygon>
+                <!-- node dots on ring -->
+                <circle cx="200" cy="40" r="3" fill="#8B5CF6" opacity=".7"></circle>
+                <circle cx="310" cy="105" r="3" fill="#8B5CF6" opacity=".5"></circle>
+                <circle cx="310" cy="195" r="3" fill="#6366F1" opacity=".5"></circle>
+                <circle cx="200" cy="260" r="3" fill="#8B5CF6" opacity=".7"></circle>
+                <circle cx="90" cy="195" r="3" fill="#6366F1" opacity=".5"></circle>
+                <circle cx="90" cy="105" r="3" fill="#8B5CF6" opacity=".5"></circle>
+                <!-- connection lines -->
+                <line x1="200" y1="40" x2="200" y2="150" stroke="rgba(139,92,246,.15)" stroke-width="1" stroke-dasharray="3,4"></line>
+                <line x1="310" y1="105" x2="200" y2="150" stroke="rgba(99,102,241,.12)" stroke-width="1" stroke-dasharray="3,4"></line>
+                <line x1="90" y1="195" x2="200" y2="150" stroke="rgba(139,92,246,.12)" stroke-width="1" stroke-dasharray="3,4"></line>
+                <!-- background hex grid (subtle) -->
+                <g opacity=".06" stroke="rgba(139,92,246,1)" stroke-width=".7" fill="none">
+                  <polygon points="50,20 70,8 90,20 90,44 70,56 50,44"></polygon>
+                  <polygon points="330,240 350,228 370,240 370,264 350,276 330,264"></polygon>
+                  <polygon points="10,170 30,158 50,170 50,194 30,206 10,194"></polygon>
+                  <polygon points="355,60 375,48 395,60 395,84 375,96 355,84"></polygon>
+                </g>
+                <!-- small data bits at edges -->
+                <g font-family="monospace" font-size="8" fill="rgba(139,92,246,.3)">
+                  <text x="16" y="28">0x4f</text>
+                  <text x="332" y="16">zkp://</text>
+                  <text x="16" y="280">0b1101</text>
+                  <text x="318" y="290">note.zk</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-num">Case Study 02</div>
+            <h3>Miden Crypto Wallet</h3>
+            <div class="pc-sub">Privacy-First Wallet</div>
+            <div class="pc-tags"><span class="tag">Product Design</span><span class="tag sg">Research</span><span class="tag pl">Strategy</span></div>
+            <span class="rdm">View Case Study <span class="arr">→</span></span>
+          </div>
+          <div class="pc-ft">◇ 6 layers · April 2025</div>
+        </div>
+      </div>
+
+      <!-- Card 3: Tires Ecosystem -->
+      <div class="rv d3 vis">
+        <div class="pc-frame">Frame: "Case Study 03"</div>
+        <div class="pcard" onclick="showCS(&#39;cs3&#39;)" onmousemove="tilt(this,event)" onmouseleave="untilt(this)" style="transition: transform 0.45s; transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px);">
+          <div class="phl"></div><div class="phb"></div>
+          <div class="pc-tb">
+            <div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div>
+            <span class="pc-tb-t">tires_ecosystem.fig</span>
+          </div>
+          <div class="pc-img">
+            <div class="pc-img-inner thumb-3">
+              <!-- Tires SVG art: concentric wheel cross-section, industrial -->
+              <svg class="th-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <radialgradient id="g3rim" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#555" stop-opacity=".9"></stop>
+                    <stop offset="100%" stop-color="#1a1a1a" stop-opacity=".3"></stop>
+                  </radialgradient>
+                </defs>
+                <!-- outer tire -->
+                <circle cx="200" cy="150" r="135" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="22"></circle>
+                <!-- tire tread marks -->
+                <circle cx="200" cy="150" r="135" fill="none" stroke="rgba(255,255,255,.04)" stroke-width="16" stroke-dasharray="8,6"></circle>
+                <!-- tire sidewall -->
+                <circle cx="200" cy="150" r="112" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1.5"></circle>
+                <!-- rim outer -->
+                <circle cx="200" cy="150" r="100" fill="url(#g3rim)" stroke="rgba(255,255,255,.15)" stroke-width="1"></circle>
+                <!-- spokes (5-spoke rim) -->
+                <g stroke="rgba(255,255,255,.22)" stroke-width="10" stroke-linecap="round">
+                  <line x1="200" y1="150" x2="200" y2="58"></line>
+                  <line x1="200" y1="150" x2="285" y2="203"></line>
+                  <line x1="200" y1="150" x2="249" y2="240"></line>
+                  <line x1="200" y1="150" x2="151" y2="240"></line>
+                  <line x1="200" y1="150" x2="115" y2="203"></line>
+                </g>
+                <!-- spoke highlights -->
+                <g stroke="rgba(255,255,255,.08)" stroke-width="4" stroke-linecap="round">
+                  <line x1="200" y1="150" x2="200" y2="58"></line>
+                  <line x1="200" y1="150" x2="285" y2="203"></line>
+                  <line x1="200" y1="150" x2="249" y2="240"></line>
+                  <line x1="200" y1="150" x2="151" y2="240"></line>
+                  <line x1="200" y1="150" x2="115" y2="203"></line>
+                </g>
+                <!-- hub ring -->
+                <circle cx="200" cy="150" r="28" fill="#2a2a2a" stroke="rgba(255,255,255,.2)" stroke-width="1.5"></circle>
+                <circle cx="200" cy="150" r="16" fill="#333" stroke="rgba(255,255,255,.3)" stroke-width="1"></circle>
+                <circle cx="200" cy="150" r="6" fill="rgba(255,255,255,.5)"></circle>
+                <!-- lug nuts -->
+                <circle cx="200" cy="124" r="4" fill="rgba(255,255,255,.35)" stroke="rgba(255,255,255,.2)" stroke-width="1"></circle>
+                <circle cx="223" cy="163" r="4" fill="rgba(255,255,255,.35)" stroke="rgba(255,255,255,.2)" stroke-width="1"></circle>
+                <circle cx="211" cy="188" r="4" fill="rgba(255,255,255,.35)" stroke="rgba(255,255,255,.2)" stroke-width="1"></circle>
+                <circle cx="189" cy="188" r="4" fill="rgba(255,255,255,.35)" stroke="rgba(255,255,255,.2)" stroke-width="1"></circle>
+                <circle cx="177" cy="163" r="4" fill="rgba(255,255,255,.35)" stroke="rgba(255,255,255,.2)" stroke-width="1"></circle>
+                <!-- year/make/model label -->
+                <rect x="16" y="14" width="120" height="22" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.1)" stroke-width="1"></rect>
+                <text x="24" y="29" font-family="monospace" font-size="9" fill="rgba(255,255,255,.5)">YEAR / MAKE / MODEL</text>
+                <!-- data readout -->
+                <g font-family="monospace" font-size="8" fill="rgba(255,255,255,.25)">
+                  <text x="16" y="278">225/45R17</text>
+                  <text x="290" y="278">B2B · B2C</text>
+                  <text x="338" y="16">17"</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-num">Case Study 03</div>
+            <h3>Tires &amp; Rims Ecosystem</h3>
+            <div class="pc-sub">B2C &amp; B2B Business Strategy</div>
+            <div class="pc-tags"><span class="tag">UX Lead</span><span class="tag sg">Design System</span><span class="tag pl">End-to-end</span></div>
+            <span class="rdm">View Case Study <span class="arr">→</span></span>
+          </div>
+          <div class="pc-ft">◇ 5 layers · Sep 2025 – Ongoing</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROCESS ==================== -->
+<section class="section proc" id="process">
+  <div class="container">
+    <div class="slabel rv vis"><span class="dot"></span> Approach</div>
+    <h2 class="stitle rv d1 vis">How I Design</h2>
+    <p class="proc-intro rv d2 vis">Design Thinking was my gospel. Empathise, define, ideate, prototype, test. A structured path I trusted completely. Then AI changed the pace, and the framework stopped being the point. Discovery happens in production now. Vision travels through working prototypes, not decks. The loop between design and engineering collapsed. My base didn't change. How tightly I hold it did.</p>
+    <div class="proc-grid">
+      <div class="pstep rv d1 vis"><div class="pstep-n">◇ 01</div><h3>Discover</h3><p>Talk to stakeholders. Dig into the data. But don't wait for it to be perfect. Discovery happens in production too. Real users interacting with real systems reveal what no research brief ever could.</p></div>
+      <div class="pstep rv d2 vis"><div class="pstep-n">◇ 02</div><h3>Define</h3><p>Map the flows. Clarify direction. But static Figma screens stopped being the primary communication tool. A working prototype says more than any deck, faster.</p></div>
+      <div class="pstep rv d3 vis"><div class="pstep-n">◇ 03</div><h3>Specify</h3><p>Write the PRD. Every requirement, every edge case, every state. The spec still matters, but it follows the prototype now, not the other way around. What you can articulate is what gets built well.</p></div>
+      <div class="pstep rv d4 vis"><div class="pstep-n">◇ 04</div><h3>Generate</h3><p>Drop the spec into Claude Code or Figma Make. Weeks collapse into hours. AI is getting better at taste, but what actually matters is still my call. That judgment stays mine.</p></div>
+      <div class="pstep rv d5 vis"><div class="pstep-n">◇ 05</div><h3>Ship &amp; Iterate</h3><p>Ship. Watch what happens. AI systems don't behave the same way twice. You can't mock every state in advance. Real use cases only emerge from real data. The loop is the validation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section class="section" id="contact">
+  <div class="cta-sec">
+    <h2 class="rv vis">Let's build something<br><em style="font-style:italic;color:var(--primary)">together.</em></h2>
+    <p class="rv d1 vis">I'm exploring new opportunities and would love to discuss how I can contribute to your team.</p>
+    <div class="clinks rv d2 vis">
+      <a class="clk cp" href="mailto:jm@jmeyerdesign.com">✉ jm@jmeyerdesign.com</a>
+      <a href="https://www.linkedin.com/in/juana-meyer/" class="clk" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a href="javascript:void(0)" class="clk">↓ Resume</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-m">© 2026 Juana Meyer. Designed in Figma, built with intention.</div>
+  <div class="footer-t">"Every pixel is a decision."</div>
+</footer>
+</div><!-- /mainPage -->
+
+<!-- ==================== CASE STUDY 1 ==================== -->
+<div class="cs" id="cs1">
+<div style="height:var(--header-h)"></div>
+<div class="container-narrow" style="padding-top:20px"><button class="cs-back">← Back to Work</button></div>
+<div class="cs-hero" style="max-width:var(--max-w);margin:0 auto 56px">
+  <div class="cs-hero-tb"><div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div><span class="url">curacao.com, Shopify Plus</span></div>
+  <div class="cs-hero-inner thumb-1" style="aspect-ratio:16/8">
+    
+  </div>
+</div>
+<div class="cs-hdr"><div class="pc-num">CASE STUDY 01</div><h1>E-Commerce Platform Migration</h1><p class="cs-tl">Re-platforming a 13-store Latino retail operation from Magento to Shopify Plus, and converting a post-migration traffic drop into a profitability breakthrough.</p></div>
+<div class="cs-meta"><div class="cs-mi"><span class="lb">Role</span><span class="vl">Lead UX Strategist &amp; Architect</span></div><div class="cs-mi"><span class="lb">Timeline</span><span class="vl">8 months</span></div><div class="cs-mi"><span class="lb">Year</span><span class="vl">2024–2025</span></div><div class="cs-mi"><span class="lb">Team</span><span class="vl">Cross-functional, 12 people</span></div></div>
+<div class="cs-body">
+<h2>The Challenge</h2>
+<p>Curacao isn't your average retailer. 13 stores across California, Nevada, and Arizona, serving Latino families who often can't get a credit card anywhere else. Their in-house financing program, <em>CPay</em>, is how customers buy a TV, build credit, and come back. That trust is the actual product.</p>
+<p>The problem: their Magento site hadn't kept up. Every update needed a dev ticket. In a business that refreshes campaigns every two weeks, that's not slow. That's broken.</p>
+<p>But the bigger issue wasn't the platform. It was the architecture underneath. The site was organized like the company's internal departments, not how a customer thinks when they go shopping online. I benchmarked Walmart, Best Buy, and Amazon to prove it.</p>
+<div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Before/after site map comparison</span></div>
+<h2>What I Found</h2>
+<p><em>"Beauty &amp; Men's Grooming"</em> was buried inside Fashion. <em>"Kids &amp; Babies"</em> mixed bassinets with video gaming consoles. Nobody else organized it that way, because customers don't shop that way.</p>
+<p>Every change I made was backed by what the benchmark showed. Toys &amp; Gaming became its own department. Baby became its own. Health &amp; Beauty moved out of Fashion and became a top-level destination. Simple moves, real difference in how people find things.</p>
+<h2>How I Approached It</h2>
+<ol>
+<li><strong>Competitive Benchmark</strong>. Mapped how Walmart, Best Buy, and Amazon structured their categories. Used that as the baseline, not Curacao's org chart.</li>
+<li><strong>IA Restructuring</strong>. Rebuilt the navigation around how customers shop, not how the company is organized. Documented every decision so the external dev agency could actually build it.</li>
+<li><strong>Component-Based Design System</strong>. Built a modular UI library so the marketing team could run campaigns, update catalogs, and manage promotions on their own. No more dev tickets for a banner change.</li>
+</ol>
+</div>
+<div class="cs-iw"><div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Component library &amp; design system overview</span></div></div>
+<div class="cs-body">
+<h2>The Hard Parts</h2>
+<p><em>Agency coordination:</em> We didn't have in-house dev capacity for this, so a third-party agency built it. The problem: everything Curacao knew about their own system lived in people's heads. I had to design the system and document it at the same time, writing requirements that had never been written before, for a team that had never worked with Curacao.</p>
+<p><em>Shopify vs. Curacao's custom logic:</em> Shopify doesn't do custom checkouts. CPay, Curacao's in-house financing, had to live in checkout. The fix was building a dedicated <strong>CPay Shopify app</strong> that plugged into native checkout without replacing it. Then there was the <strong>Club Membership program</strong>. Its discount logic was complex enough that it pushed against Shopify's theme limits too. Every constraint needed a solution that didn't break the platform.</p>
+<p><em>Scope:</em> Ten years of Magento custom code. Every feature had to be evaluated: rebuild it, replace it, or cut it. The answer was different every time.</p>
+<h2>What Changed</h2>
+<p>Before: every campaign update needed a dev ticket. After: the e-commerce team handled it themselves. Bi-weekly campaigns, catalog updates, promotions, all without touching dev. Developer involvement in routine work dropped by about <strong>50%</strong>. For a business that moves at retail speed, that's everything.</p>
+<h2>Post-Launch: The Login Problem</h2>
+<p>We launched without SSO. It came months later. That meant thousands of existing customers hit a new platform with no account on it. I mapped what that actually looked like: four distinct states, each with a different resolution.</p>
+<ol>
+<li><strong>My Account holders (customers with active financing)</strong>. Had a Magento account with an active CPay credit line, but no Shopify account. The most sensitive case: these customers had a financial relationship with Curacao, and losing their login meant losing access to payment history and credit tools.</li>
+<li><strong>Non-My Account holders</strong>. Had a legacy Magento account (purchase history, no credit) but no Shopify account. Key risk: these users might attempt a password reset on the My Account credit portal instead of the Shopify storefront, triggering the wrong system entirely. Account state detected: <em>disabled / invited / declined</em>.</li>
+<li><strong>Customers with an existing Shopify account</strong>. The simplest case. Account state: <em>enabled</em>. Standard login flow, no conflicts.</li>
+<li><strong>New customers creating an account</strong>. Where the system could detect a pre-existing Shopify record from a prior transaction, surfacing a confusing "email already in use" state with no explanation.</li>
+</ol>
+<p>Every state needed its own flow: what the user sees, what the system knows, what happens next. Getting it wrong meant customers couldn't access their financing history. Getting it right meant the transition was invisible.</p>
+<h2>The Results</h2>
+<table class="mtbl"><thead><tr><th>Metric</th><th>Before</th><th>After</th><th>Change</th></tr></thead><tbody>
+<tr><td>Bounce Rate</td><td>42%</td><td>32.67%</td><td class="mp">-22%</td></tr>
+<tr><td>ROAS (Q4)</td><td>$21</td><td>$29.18</td><td class="mp">+39% YoY</td></tr>
+<tr><td>Revenue (Oct)</td><td>Baseline</td><td>+6.6% YoY</td><td class="mp">↑ Despite lower traffic</td></tr>
+<tr><td>Dev dependency</td><td>High</td><td>Near-zero</td><td class="mp">Team autonomy</td></tr>
+</tbody></table>
+<div class="cs-co"><p>Traffic dropped 38% after launch. We knew it would. Re-platforming always does that, and the paid budget got cut hard that year too. But revenue still grew and ROAS hit all-time highs. Less traffic, more money. We stopped buying people who weren't going to buy.</p></div>
+<div class="cs-af"><strong>Artifacts:</strong> Site Maps · Taxonomy Restructure · Migration Strategy Deck · Component Library · Checkout Flow Prototypes · Account State Login Flows</div>
+</div>
+<div class="cs-nx"><div></div><div><span class="nl">Next Project</span><a href="javascript:void(0)" onclick="showCS(&#39;cs2&#39;);return false">Miden Crypto Wallet →</a></div></div>
+</div>
+
+<!-- ==================== CASE STUDY 2 ==================== -->
+<div class="cs active" id="cs2">
+<div style="height:var(--header-h)"></div>
+<div class="container-narrow" style="padding-top:20px"><button class="cs-back">← Back to Work</button></div>
+<div class="cs-hero" style="max-width:var(--max-w);margin:0 auto 56px">
+  <div class="cs-hero-tb"><div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div><span class="url">miden.io, Privacy Wallet</span></div>
+  <iframe
+    srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>Miden Wallet — Hero Graphic</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 100%;
+    aspect-ratio: 16/8;
+    overflow: hidden;
+    background: #060412;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  .scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* ── Background layers ── */
+  .bg-gradient {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 70% at 50% 55%, #0E0820 0%, #060412 70%);
+  }
+
+  .bg-glow-center {
+    position: absolute;
+    width: 55%;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -44%);
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.22) 0%, rgba(139, 92, 246, 0.06) 45%, transparent 70%);
+    animation: glowPulse 4s ease-in-out infinite;
+  }
+
+  .bg-glow-floor {
+    position: absolute;
+    width: 70%;
+    height: 30%;
+    bottom: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(ellipse, rgba(139, 92, 246, 0.12) 0%, transparent 70%);
+  }
+
+  /* Subtle star field */
+  .stars {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.7);
+    animation: twinkle var(--d) ease-in-out infinite var(--delay);
+  }
+
+  /* Grid lines */
+  .grid-lines {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(139,92,246,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139,92,246,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, black 30%, transparent 80%);
+  }
+
+  /* ── Floating orbs ── */
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0;
+    animation: orbFloat var(--d) ease-in-out infinite var(--delay), fadeIn 1s var(--fi) ease forwards;
+  }
+  .orb-1 {
+    width: 28%; aspect-ratio: 1;
+    top: 5%; left: 8%;
+    background: radial-gradient(circle, rgba(139,92,246,0.35), transparent 70%);
+    --d: 7s; --delay: 0s; --fi: 0.3s;
+  }
+  .orb-2 {
+    width: 20%; aspect-ratio: 1;
+    top: 55%; right: 10%;
+    background: radial-gradient(circle, rgba(88,28,220,0.3), transparent 70%);
+    --d: 9s; --delay: -3s; --fi: 0.5s;
+  }
+  .orb-3 {
+    width: 16%; aspect-ratio: 1;
+    bottom: 10%; left: 18%;
+    background: radial-gradient(circle, rgba(167,139,250,0.2), transparent 70%);
+    --d: 11s; --delay: -5s; --fi: 0.8s;
+  }
+
+  /* ── Brand label ── */
+  .brand {
+    position: absolute;
+    top: 7%;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    animation: slideInLeft 0.7s 0.4s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+  .brand-logo {
+    width: 28px;
+    height: 28px;
+    position: relative;
+  }
+  .brand-logo svg { width: 100%; height: 100%; }
+  .brand-name {
+    font-size: clamp(11px, 1.3vw, 16px);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.9);
+    text-transform: uppercase;
+  }
+  .brand-sub {
+    font-size: clamp(9px, 1vw, 12px);
+    color: rgba(167,139,250,0.8);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ── Tag line ── */
+  .tagline {
+    position: absolute;
+    bottom: 9%;
+    left: 5%;
+    opacity: 0;
+    animation: slideInLeft 0.7s 1.6s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+  .tagline h2 {
+    font-size: clamp(13px, 1.6vw, 22px);
+    font-weight: 300;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.02em;
+    line-height: 1.35;
+  }
+  .tagline h2 strong {
+    font-weight: 700;
+    background: linear-gradient(135deg, #a78bfa, #8b5cf6, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .tagline p {
+    font-size: clamp(9px, 1vw, 13px);
+    color: rgba(167,139,250,0.65);
+    margin-top: 5px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── Floating pills (stats) ── */
+  .pill {
+    position: absolute;
+    background: rgba(14,8,32,0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(139,92,246,0.3);
+    border-radius: 100px;
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    opacity: 0;
+    animation: pillPop 0.6s cubic-bezier(0.34,1.56,0.64,1) forwards, pillFloat var(--pf) ease-in-out infinite var(--pfd);
+    white-space: nowrap;
+  }
+  .pill-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .pill-label {
+    font-size: clamp(8px, 0.85vw, 11px);
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .pill-value {
+    font-size: clamp(9px, 0.95vw, 12px);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .pill-privacy {
+    top: 14%;
+    right: 5%;
+    --pf: 5s; --pfd: 0s;
+    animation-delay: 1.8s, 0s;
+  }
+  .pill-privacy .pill-dot { background: #34d399; }
+  .pill-privacy .pill-value { color: #34d399; }
+
+  .pill-network {
+    bottom: 26%;
+    right: 4%;
+    --pf: 6.5s; --pfd: -2s;
+    animation-delay: 2s, 0s;
+  }
+  .pill-network .pill-dot { background: #8b5cf6; }
+  .pill-network .pill-value { color: #c4b5fd; }
+
+  .pill-txn {
+    bottom: 14%;
+    right: 5%;
+    --pf: 7s; --pfd: -4s;
+    animation-delay: 2.2s, 0s;
+  }
+  .pill-txn .pill-dot { background: #f59e0b; }
+  .pill-txn .pill-value { color: #fcd34d; }
+
+  /* ── Phone wrapper ── */
+  .phone-wrap {
+    position: relative;
+    z-index: 10;
+    opacity: 0;
+    animation: phoneEntrance 1s 0.6s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+
+  .phone-float {
+    animation: phoneFloat 5s ease-in-out infinite 1.6s;
+  }
+
+  /* iPhone 14 Pro frame */
+  .phone-frame {
+    position: relative;
+    width: clamp(160px, 20vw, 280px);
+    aspect-ratio: 393/852;
+    border-radius: clamp(28px, 3.5vw, 48px);
+    background: linear-gradient(145deg, #1c1c2e 0%, #0d0d1a 100%);
+    border: 1.5px solid rgba(255,255,255,0.12);
+    box-shadow:
+      0 0 0 0.5px rgba(255,255,255,0.05),
+      0 0 60px rgba(139,92,246,0.25),
+      0 30px 80px rgba(0,0,0,0.6),
+      inset 0 0.5px 0 rgba(255,255,255,0.15);
+    overflow: hidden;
+  }
+
+  /* Side buttons */
+  .phone-frame::before {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 25%;
+    width: 3px;
+    height: 12%;
+    background: linear-gradient(180deg, #2a2a3e, #1a1a2e);
+    border-radius: 0 2px 2px 0;
+    box-shadow: 0 35px 0 rgba(42,42,62,1);
+  }
+
+  /* Dynamic island */
+  .dynamic-island {
+    position: absolute;
+    top: 3.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32%;
+    height: 4.5%;
+    background: #000;
+    border-radius: 100px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 18%;
+    gap: 4px;
+  }
+  .di-cam {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    border: 1.5px solid #2a2a2a;
+    position: relative;
+  }
+  .di-cam::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: #0d0d0d;
+  }
+
+  /* Phone screen */
+  .phone-screen {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #060412 0%, #0a0618 100%);
+    border-radius: inherit;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  /* Screen glow */
+  .screen-glow {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 40%;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139,92,246,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* ── App UI ── */
+  .app-ui {
+    position: absolute;
+    inset: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Status bar */
+  .status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14% 7% 3%;
+    font-size: clamp(6px, 0.75vw, 9px);
+    color: rgba(255,255,255,0.9);
+    font-weight: 600;
+  }
+  .sb-time { font-size: inherit; font-weight: 700; }
+  .sb-icons {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+  .sb-icon { font-size: inherit; opacity: 0.9; }
+
+  /* Top nav */
+  .app-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7% 4%;
+  }
+  .nav-greeting {
+    font-size: clamp(5px, 0.6vw, 8px);
+    color: rgba(167,139,250,0.7);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .nav-name {
+    font-size: clamp(7px, 0.85vw, 11px);
+    font-weight: 700;
+    color: #fff;
+    margin-top: 1px;
+  }
+  .nav-avatar {
+    width: clamp(18px, 2.2vw, 30px);
+    height: clamp(18px, 2.2vw, 30px);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(7px, 0.85vw, 10px);
+    font-weight: 700;
+    color: #fff;
+  }
+
+  /* Balance section */
+  .balance-section {
+    text-align: center;
+    padding: 2% 7% 4%;
+  }
+  .balance-label {
+    font-size: clamp(5px, 0.55vw, 7px);
+    color: rgba(167,139,250,0.6);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .balance-amount {
+    font-size: clamp(18px, 2.4vw, 34px);
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .balance-amount .currency {
+    font-size: 0.55em;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+    vertical-align: super;
+    margin-right: 2px;
+  }
+  .balance-change {
+    font-size: clamp(5px, 0.6vw, 8px);
+    color: #34d399;
+    margin-top: 3px;
+    font-weight: 600;
+  }
+
+  /* CTA buttons */
+  .action-buttons {
+    display: flex;
+    gap: 5%;
+    padding: 0 10% 5%;
+  }
+  .btn-action {
+    flex: 1;
+    padding: 5% 0;
+    border-radius: 100px;
+    font-size: clamp(6px, 0.7vw, 9px);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+  }
+  .btn-send {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(139,92,246,0.4);
+  }
+  .btn-receive {
+    background: rgba(139,92,246,0.12);
+    color: rgba(167,139,250,0.9);
+    border: 1px solid rgba(139,92,246,0.3);
+  }
+
+  /* Divider */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    padding: 0 7% 3%;
+    gap: 8px;
+  }
+  .divider-label {
+    font-size: clamp(5px, 0.55vw, 7px);
+    color: rgba(167,139,250,0.5);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(139,92,246,0.15);
+  }
+
+  /* Token list */
+  .token-list {
+    flex: 1;
+    padding: 0 6%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+  }
+
+  .token-row {
+    display: flex;
+    align-items: center;
+    gap: 6%;
+    padding: 3% 4%;
+    border-radius: clamp(6px, 0.8vw, 10px);
+    background: rgba(139,92,246,0.05);
+    border: 1px solid rgba(139,92,246,0.08);
+    opacity: 0;
+    transform: translateX(8px);
+    animation: tokenSlide 0.5s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+
+  .token-icon {
+    width: clamp(14px, 1.8vw, 24px);
+    height: clamp(14px, 1.8vw, 24px);
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(5px, 0.6vw, 8px);
+    font-weight: 800;
+    color: #fff;
+  }
+
+  .token-info { flex: 1; min-width: 0; }
+  .token-symbol {
+    font-size: clamp(6px, 0.7vw, 9px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+  }
+  .token-name {
+    font-size: clamp(4px, 0.5vw, 6px);
+    color: rgba(255,255,255,0.35);
+    line-height: 1;
+    margin-top: 1px;
+  }
+
+  .token-price { text-align: right; }
+  .token-value {
+    font-size: clamp(6px, 0.7vw, 9px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+  }
+  .token-change {
+    font-size: clamp(4px, 0.5vw, 6px);
+    line-height: 1;
+    margin-top: 1px;
+    font-weight: 600;
+  }
+  .pos { color: #34d399; }
+  .neg { color: #f87171; }
+
+  /* Mini sparkline */
+  .token-spark {
+    width: clamp(20px, 2.5vw, 34px);
+    height: clamp(12px, 1.5vw, 20px);
+    flex-shrink: 0;
+  }
+
+  /* Token-specific timing */
+  .token-row:nth-child(1) { animation-delay: 1.4s; }
+  .token-row:nth-child(2) { animation-delay: 1.55s; }
+  .token-row:nth-child(3) { animation-delay: 1.7s; }
+  .token-row:nth-child(4) { animation-delay: 1.85s; }
+  .token-row:nth-child(5) { animation-delay: 2s; }
+
+  /* Privacy badge */
+  .privacy-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 3% 0 5%;
+    opacity: 0;
+    animation: fadeIn 0.5s 2.3s ease forwards;
+  }
+  .pb-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: #34d399;
+    animation: blinkGreen 2s ease-in-out infinite 2.3s;
+  }
+  .pb-text {
+    font-size: clamp(4px, 0.5vw, 6px);
+    color: rgba(52,211,153,0.7);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ── Animations ── */
+  @keyframes glowPulse {
+    0%, 100% { transform: translate(-50%, -44%) scale(1); opacity: 1; }
+    50% { transform: translate(-50%, -44%) scale(1.08); opacity: 0.85; }
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.9; transform: scale(1.4); }
+  }
+  @keyframes orbFloat {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    33% { transform: translateY(-8%) translateX(4%); }
+    66% { transform: translateY(5%) translateX(-3%); }
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes phoneEntrance {
+    from { opacity: 0; transform: translateY(30px) scale(0.92); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  @keyframes phoneFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  @keyframes pillPop {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes pillFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  @keyframes tokenSlide {
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes blinkGreen {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  @keyframes countUp {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* ── Sparkline path animation ── */
+  .spark-path {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    animation: drawSpark 0.8s ease forwards;
+  }
+  .spark-path-1 { animation-delay: 1.5s; }
+  .spark-path-2 { animation-delay: 1.65s; }
+  .spark-path-3 { animation-delay: 1.8s; }
+  .spark-path-4 { animation-delay: 1.95s; }
+  .spark-path-5 { animation-delay: 2.1s; }
+
+  @keyframes drawSpark {
+    to { stroke-dashoffset: 0; }
+  }
+</style>
+</head>
+<body>
+<div class=&quot;scene&quot;>
+
+  <!-- Background layers -->
+  <div class=&quot;bg-gradient&quot;></div>
+  <div class=&quot;grid-lines&quot;></div>
+  <div class=&quot;bg-glow-center&quot;></div>
+  <div class=&quot;bg-glow-floor&quot;></div>
+
+  <!-- Stars -->
+  <div class=&quot;stars&quot; id=&quot;stars&quot;></div>
+
+  <!-- Floating orbs -->
+  <div class=&quot;orb orb-1&quot;></div>
+  <div class=&quot;orb orb-2&quot;></div>
+  <div class=&quot;orb orb-3&quot;></div>
+
+  <!-- Brand -->
+  <div class=&quot;brand&quot;>
+    <div class=&quot;brand-logo&quot;>
+      <svg viewBox=&quot;0 0 32 32&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;>
+        <polygon points=&quot;16,2 30,10 30,22 16,30 2,22 2,10&quot; fill=&quot;none&quot; stroke=&quot;rgba(139,92,246,0.6)&quot; stroke-width=&quot;1.5&quot;/>
+        <polygon points=&quot;16,6 26,12 26,20 16,26 6,20 6,12&quot; fill=&quot;rgba(139,92,246,0.15)&quot; stroke=&quot;rgba(139,92,246,0.9)&quot; stroke-width=&quot;1&quot;/>
+        <circle cx=&quot;16&quot; cy=&quot;16&quot; r=&quot;4&quot; fill=&quot;#8b5cf6&quot;/>
+      </svg>
+    </div>
+    <div>
+      <div class=&quot;brand-name&quot;>Polygon Miden</div>
+      <div class=&quot;brand-sub&quot;>Zero-Knowledge Wallet</div>
+    </div>
+  </div>
+
+  <!-- Tagline -->
+  <div class=&quot;tagline&quot;>
+    <h2>Privacy-first<br><strong>crypto wallet</strong></h2>
+    <p>Designed for Polygon Miden · 2024</p>
+  </div>
+
+  <!-- Floating pills -->
+  <div class=&quot;pill pill-privacy&quot;>
+    <div class=&quot;pill-dot&quot;></div>
+    <span class=&quot;pill-label&quot;>Privacy</span>
+    <span class=&quot;pill-value&quot;>Active</span>
+  </div>
+  <div class=&quot;pill pill-network&quot;>
+    <div class=&quot;pill-dot&quot;></div>
+    <span class=&quot;pill-label&quot;>Network</span>
+    <span class=&quot;pill-value&quot;>Miden Testnet</span>
+  </div>
+  <div class=&quot;pill pill-txn&quot;>
+    <div class=&quot;pill-dot&quot;></div>
+    <span class=&quot;pill-label&quot;>Last Tx</span>
+    <span class=&quot;pill-value&quot;>+$420.00</span>
+  </div>
+
+  <!-- Phone -->
+  <div class=&quot;phone-wrap&quot;>
+    <div class=&quot;phone-float&quot;>
+      <div class=&quot;phone-frame&quot;>
+
+        <!-- Reflection highlight -->
+        <div style=&quot;position:absolute;top:0;left:10%;right:10%;height:40%;
+          background:linear-gradient(180deg,rgba(255,255,255,0.04) 0%,transparent 100%);
+          border-radius:inherit;pointer-events:none;z-index:30;&quot;></div>
+
+        <div class=&quot;phone-screen&quot;>
+          <div class=&quot;screen-glow&quot;></div>
+
+          <!-- Dynamic Island -->
+          <div class=&quot;dynamic-island&quot;>
+            <div class=&quot;di-cam&quot;></div>
+          </div>
+
+          <div class=&quot;app-ui&quot;>
+
+            <!-- Status bar -->
+            <div class=&quot;status-bar&quot;>
+              <span class=&quot;sb-time&quot;>9:41</span>
+              <div class=&quot;sb-icons&quot;>
+                <span class=&quot;sb-icon&quot;>▂▄▆</span>
+                <span class=&quot;sb-icon&quot;>WiFi</span>
+                <span class=&quot;sb-icon&quot;>⬛</span>
+              </div>
+            </div>
+
+            <!-- Nav -->
+            <div class=&quot;app-nav&quot;>
+              <div>
+                <div class=&quot;nav-greeting&quot;>Good morning</div>
+                <div class=&quot;nav-name&quot;>Juana M.</div>
+              </div>
+              <div class=&quot;nav-avatar&quot;>JM</div>
+            </div>
+
+            <!-- Balance -->
+            <div class=&quot;balance-section&quot;>
+              <div class=&quot;balance-label&quot;>Total Balance</div>
+              <div class=&quot;balance-amount&quot; id=&quot;balanceAmt&quot;>
+                <span class=&quot;currency&quot;>$</span><span id=&quot;balNum&quot;>0.00</span>
+              </div>
+              <div class=&quot;balance-change&quot;>↑ +$312.44 (12.7%) today</div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class=&quot;action-buttons&quot;>
+              <div class=&quot;btn-action btn-send&quot;>Send</div>
+              <div class=&quot;btn-action btn-receive&quot;>Receive</div>
+            </div>
+
+            <!-- Divider -->
+            <div class=&quot;section-divider&quot;>
+              <span class=&quot;divider-label&quot;>Assets</span>
+              <div class=&quot;divider-line&quot;></div>
+            </div>
+
+            <!-- Token list -->
+            <div class=&quot;token-list&quot;>
+
+              <div class=&quot;token-row&quot;>
+                <div class=&quot;token-icon&quot; style=&quot;background:linear-gradient(135deg,#8247e5,#6b21a8);&quot;>POL</div>
+                <div class=&quot;token-info&quot;>
+                  <div class=&quot;token-symbol&quot;>POL</div>
+                  <div class=&quot;token-name&quot;>Polygon</div>
+                </div>
+                <svg class=&quot;token-spark&quot; viewBox=&quot;0 0 34 20&quot; fill=&quot;none&quot;>
+                  <path class=&quot;spark-path spark-path-1&quot; d=&quot;M2 15 L7 12 L12 14 L17 8 L22 10 L27 6 L32 4&quot; stroke=&quot;#8b5cf6&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>
+                </svg>
+                <div class=&quot;token-price&quot;>
+                  <div class=&quot;token-value&quot;>$1,204</div>
+                  <div class=&quot;token-change pos&quot;>+8.3%</div>
+                </div>
+              </div>
+
+              <div class=&quot;token-row&quot;>
+                <div class=&quot;token-icon&quot; style=&quot;background:linear-gradient(135deg,#627eea,#3c4fe0);&quot;>ETH</div>
+                <div class=&quot;token-info&quot;>
+                  <div class=&quot;token-symbol&quot;>ETH</div>
+                  <div class=&quot;token-name&quot;>Ethereum</div>
+                </div>
+                <svg class=&quot;token-spark&quot; viewBox=&quot;0 0 34 20&quot; fill=&quot;none&quot;>
+                  <path class=&quot;spark-path spark-path-2&quot; d=&quot;M2 12 L7 10 L12 13 L17 9 L22 11 L27 7 L32 5&quot; stroke=&quot;#34d399&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>
+                </svg>
+                <div class=&quot;token-price&quot;>
+                  <div class=&quot;token-value&quot;>$842</div>
+                  <div class=&quot;token-change pos&quot;>+4.1%</div>
+                </div>
+              </div>
+
+              <div class=&quot;token-row&quot;>
+                <div class=&quot;token-icon&quot; style=&quot;background:linear-gradient(135deg,#f7931a,#e55d1b);&quot;>BTC</div>
+                <div class=&quot;token-info&quot;>
+                  <div class=&quot;token-symbol&quot;>BTC</div>
+                  <div class=&quot;token-name&quot;>Bitcoin</div>
+                </div>
+                <svg class=&quot;token-spark&quot; viewBox=&quot;0 0 34 20&quot; fill=&quot;none&quot;>
+                  <path class=&quot;spark-path spark-path-3&quot; d=&quot;M2 8 L7 11 L12 9 L17 14 L22 12 L27 15 L32 13&quot; stroke=&quot;#f87171&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>
+                </svg>
+                <div class=&quot;token-price&quot;>
+                  <div class=&quot;token-value&quot;>$507</div>
+                  <div class=&quot;token-change neg&quot;>-2.1%</div>
+                </div>
+              </div>
+
+              <div class=&quot;token-row&quot;>
+                <div class=&quot;token-icon&quot; style=&quot;background:linear-gradient(135deg,#00b4d8,#0077b6);&quot;>SHIB</div>
+                <div class=&quot;token-info&quot;>
+                  <div class=&quot;token-symbol&quot;>SHIB</div>
+                  <div class=&quot;token-name&quot;>Shiba Inu</div>
+                </div>
+                <svg class=&quot;token-spark&quot; viewBox=&quot;0 0 34 20&quot; fill=&quot;none&quot;>
+                  <path class=&quot;spark-path spark-path-4&quot; d=&quot;M2 14 L7 10 L12 12 L17 7 L22 9 L27 5 L32 7&quot; stroke=&quot;#34d399&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>
+                </svg>
+                <div class=&quot;token-price&quot;>
+                  <div class=&quot;token-value&quot;>$143</div>
+                  <div class=&quot;token-change pos&quot;>+11.2%</div>
+                </div>
+              </div>
+
+              <div class=&quot;token-row&quot;>
+                <div class=&quot;token-icon&quot; style=&quot;background:linear-gradient(135deg,#a78bfa,#7c3aed);&quot;>BNB</div>
+                <div class=&quot;token-info&quot;>
+                  <div class=&quot;token-symbol&quot;>BNB</div>
+                  <div class=&quot;token-name&quot;>BNB Chain</div>
+                </div>
+                <svg class=&quot;token-spark&quot; viewBox=&quot;0 0 34 20&quot; fill=&quot;none&quot;>
+                  <path class=&quot;spark-path spark-path-5&quot; d=&quot;M2 10 L7 8 L12 11 L17 7 L22 9 L27 6 L32 4&quot; stroke=&quot;#8b5cf6&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/>
+                </svg>
+                <div class=&quot;token-price&quot;>
+                  <div class=&quot;token-value&quot;>$67</div>
+                  <div class=&quot;token-change pos&quot;>+1.8%</div>
+                </div>
+              </div>
+
+            </div><!-- /token-list -->
+
+            <!-- Privacy badge -->
+            <div class=&quot;privacy-badge&quot;>
+              <div class=&quot;pb-dot&quot;></div>
+              <span class=&quot;pb-text&quot;>Zero-Knowledge Protected</span>
+            </div>
+
+          </div><!-- /app-ui -->
+        </div><!-- /phone-screen -->
+      </div><!-- /phone-frame -->
+    </div><!-- /phone-float -->
+  </div><!-- /phone-wrap -->
+
+</div><!-- /scene -->
+
+<script>
+  // Generate stars
+  (function(){
+    const container = document.getElementById('stars');
+    const count = 60;
+    for (let i = 0; i < count; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      const size = Math.random() * 2 + 0.5;
+      star.style.cssText = `
+        width:${size}px;
+        height:${size}px;
+        top:${Math.random()*100}%;
+        left:${Math.random()*100}%;
+        --d:${2 + Math.random()*4}s;
+        --delay:-${Math.random()*4}s;
+        opacity:${Math.random()*0.5};
+      `;
+      container.appendChild(star);
+    }
+  })();
+
+  // Animate balance counter
+  (function(){
+    const target = 2763.08;
+    const el = document.getElementById('balNum');
+    const duration = 1800;
+    const startDelay = 900;
+    let start = null;
+
+    function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+    function tick(ts) {
+      if (!start) start = ts;
+      const elapsed = ts - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const val = target * easeOut(progress);
+      el.textContent = val.toLocaleString('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+
+    setTimeout(() => requestAnimationFrame(tick), startDelay);
+  })();
+</script>
+</body>
+</html>
+
+"
+    style="width:100%;aspect-ratio:16/8;border:none;display:block;"
+    scrolling="no"
+    title="Miden wallet — hero screen mockup">
+  </iframe>
+</div>
+<div class="cs-hdr"><div class="pc-num">CASE STUDY 02</div><h1>Miden Crypto Wallet</h1><p class="cs-tl">A design pitch for Fat Solutions. Making Zero-Knowledge privacy feel like sending a text message, not running a cryptographic protocol.</p></div>
+<div class="cs-meta"><div class="cs-mi"><span class="lb">Role</span><span class="vl">Lead Product Designer</span></div><div class="cs-mi"><span class="lb">Type</span><span class="vl">Agency Pitch</span></div><div class="cs-mi"><span class="lb">Agency</span><span class="vl">Fat Solutions</span></div><div class="cs-mi"><span class="lb">Client</span><span class="vl">Miden (Polygon)</span></div><div class="cs-mi"><span class="lb">Timeline</span><span class="vl">2 months</span></div><div class="cs-mi"><span class="lb">Team</span><span class="vl">Core team of 5</span></div></div>
+<div class="cs-body">
+<h2>The Context</h2>
+<p><strong>Fat Solutions</strong> brought me in on a pitch. The client: <strong>Miden</strong>, a privacy-first wallet running on the Polygon blockchain. The ask: make Zero-Knowledge privacy accessible to people who've never heard the words "Zero-Knowledge." Two months. Let's go.</p>
+<h2>The Challenge</h2>
+<p>ZK proofs are remarkable. Transactions verified without exposing any underlying data. Privacy at the protocol level, built in, not bolted on. The problem: every wallet in the space designs like the user has a computer science degree. The complexity surfaces everywhere: in the terminology, the flows, the error states. It shuts people out before they ever get started.</p>
+<h2>The Competitive Landscape</h2>
+<p>The benchmark covered App Store and Google Play data across four wallets (Feb 2024–Feb 2025). The pattern: the market leader carries significant UX debt, and the alternatives either fail on mobile or lack the adoption to validate their approach at scale.</p>
+<table class="mtbl"><thead><tr><th>Wallet</th><th>Score (Android / iOS)</th><th>Avg Stars</th><th>Reviews</th><th>Key Signal</th></tr></thead><tbody>
+<tr><td><strong>MetaMask</strong></td><td>72 / 65</td><td>3.6 / 3.3</td><td>21,640+</td><td class="mp">~5,500 one-star reviews (~26%), dominant but deeply frustrating</td></tr>
+<tr><td><strong>Phantom</strong></td><td>81 / 53</td><td>4.0 / 2.7</td><td>10,805+</td><td class="mp">Strong Android; iOS feels like a different, worse product</td></tr>
+<tr><td><strong>Sentz</strong></td><td>73 / 53</td><td>3.7 / 2.7</td><td>~604</td><td class="mp">Same iOS gap as Phantom, mobile is the industry's blind spot</td></tr>
+<tr><td><strong>Payy</strong></td><td>72 / 100</td><td>3.6 / 5.0</td><td>~21</td><td class="mp">Near-perfect satisfaction, but no user base yet to prove it</td></tr>
+</tbody></table>
+<p>MetaMask owns the market. It also has 26% one-star reviews. Phantom is the best experience on Android and falls apart on iOS. The smaller players haven't proven anything at scale yet. The gap was obvious: nobody had built a privacy wallet that actually respected the user's time.</p>
+<h2>The Insight</h2>
+<p>The breakthrough was reframing what a ZK note actually is. It's not a cryptographic object. It's a message. A private one. <em>Public:</em> share your address. <em>Private:</em> generate a one-time ZK note, send it through WhatsApp, iMessage, Telegram, whatever the recipient already uses. Privacy becomes <em>how</em> you send, not a setting you configure first.</p>
+<p>Worked this out with Fat Solutions' engineering team. Once we had the mental model right, the rest of the design snapped into place.</p>
+<div style="margin:32px 0">
+  <iframe
+    srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>Miden — Competitive Analysis</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: #060412;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  .scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 4.5% 5.5%;
+    overflow: hidden;
+  }
+
+  /* Background */
+  .bg { position: absolute; inset: 0; background: radial-gradient(ellipse 90% 80% at 40% 50%, #0d0720 0%, #060412 65%); }
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(139,92,246,0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139,92,246,0.045) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse 80% 90% at 50% 50%, black 20%, transparent 75%);
+  }
+  .glow-tl {
+    position: absolute; top: -10%; left: -8%;
+    width: 45%; aspect-ratio: 1;
+    background: radial-gradient(circle, rgba(139,92,246,0.1), transparent 70%);
+    filter: blur(50px);
+    animation: glowDrift 9s ease-in-out infinite;
+  }
+  .glow-br {
+    position: absolute; bottom: -15%; right: -8%;
+    width: 40%; aspect-ratio: 1;
+    background: radial-gradient(circle, rgba(109,40,217,0.12), transparent 70%);
+    filter: blur(50px);
+    animation: glowDrift 12s ease-in-out infinite reverse;
+  }
+
+  /* Header */
+  .header {
+    position: relative; z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 3%;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.2s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+  .section-tag {
+    font-size: clamp(7px, 0.72vw, 10px);
+    color: rgba(167,139,250,0.7);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-tag::before {
+    content: ''; display: inline-block;
+    width: 18px; height: 1px;
+    background: rgba(167,139,250,0.5);
+  }
+  .header h1 {
+    font-size: clamp(13px, 1.7vw, 24px);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+  .header h1 span {
+    background: linear-gradient(135deg, #c4b5fd, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .legend {
+    display: flex;
+    gap: clamp(10px, 1.4vw, 18px);
+    align-items: center;
+    padding-bottom: 3px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: clamp(6px, 0.62vw, 9px);
+    color: rgba(255,255,255,0.45);
+  }
+  .legend-dot { width: 7px; height: 7px; border-radius: 50%; }
+
+  /* Grid */
+  .comp-grid {
+    position: relative; z-index: 2;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(8px, 1.1vw, 14px);
+    min-height: 0;
+  }
+
+  /* Card */
+  .wallet-card {
+    background: rgba(11,6,26,0.75);
+    backdrop-filter: blur(24px);
+    border-radius: clamp(10px, 1.3vw, 16px);
+    border: 1px solid rgba(139,92,246,0.14);
+    padding: clamp(10px, 1.3vw, 18px);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.25s;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+  .wallet-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--accent);
+    opacity: 0.7;
+    border-radius: 16px 16px 0 0;
+  }
+  .wallet-card:hover {
+    border-color: rgba(139,92,246,0.38);
+    box-shadow: 0 10px 40px rgba(139,92,246,0.14);
+    transform: translateY(-4px);
+  }
+  .wallet-card:nth-child(1) { animation: cardReveal 0.55s 0.45s cubic-bezier(0.22,1,0.36,1) forwards; }
+  .wallet-card:nth-child(2) { animation: cardReveal 0.55s 0.62s cubic-bezier(0.22,1,0.36,1) forwards; }
+  .wallet-card:nth-child(3) { animation: cardReveal 0.55s 0.79s cubic-bezier(0.22,1,0.36,1) forwards; }
+  .wallet-card:nth-child(4) { animation: cardReveal 0.55s 0.96s cubic-bezier(0.22,1,0.36,1) forwards; }
+
+  /* Card top: icon + gauge side by side */
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: clamp(8px, 1vw, 14px);
+  }
+  .card-identity {}
+  .wallet-icon {
+    width: clamp(28px, 3.5vw, 46px);
+    height: clamp(28px, 3.5vw, 46px);
+    border-radius: clamp(7px, 0.9vw, 12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(10px, 1.3vw, 17px);
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .wallet-name {
+    font-size: clamp(10px, 1.2vw, 16px);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+  }
+  .wallet-type {
+    font-size: clamp(6px, 0.62vw, 8px);
+    color: rgba(255,255,255,0.35);
+    margin-top: 3px;
+    letter-spacing: 0.04em;
+  }
+
+  /* SVG arc gauge */
+  .gauge-wrap {
+    position: relative;
+    flex-shrink: 0;
+  }
+  .gauge-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .gauge-score {
+    font-size: clamp(13px, 1.7vw, 22px);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .gauge-max {
+    font-size: clamp(5px, 0.55vw, 7px);
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.04em;
+    margin-top: 1px;
+  }
+
+  /* Score bars section */
+  .metrics {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(5px, 0.7vw, 9px);
+    margin-bottom: clamp(8px, 1vw, 12px);
+  }
+  .metric-row {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .metric-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .metric-label {
+    font-size: clamp(5px, 0.58vw, 7.5px);
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .metric-vals {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+  }
+  .mv { font-size: clamp(7px, 0.85vw, 11px); font-weight: 800; }
+  .mp { font-size: clamp(5px, 0.5vw, 6px); color: rgba(255,255,255,0.3); }
+
+  .bar-track {
+    height: clamp(3px, 0.38vw, 5px);
+    background: rgba(255,255,255,0.06);
+    border-radius: 100px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 100px;
+    width: 0%;
+    transition: width 1.1s cubic-bezier(0.22,1,0.36,1);
+  }
+
+  /* Star rating */
+  .rating-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: clamp(6px, 0.9vw, 12px);
+    padding: clamp(6px, 0.8vw, 10px) 0;
+    border-top: 1px solid rgba(139,92,246,0.1);
+    border-bottom: 1px solid rgba(139,92,246,0.1);
+  }
+  .stars { color: #fbbf24; font-size: clamp(7px, 0.9vw, 12px); letter-spacing: 1px; }
+  .rating-num { font-size: clamp(9px, 1.1vw, 14px); font-weight: 800; color: #fff; }
+  .rating-ios { font-size: clamp(5px, 0.55vw, 7px); color: rgba(255,255,255,0.3); margin-left: auto; }
+
+  /* Tags */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(3px, 0.4vw, 5px);
+    margin-bottom: clamp(6px, 0.9vw, 10px);
+  }
+  .tag {
+    padding: clamp(2px,0.25vw,3px) clamp(5px,0.65vw,9px);
+    border-radius: 100px;
+    font-size: clamp(5px, 0.54vw, 7px);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    opacity: 0;
+    animation: tagPop 0.4s cubic-bezier(0.34,1.56,0.64,1) forwards;
+  }
+  .tag-pro {
+    background: rgba(52,211,153,0.12);
+    border: 1px solid rgba(52,211,153,0.3);
+    color: rgba(52,211,153,0.9);
+  }
+  .tag-con {
+    background: rgba(248,113,113,0.1);
+    border: 1px solid rgba(248,113,113,0.25);
+    color: rgba(248,113,113,0.85);
+  }
+
+  /* Reviews / bottom */
+  .card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+  .reviews-label { font-size: clamp(5px, 0.52vw, 7px); color: rgba(255,255,255,0.25); letter-spacing: 0.05em; }
+  .reviews-num { font-size: clamp(8px, 0.95vw, 12px); font-weight: 800; color: rgba(255,255,255,0.55); }
+
+  /* Footer */
+  .footer {
+    position: relative; z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 2.5%;
+    opacity: 0;
+    animation: fadeUp 0.5s 1.8s ease forwards;
+  }
+  .footer span { font-size: clamp(5px, 0.56vw, 7.5px); color: rgba(255,255,255,0.18); letter-spacing: 0.08em; text-transform: uppercase; }
+  .footer-sep { width: 1px; height: 8px; background: rgba(255,255,255,0.1); }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes cardReveal {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes glowDrift {
+    0%,100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(3%,4%) scale(1.1); }
+  }
+  @keyframes tagPop {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes arcDraw {
+    to { stroke-dashoffset: var(--target-offset); }
+  }
+  @keyframes numCount {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+<div class=&quot;scene&quot;>
+  <div class=&quot;bg&quot;></div>
+  <div class=&quot;grid&quot;></div>
+  <div class=&quot;glow-tl&quot;></div>
+  <div class=&quot;glow-br&quot;></div>
+
+  <div class=&quot;header&quot;>
+    <div>
+      <div class=&quot;section-tag&quot;>Competitive Analysis</div>
+      <h1>Wallet App Market<br><span>UX &amp; Store Scores</span></h1>
+    </div>
+    <div class=&quot;legend&quot;>
+      <div class=&quot;legend-item&quot;><div class=&quot;legend-dot&quot; style=&quot;background:#60a5fa;&quot;></div>Android Score</div>
+      <div class=&quot;legend-item&quot;><div class=&quot;legend-dot&quot; style=&quot;background:#a78bfa;&quot;></div>iOS Score</div>
+      <div class=&quot;legend-item&quot;><div class=&quot;legend-dot&quot; style=&quot;background:#fbbf24;&quot;></div>User Rating</div>
+    </div>
+  </div>
+
+  <div class=&quot;comp-grid&quot;>
+
+    <!-- ── PHANTOM ── -->
+    <div class=&quot;wallet-card&quot; style=&quot;--accent:#8b5cf6;&quot;>
+      <div class=&quot;card-top&quot;>
+        <div class=&quot;card-identity&quot;>
+          <div class=&quot;wallet-icon&quot; style=&quot;background:linear-gradient(135deg,#4c1d95,#7c3aed);&quot;>Ph</div>
+          <div class=&quot;wallet-name&quot;>Phantom</div>
+          <div class=&quot;wallet-type&quot;>Multi-chain · Solana</div>
+        </div>
+        <div class=&quot;gauge-wrap&quot;>
+          <svg width=&quot;clamp(60px,7.5vw,90px)&quot; height=&quot;clamp(60px,7.5vw,90px)&quot; viewBox=&quot;0 0 88 88&quot; style=&quot;width:clamp(60px,7.5vw,90px);height:clamp(60px,7.5vw,90px);&quot;>
+            <circle cx=&quot;44&quot; cy=&quot;44&quot; r=&quot;34&quot; fill=&quot;none&quot; stroke=&quot;rgba(139,92,246,0.1)&quot; stroke-width=&quot;6&quot;/>
+            <circle cx=&quot;44&quot; cy=&quot;44&quot; r=&quot;34&quot; fill=&quot;none&quot; stroke=&quot;#8b5cf6&quot; stroke-width=&quot;6&quot;
+              stroke-linecap=&quot;round&quot; stroke-dasharray=&quot;213.6&quot; stroke-dashoffset=&quot;213.6&quot;
+              transform=&quot;rotate(-90 44 44)&quot;
+              class=&quot;arc-ring&quot; data-score=&quot;67&quot; style=&quot;--target-offset:70.5;&quot;/>
+            <!-- Inner detail ring -->
+            <circle cx=&quot;44&quot; cy=&quot;44&quot; r=&quot;26&quot; fill=&quot;none&quot; stroke=&quot;rgba(139,92,246,0.08)&quot; stroke-width=&quot;3&quot;/>
+          </svg>
+          <div class=&quot;gauge-label&quot;>
+            <span class=&quot;gauge-score&quot; data-target=&quot;67&quot;>0</span>
+            <span class=&quot;gauge-max&quot;>/ 100</span>
+          </div>
+        </div>
+      </div>
+
+      <div class=&quot;metrics&quot;>
+        <div class=&quot;metric-row&quot;>
+          <div class=&quot;metric-header&quot;>
+            <span class=&quot;metric-label&quot;>Android</span>
+            <div class=&quot;metric-vals&quot;><span class=&quot;mv&quot; style=&quot;color:#60a5fa;&quot;>81</span><span class=&quot;mp&quot;>/100</span></div>
+          </div>
+          <div class=&quot;bar-track&quot;><div class=&quot;bar-fill&quot; data-w=&quot;81&quot; style=&quot;background:linear-gradient(90deg,#3b82f6,#60a5fa);&quot;></div></div>
+        </div>
+        <div class=&quot;metric-row&quot;>
+          <div class=&quot;metric-header&quot;>
+            <span class=&quot;metric-label&quot;>iOS</span>
+            <div class=&quot;metric-vals&quot;><span class=&quot;mv&quot; style=&quot;color:#a78bfa;&quot;>53</span><span class=&quot;mp&quot;>/100</span></div>
+          </div>
+          <div class=&quot;bar-track&quot;><div class=&quot;bar-fill&quot; data-w=&quot;53&quot; style=&quot;background:linear-gradient(90deg,#7c3aed,#a78bfa);&quot;></div></div>
+        </div>
+      </div>
+
+      <div class=&quot;rating-row&quot;>
+        <span class=&quot;stars&quot;>★★★★☆</span>
+        <span class=&quot;rating-num&quot;>4.0</span>
+        <span class=&quot;rating-ios&quot;>2.7 iOS</span>
+      </div>
+
+      <div class=&quot;tags&quot;>
+        <span class=&quot;tag tag-pro&quot; style=&quot;animation-delay:1.4s;&quot;>Large user base</span>
+        <span class=&quot;tag tag-pro&quot; style=&quot;animation-delay:1.5s;&quot;>Multi-chain</span>
+        <span class=&quot;tag tag-con&quot; style=&quot;animation-delay:1.6s;&quot;>Weak iOS UX</span>
+        <span class=&quot;tag tag-con&quot; style=&quot;animation-delay:1.7s;&quot;>No ZK privacy</span>
+      </div>
+
+      <div class=&quot;card-foot&quot;>
+        <span class=&quot;reviews-label&quot;>Total Reviews</span>
+        <span class=&quot;reviews-num&quot;>10,805</span>
+      </div>
+    </div>
+
+    <!-- ── PAYY ── -->
+    <div class=&quot;wallet-card&quot; style=&quot;--accent:#06b6d4;&quot;>
+      <div class=&quot;card-top&quot;>
+        <div class=&quot;card-identity&quot;>
+          <div class=&quot;wallet-icon&quot; style=&quot;background:linear-gradient(135deg,#0c4a6e,#0891b2);&quot;>Pa</div>
+          <div class=&quot;wallet-name&quot;>Payy</div>
+          <div class=&quot;wallet-type&quot;>Privacy · ZK-based</div>
+        </div>
+        <div class=&quot;gauge-wrap&quot;>
+          <svg width=&quot;clamp(60px,7.5vw,90px)&quot; height=&quot;clamp(60px,7.5vw,90px)&quot; viewBox=&quot;0 0 88 88&quot; style=&quot;width:clamp(60px,7.5vw,90px);height:clamp(60px,7.5vw,90px);&quot;>
+            <circle cx=&quot;44&quot; cy=&quot;44&quot; r=&quot;34&quot; fill=&quot;none&quot; stroke=&quot;rgba(6,182,212,0.1)&quot; stroke-width=&quot;6&quot;/>
+            <circle cx=&quot;44&quot; cy=&quot;44&quot; r=&quot;34&quot; fill=&quot;none&quot; stroke=&quot;#06b6d4&quot; stroke-width=&quot;6&quot;
+              stroke-linecap=&quot;round&quot; stroke-dasharray=&quot;213.6&quot; stroke-dashoffset=&quot;213.6&quot;
+              transform=&quot;rotate(-90 44 44)&quot;
+              class=&quot;arc-ring&quot; data-score=&quot;86&quot; style=&quot;--target-offset:29.9;&quot;/>
+            <circle cx=&quot;44&quot; cy=&quot;44&quot; r=&quot;26&quot; fill=&quot;none&quot; stroke=&quot;rgba(6,182,212,0.08)&quot; stroke-width=&quot;3&quot;/>
+          </svg>
+          <div class=&quot;gauge-label&quot;>
+            <span class=&quot;gauge-score&quot; data-target=&quot;86&quot;>0</span>
+            <span class=&quot;gauge-max&quot;>/ 100</span>
+          </div>
+        </div>
+      </div>
+
+      <div class=&quot;metrics&quot;>
+        <div class=&quot;metric-row&quot;>
+          <div class=&quot;metric-header&quot;>
+            <span class=&quot;metric-label&quot;>Android</span>
+            <div class=&quot;metric-vals&quot;><span class=&quot;mv&quot; style=&quot;color:#60a5fa;&quot;>72</span><span class=&quot;mp&quot;>/100</span></div>
+          </div>
+          <div class=&quot;bar-track&quot;><div class=&quot;bar-fill&quot; data-w=&quot;72&quot; style=&quot;background:linear-gradient(90deg,#0369a1,#38bdf8);&quot;></div></div>
+        </div>
+        <div class=&quot;metric-row&quot;>
+          <div class=&quot;metric-header&quot;>
+            <span class=&quot;metric-label&quot;>iOS</span>
+            <div class=&quot;metric-vals&quot;><span class=&quot;mv&quot; style=&quot;color:#a78bfa;&quot;>100</span><span class=&quot;mp&quot;>/100</span></div>
+          </div>
+          <div class=&quot;bar-track&quot;><div class=&quot;bar-fill&quot; data-w=&quot;100&quot; style=&quot;background:linear-gradient(90deg,#0891b2,#06b6d4);&quot;></div></div>
+        </div>
+      </div>
+
+      <div class=&quot;rating-row&quot;>
+        <span class=&quot;stars&quot;>★★★★☆</span>
+        <span class=&quot;rating-num&quot;>3.7</span>
+        <span class=&quot;rating-ios&quot;>5.0 iOS</span>
+      </div>
+
+      <div class=&quot;tags&quot;>
+        <span class=&quot;tag tag-pro&quot; style=&quot;animation-delay:1.55s;&quot;>ZK Privacy</span>
+        <span class=&quot;tag tag-pro&quot; style=&quot;animation-delay:1.65s;&quot;>iOS optimized</span>
+        <span class=&quot;tag tag-con&quot; style=&quot;animation-delay:1.75s;&quot;>Small user base</span>
+        <span class=&quot;tag tag-con&quot; style=&quot;animation-delay:1.85s;&quot;>Limited chains</span>
+      </div>
+
+      <div class=&quot;card-foot&quot;>
+        <span class=&quot;reviews-label&quot;>Total Reviews</span>
+        <span class=&quot;reviews-num&quot;>~604</span>
+      </div>
+    </div>
+
+    <!-- ── SENTZ ── -->
+    <div class=&quot;wallet-card&quot; style=&quot;--accent:#10b981;&quot;>
+      <div class=&quot;card-top&quot;>
+        <div class=&quot;card-identity&quot;>
+          <div class=&quot;wallet-icon&quot; style=&quot;background:linear-gradient(135deg,#064e3b,#059669);&quot;>Sz</div>
+          <div class=&quot;wallet-name&quot;>Sentz</div>
+          <div class=&quot;wallet-type&quot;>Privacy · Zcash</div>
+        </div>
+        <div class=&quot;gauge-wrap&quot;>
+          <svg width=&quot;clamp(60px,7.5vw,90px)&quot; height=&quot;clamp(60px,7.5vw,90px)&quot; viewBox=&quot;0 0 88 88&quot; style=&quot;width:clamp(60px,7.5vw,90px);height:clamp(60px,7.5vw,90px);&quot;>
+            <circle cx=&quot;44&quot; cy=&quot;44&quot; r=&quot;34&quot; fill=&quot;none&quot; stroke=&quot;rgba(16,185,129,0.1)&quot; stroke-width=&quot;6&quot;/>
+            <circle cx=&quot;44&quot; cy=&quot;44&quot; r=&quot;34&quot; fill=&quot;none&quot; stroke=&quot;#10b981&quot; stroke-width=&quot;6&quot;
+              stroke-linecap=&quot;round&quot; stroke-dasharray=&quot;213.6&quot; stroke-dashoffset=&quot;213.6&quot;
+              transform=&quot;rotate(-90 44 44)&quot;
+              class=&quot;arc-ring&quot; data-score=&quot;63&quot; style=&quot;--target-offset:79.0;&quot;/>
+            <circle cx=&quot;44&quot; cy=&quot;44&quot; r=&quot;26&quot; fill=&quot;none&quot; stroke=&quot;rgba(16,185,129,0.08)&quot; stroke-width=&quot;3&quot;/>
+          </svg>
+          <div class=&quot;gauge-label&quot;>
+            <span class=&quot;gauge-score&quot; data-target=&quot;63&quot;>0</span>
+            <span class=&quot;gauge-max&quot;>/ 100</span>
+          </div>
+        </div>
+      </div>
+
+      <div class=&quot;metrics&quot;>
+        <div class=&quot;metric-row&quot;>
+          <div class=&quot;metric-header&quot;>
+            <span class=&quot;metric-label&quot;>Android</span>
+            <div class=&quot;metric-vals&quot;><span class=&quot;mv&quot; style=&quot;color:#60a5fa;&quot;>73</span><span class=&quot;mp&quot;>/100</span></div>
+          </div>
+          <div class=&quot;bar-track&quot;><div class=&quot;bar-fill&quot; data-w=&quot;73&quot; style=&quot;background:linear-gradient(90deg,#065f46,#10b981);&quot;></div></div>
+        </div>
+        <div class=&quot;metric-row&quot;>
+          <div class=&quot;metric-header&quot;>
+            <span class=&quot;metric-label&quot;>iOS</span>
+            <div class=&quot;metric-vals&quot;><span class=&quot;mv&quot; style=&quot;color:#a78bfa;&quot;>53</span><span class=&quot;mp&quot;>/100</span></div>
+          </div>
+          <div class=&quot;bar-track&quot;><div class=&quot;bar-fill&quot; data-w=&quot;53&quot; style=&quot;background:linear-gradient(90deg,#047857,#34d399);&quot;></div></div>
+        </div>
+      </div>
+
+      <div class=&quot;rating-row&quot;>
+        <span class=&quot;stars&quot;>★★★★☆</span>
+        <span class=&quot;rating-num&quot;>3.7</span>
+        <span class=&quot;rating-ios&quot;>2.7 iOS</span>
+      </div>
+
+      <div class=&quot;tags&quot;>
+        <span class=&quot;tag tag-pro&quot; style=&quot;animation-delay:1.7s;&quot;>Shielded txns</span>
+        <span class=&quot;tag tag-pro&quot; style=&quot;animation-delay:1.8s;&quot;>Simple UX</span>
+        <span class=&quot;tag tag-con&quot; style=&quot;animation-delay:1.9s;&quot;>Weak iOS store</span>
+        <span class=&quot;tag tag-con&quot; style=&quot;animation-delay:2.0s;&quot;>Zcash only</span>
+      </div>
+
+      <div class=&quot;card-foot&quot;>
+        <span class=&quot;reviews-label&quot;>Total Reviews</span>
+        <span class=&quot;reviews-num&quot;>~604</span>
+      </div>
+    </div>
+
+    <!-- ── METAMASK ── -->
+    <div class=&quot;wallet-card&quot; style=&quot;--accent:#f59e0b;&quot;>
+      <div class=&quot;card-top&quot;>
+        <div class=&quot;card-identity&quot;>
+          <div class=&quot;wallet-icon&quot; style=&quot;background:linear-gradient(135deg,#78350f,#d97706);&quot;>MM</div>
+          <div class=&quot;wallet-name&quot;>MetaMask</div>
+          <div class=&quot;wallet-type&quot;>EVM · Browser ext</div>
+        </div>
+        <div class=&quot;gauge-wrap&quot;>
+          <svg width=&quot;clamp(60px,7.5vw,90px)&quot; height=&quot;clamp(60px,7.5vw,90px)&quot; viewBox=&quot;0 0 88 88&quot; style=&quot;width:clamp(60px,7.5vw,90px);height:clamp(60px,7.5vw,90px);&quot;>
+            <circle cx=&quot;44&quot; cy=&quot;44&quot; r=&quot;34&quot; fill=&quot;none&quot; stroke=&quot;rgba(245,158,11,0.1)&quot; stroke-width=&quot;6&quot;/>
+            <circle cx=&quot;44&quot; cy=&quot;44&quot; r=&quot;34&quot; fill=&quot;none&quot; stroke=&quot;#f59e0b&quot; stroke-width=&quot;6&quot;
+              stroke-linecap=&quot;round&quot; stroke-dasharray=&quot;213.6&quot; stroke-dashoffset=&quot;213.6&quot;
+              transform=&quot;rotate(-90 44 44)&quot;
+              class=&quot;arc-ring&quot; data-score=&quot;69&quot; style=&quot;--target-offset:66.2;&quot;/>
+            <circle cx=&quot;44&quot; cy=&quot;44&quot; r=&quot;26&quot; fill=&quot;none&quot; stroke=&quot;rgba(245,158,11,0.08)&quot; stroke-width=&quot;3&quot;/>
+          </svg>
+          <div class=&quot;gauge-label&quot;>
+            <span class=&quot;gauge-score&quot; data-target=&quot;69&quot;>0</span>
+            <span class=&quot;gauge-max&quot;>/ 100</span>
+          </div>
+        </div>
+      </div>
+
+      <div class=&quot;metrics&quot;>
+        <div class=&quot;metric-row&quot;>
+          <div class=&quot;metric-header&quot;>
+            <span class=&quot;metric-label&quot;>Android</span>
+            <div class=&quot;metric-vals&quot;><span class=&quot;mv&quot; style=&quot;color:#60a5fa;&quot;>72</span><span class=&quot;mp&quot;>/100</span></div>
+          </div>
+          <div class=&quot;bar-track&quot;><div class=&quot;bar-fill&quot; data-w=&quot;72&quot; style=&quot;background:linear-gradient(90deg,#b45309,#fbbf24);&quot;></div></div>
+        </div>
+        <div class=&quot;metric-row&quot;>
+          <div class=&quot;metric-header&quot;>
+            <span class=&quot;metric-label&quot;>iOS</span>
+            <div class=&quot;metric-vals&quot;><span class=&quot;mv&quot; style=&quot;color:#a78bfa;&quot;>65</span><span class=&quot;mp&quot;>/100</span></div>
+          </div>
+          <div class=&quot;bar-track&quot;><div class=&quot;bar-fill&quot; data-w=&quot;65&quot; style=&quot;background:linear-gradient(90deg,#d97706,#fcd34d);&quot;></div></div>
+        </div>
+      </div>
+
+      <div class=&quot;rating-row&quot;>
+        <span class=&quot;stars&quot;>★★★★☆</span>
+        <span class=&quot;rating-num&quot;>3.6</span>
+        <span class=&quot;rating-ios&quot;>3.3 iOS</span>
+      </div>
+
+      <div class=&quot;tags&quot;>
+        <span class=&quot;tag tag-pro&quot; style=&quot;animation-delay:1.85s;&quot;>Industry leader</span>
+        <span class=&quot;tag tag-pro&quot; style=&quot;animation-delay:1.95s;&quot;>EVM ecosystem</span>
+        <span class=&quot;tag tag-con&quot; style=&quot;animation-delay:2.05s;&quot;>No privacy</span>
+        <span class=&quot;tag tag-con&quot; style=&quot;animation-delay:2.15s;&quot;>Complex onboarding</span>
+      </div>
+
+      <div class=&quot;card-foot&quot;>
+        <span class=&quot;reviews-label&quot;>Total Reviews</span>
+        <span class=&quot;reviews-num&quot;>21,640+</span>
+      </div>
+    </div>
+
+  </div><!-- /comp-grid -->
+
+  <div class=&quot;footer&quot;>
+    <span>Source: Google Play · Apple App Store</span>
+    <div class=&quot;footer-sep&quot;></div>
+    <span>Scores: MobileAction · AppFollow</span>
+    <div class=&quot;footer-sep&quot;></div>
+    <span>Composite = avg(Android, iOS) store score</span>
+    <div class=&quot;footer-sep&quot;></div>
+    <span>Miden Competitive Research · 2024</span>
+  </div>
+</div>
+
+<script>
+  const CIRC = 213.6;
+
+  // Animate arc rings and score counters
+  function animateCards() {
+    document.querySelectorAll('.arc-ring').forEach((ring, i) => {
+      const score = parseInt(ring.dataset.score);
+      const targetOffset = CIRC * (1 - score / 100);
+      setTimeout(() => {
+        ring.style.transition = `stroke-dashoffset 1.3s cubic-bezier(0.22,1,0.36,1)`;
+        ring.style.strokeDashoffset = targetOffset;
+      }, 600 + i * 180);
+    });
+
+    document.querySelectorAll('.gauge-score').forEach((el, i) => {
+      const target = parseInt(el.dataset.target);
+      const delay = 600 + i * 180;
+      const duration = 1100;
+      let start = null;
+      setTimeout(() => {
+        requestAnimationFrame(function tick(ts) {
+          if (!start) start = ts;
+          const p = Math.min((ts - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * ease);
+          if (p < 1) requestAnimationFrame(tick);
+        });
+      }, delay);
+    });
+
+    // Animate bars
+    document.querySelectorAll('.bar-fill').forEach((bar, i) => {
+      setTimeout(() => {
+        bar.style.transition = 'width 1.1s cubic-bezier(0.22,1,0.36,1)';
+        bar.style.width = bar.dataset.w + '%';
+      }, 700 + i * 90);
+    });
+  }
+
+  setTimeout(animateCards, 400);
+
+  // Hover interaction
+  document.querySelectorAll('.wallet-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.querySelectorAll('.bar-fill').forEach(f => f.style.filter = 'brightness(1.35)');
+      card.querySelectorAll('.arc-ring').forEach(r => r.style.filter = 'brightness(1.3)');
+    });
+    card.addEventListener('mouseleave', () => {
+      card.querySelectorAll('.bar-fill').forEach(f => f.style.filter = '');
+      card.querySelectorAll('.arc-ring').forEach(r => r.style.filter = '');
+    });
+  });
+</script>
+</body>
+</html>
+"
+    style="width:100%;aspect-ratio:16/9;border:none;display:block;border-radius:10px;"
+    scrolling="no"
+    title="Miden — Competitive analysis matrix">
+  </iframe>
+  <p class="cs-af" style="text-align:center;margin-top:10px">↑ Competitive analysis — Phantom · Payy · Sentz · MetaMask</p>
+</div>
+<h2>What I Did</h2>
+<ol>
+<li><strong>Competitive Benchmark</strong>. Pulled App Store and Google Play data across four wallets over 12 months. Mapped sentiment, scores, review volume. The pattern kept repeating: technical complexity surfaces exactly where trust should be.</li>
+<li><strong>Mental Model Work</strong>. Miden calls transaction objects "Notes." That word already does the work. A Note is something you send privately to someone. Built the whole UX around that metaphor and didn't look back.</li>
+<li><strong>End-to-End Flow Design</strong>. Three flows, two modes each. Onboarding, Send, Receive. Public and private variants for all of them. Every scenario in the system, designed and documented.</li>
+</ol>
+<h2>The Three Flows</h2>
+<p><strong>Onboarding</strong>. Two paths: new wallet, or import an existing one. Both involve the <em>State File</em>, the cryptographic record of your wallet state. New user: set password → wallet created → download your State File. Required, not optional. The challenge: making "download this cryptographic backup file" feel like a normal step, not a warning sign you'd skip on instinct.</p>
+<p><strong>Send</strong>. The decision happens first. Private or public? Private: pick a token, enter an amount, a Note is generated, then you choose how to deliver it. Pick your messaging app. Choose your contact. Done. Public: token, amount, address. Standard crypto, untouched. Privacy isn't a feature you find later. It's the first question.</p>
+<p><strong>Receive</strong>. Mirror of Send. Public: QR code, copy address, share. Private: enter the Note manually or upload the file. Note imported, transaction complete. The mental model is the same on both ends. That was deliberate. Consistency is how trust gets built.</p>
+</div>
+<div class="cs-iw">
+  <iframe
+    srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot;>
+<head>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>Miden — MVP User Flows</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 100%;
+    aspect-ratio: 16/7;
+    overflow: hidden;
+    background: #060412;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  .scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /* Background */
+  .bg-layer {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 100% 100% at 50% 50%, #0a0618 0%, #060412 70%);
+  }
+
+  /* SVG takes full scene */
+  .flow-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Glow orbs */
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+  }
+  .orb-1 { width:35%;aspect-ratio:1;top:-10%;left:-5%;background:radial-gradient(circle,rgba(139,92,246,0.1),transparent 70%);animation:orbFloat 9s ease-in-out infinite; }
+  .orb-2 { width:28%;aspect-ratio:1;bottom:-8%;right:-4%;background:radial-gradient(circle,rgba(109,40,217,0.12),transparent 70%);animation:orbFloat 12s ease-in-out infinite reverse; }
+
+  @keyframes orbFloat {
+    0%,100% { transform: translate(0,0); }
+    50% { transform: translate(3%,5%); }
+  }
+
+  /* Node pop animation */
+  @keyframes nodePop {
+    from { opacity: 0; transform: scale(0.7); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  /* Line draw animation */
+  .flow-line {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: drawLine 0.5s ease forwards;
+  }
+  @keyframes drawLine {
+    to { stroke-dashoffset: 0; }
+  }
+
+  /* Decision diamond pulse on hover (via SVG filter) */
+  .decision-node { cursor: default; transition: filter 0.2s; }
+  .decision-node:hover { filter: brightness(1.4) drop-shadow(0 0 8px rgba(167,139,250,0.6)); }
+  .step-node { cursor: default; }
+  .step-node:hover rect { filter: brightness(1.3); }
+
+  /* Title text animations */
+  .col-title { opacity: 0; animation: fadeUp 0.6s ease forwards; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Fade in for header elements */
+  .header-el { opacity: 0; animation: fadeUp 0.7s ease forwards; }
+</style>
+</head>
+<body>
+<div class=&quot;scene&quot;>
+  <div class=&quot;bg-layer&quot;></div>
+  <div class=&quot;orb orb-1&quot;></div>
+  <div class=&quot;orb orb-2&quot;></div>
+
+  <!--
+    viewBox: 0 0 1600 700
+    Three flow columns:
+      Col 1 Onboarding:  cx = 267, x range 40–493
+      Col 2 Send:        cx = 800, x range 547–1053
+      Col 3 Receive:     cx = 1333, x range 1107–1560
+    Header: y 30–90
+    Flow area: y 100–670
+  -->
+  <svg class=&quot;flow-svg&quot; viewBox=&quot;0 0 1600 700&quot; preserveAspectRatio=&quot;xMidYMid meet&quot; id=&quot;mainSvg&quot;>
+    <defs>
+      <!-- Glow filter -->
+      <filter id=&quot;glow-purple&quot; x=&quot;-30%&quot; y=&quot;-30%&quot; width=&quot;160%&quot; height=&quot;160%&quot;>
+        <feGaussianBlur stdDeviation=&quot;3&quot; result=&quot;blur&quot;/>
+        <feMerge><feMergeNode in=&quot;blur&quot;/><feMergeNode in=&quot;SourceGraphic&quot;/></feMerge>
+      </filter>
+      <filter id=&quot;glow-green&quot; x=&quot;-30%&quot; y=&quot;-30%&quot; width=&quot;160%&quot; height=&quot;160%&quot;>
+        <feGaussianBlur stdDeviation=&quot;2.5&quot; result=&quot;blur&quot;/>
+        <feMerge><feMergeNode in=&quot;blur&quot;/><feMergeNode in=&quot;SourceGraphic&quot;/></feMerge>
+      </filter>
+      <filter id=&quot;glow-blue&quot; x=&quot;-30%&quot; y=&quot;-30%&quot; width=&quot;160%&quot; height=&quot;160%&quot;>
+        <feGaussianBlur stdDeviation=&quot;2.5&quot; result=&quot;blur&quot;/>
+        <feMerge><feMergeNode in=&quot;blur&quot;/><feMergeNode in=&quot;SourceGraphic&quot;/></feMerge>
+      </filter>
+
+      <!-- Grid pattern -->
+      <pattern id=&quot;grid&quot; width=&quot;50&quot; height=&quot;50&quot; patternUnits=&quot;userSpaceOnUse&quot;>
+        <path d=&quot;M 50 0 L 0 0 0 50&quot; fill=&quot;none&quot; stroke=&quot;rgba(139,92,246,0.04)&quot; stroke-width=&quot;1&quot;/>
+      </pattern>
+      <radialGradient id=&quot;gridMask&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; r=&quot;50%&quot;>
+        <stop offset=&quot;20%&quot; stop-color=&quot;white&quot; stop-opacity=&quot;1&quot;/>
+        <stop offset=&quot;80%&quot; stop-color=&quot;white&quot; stop-opacity=&quot;0&quot;/>
+      </radialGradient>
+      <mask id=&quot;gridFade&quot;>
+        <rect width=&quot;1600&quot; height=&quot;700&quot; fill=&quot;url(#gridMask)&quot;/>
+      </mask>
+    </defs>
+
+    <!-- Grid background -->
+    <rect width=&quot;1600&quot; height=&quot;700&quot; fill=&quot;url(#grid)&quot; mask=&quot;url(#gridFade)&quot; opacity=&quot;0.8&quot;/>
+
+    <!-- Column dividers -->
+    <line x1=&quot;520&quot; y1=&quot;80&quot; x2=&quot;520&quot; y2=&quot;680&quot; stroke=&quot;rgba(139,92,246,0.1)&quot; stroke-width=&quot;1&quot; stroke-dasharray=&quot;4,6&quot;/>
+    <line x1=&quot;1080&quot; y1=&quot;80&quot; x2=&quot;1080&quot; y2=&quot;680&quot; stroke=&quot;rgba(139,92,246,0.1)&quot; stroke-width=&quot;1&quot; stroke-dasharray=&quot;4,6&quot;/>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  HEADER                                             -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <g class=&quot;header-el&quot; style=&quot;animation-delay:0.1s;&quot;>
+      <!-- Tag line -->
+      <line x1=&quot;40&quot; y1=&quot;38&quot; x2=&quot;62&quot; y2=&quot;38&quot; stroke=&quot;rgba(167,139,250,0.6)&quot; stroke-width=&quot;1.5&quot;/>
+      <text x=&quot;70&quot; y=&quot;42&quot; fill=&quot;rgba(167,139,250,0.7)&quot; font-size=&quot;11&quot; font-weight=&quot;600&quot; letter-spacing=&quot;2.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot; text-transform=&quot;uppercase&quot;>MVP USER FLOWS</text>
+      <!-- Title -->
+      <text x=&quot;40&quot; y=&quot;72&quot; fill=&quot;white&quot; font-size=&quot;24&quot; font-weight=&quot;800&quot; letter-spacing=&quot;-0.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Core User Journeys</text>
+      <text x=&quot;40&quot; y=&quot;96&quot; font-size=&quot;24&quot; font-weight=&quot;800&quot; letter-spacing=&quot;-0.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>
+        <tspan fill=&quot;url(#titleGrad)&quot;>Onboarding · Send · Receive</tspan>
+      </text>
+    </g>
+
+    <!-- Title gradient -->
+    <defs>
+      <linearGradient id=&quot;titleGrad&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;0%&quot;>
+        <stop offset=&quot;0%&quot; stop-color=&quot;#c4b5fd&quot;/>
+        <stop offset=&quot;100%&quot; stop-color=&quot;#8b5cf6&quot;/>
+      </linearGradient>
+      <!-- Branch line gradients -->
+      <linearGradient id=&quot;greenGrad&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;0%&quot; y2=&quot;100%&quot;>
+        <stop offset=&quot;0%&quot; stop-color=&quot;rgba(52,211,153,0.8)&quot;/>
+        <stop offset=&quot;100%&quot; stop-color=&quot;rgba(52,211,153,0.3)&quot;/>
+      </linearGradient>
+      <linearGradient id=&quot;purpleGrad&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;0%&quot; y2=&quot;100%&quot;>
+        <stop offset=&quot;0%&quot; stop-color=&quot;rgba(167,139,250,0.8)&quot;/>
+        <stop offset=&quot;100%&quot; stop-color=&quot;rgba(167,139,250,0.3)&quot;/>
+      </linearGradient>
+      <linearGradient id=&quot;blueGrad&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;0%&quot; y2=&quot;100%&quot;>
+        <stop offset=&quot;0%&quot; stop-color=&quot;rgba(96,165,250,0.8)&quot;/>
+        <stop offset=&quot;100%&quot; stop-color=&quot;rgba(96,165,250,0.3)&quot;/>
+      </linearGradient>
+    </defs>
+
+    <!-- Legend (top right) -->
+    <g class=&quot;header-el&quot; style=&quot;animation-delay:0.2s;&quot;>
+      <!-- Start/End -->
+      <rect x=&quot;1260&quot; y=&quot;32&quot; width=&quot;50&quot; height=&quot;18&quot; rx=&quot;9&quot; fill=&quot;none&quot; stroke=&quot;rgba(139,92,246,0.55)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;1320&quot; y=&quot;44&quot; fill=&quot;rgba(255,255,255,0.4)&quot; font-size=&quot;10&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Start / End</text>
+      <!-- Screen -->
+      <rect x=&quot;1260&quot; y=&quot;58&quot; width=&quot;50&quot; height=&quot;18&quot; rx=&quot;3&quot; fill=&quot;none&quot; stroke=&quot;rgba(255,255,255,0.25)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;1320&quot; y=&quot;70&quot; fill=&quot;rgba(255,255,255,0.4)&quot; font-size=&quot;10&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Screen / Action</text>
+      <!-- Diamond -->
+      <rect x=&quot;1278&quot; y=&quot;85&quot; width=&quot;14&quot; height=&quot;14&quot; rx=&quot;2&quot; fill=&quot;none&quot; stroke=&quot;rgba(167,139,250,0.55)&quot; stroke-width=&quot;1.2&quot; transform=&quot;rotate(45 1285 92)&quot;/>
+      <text x=&quot;1320&quot; y=&quot;97&quot; fill=&quot;rgba(255,255,255,0.4)&quot; font-size=&quot;10&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Decision</text>
+    </g>
+
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  COL 1: ONBOARDING (cx=267)                        -->
+    <!-- ═══════════════════════════════════════════════════ -->
+
+    <!-- Column title -->
+    <g class=&quot;col-title&quot; style=&quot;animation-delay:0.3s;&quot;>
+      <circle cx=&quot;55&quot; cy=&quot;126&quot; r=&quot;5&quot; fill=&quot;#8b5cf6&quot;/>
+      <text x=&quot;68&quot; y=&quot;130&quot; fill=&quot;white&quot; font-size=&quot;14&quot; font-weight=&quot;800&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Onboarding</text>
+      <text x=&quot;68&quot; y=&quot;144&quot; fill=&quot;rgba(255,255,255,0.32)&quot; font-size=&quot;10&quot; letter-spacing=&quot;1.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>2 PATHS</text>
+    </g>
+
+    <!-- N1: Open App (capsule, y=168) -->
+    <g class=&quot;flow-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 0.4s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;192&quot; y=&quot;158&quot; width=&quot;150&quot; height=&quot;30&quot; rx=&quot;15&quot; fill=&quot;rgba(139,92,246,0.18)&quot; stroke=&quot;rgba(139,92,246,0.75)&quot; stroke-width=&quot;1.5&quot; filter=&quot;url(#glow-purple)&quot;/>
+      <text x=&quot;267&quot; y=&quot;177&quot; fill=&quot;white&quot; font-size=&quot;11&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; letter-spacing=&quot;1.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>OPEN APP</text>
+    </g>
+    <!-- Connector 1→2 -->
+    <line class=&quot;flow-line&quot; x1=&quot;267&quot; y1=&quot;188&quot; x2=&quot;267&quot; y2=&quot;208&quot; stroke=&quot;rgba(139,92,246,0.45)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:0.55s;&quot;/>
+
+    <!-- N2: Welcome Screen (rect, y=208) -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 0.6s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;182&quot; y=&quot;208&quot; width=&quot;170&quot; height=&quot;30&quot; rx=&quot;5&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(139,92,246,0.22)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;267&quot; y=&quot;227&quot; fill=&quot;rgba(255,255,255,0.85)&quot; font-size=&quot;11&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Welcome Screen</text>
+    </g>
+    <!-- Connector 2→3 -->
+    <line class=&quot;flow-line&quot; x1=&quot;267&quot; y1=&quot;238&quot; x2=&quot;267&quot; y2=&quot;258&quot; stroke=&quot;rgba(139,92,246,0.4)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:0.75s;&quot;/>
+
+    <!-- N3: Decision diamond (center y=290) -->
+    <g class=&quot;decision-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 0.85s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;233&quot; y=&quot;256&quot; width=&quot;68&quot; height=&quot;68&quot; rx=&quot;6&quot; fill=&quot;rgba(167,139,250,0.1)&quot; stroke=&quot;rgba(167,139,250,0.5)&quot; stroke-width=&quot;1.5&quot; transform=&quot;rotate(45 267 290)&quot;/>
+      <text x=&quot;267&quot; y=&quot;286&quot; fill=&quot;rgba(167,139,250,0.95)&quot; font-size=&quot;10&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>New or</text>
+      <text x=&quot;267&quot; y=&quot;299&quot; fill=&quot;rgba(167,139,250,0.95)&quot; font-size=&quot;10&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Existing?</text>
+    </g>
+
+    <!-- Branch split lines from diamond corners -->
+    <!-- Left branch (Create) to x=170 -->
+    <path class=&quot;flow-line&quot; d=&quot;M 233 290 L 170 290 L 170 345&quot; fill=&quot;none&quot; stroke=&quot;rgba(52,211,153,0.5)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.05s;stroke-dasharray:200;stroke-dashoffset:200;&quot;/>
+    <!-- Right branch (Import) to x=364 -->
+    <path class=&quot;flow-line&quot; d=&quot;M 301 290 L 364 290 L 364 345&quot; fill=&quot;none&quot; stroke=&quot;rgba(167,139,250,0.5)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.05s;stroke-dasharray:200;stroke-dashoffset:200;&quot;/>
+
+    <!-- Branch labels -->
+    <text x=&quot;110&quot; y=&quot;295&quot; fill=&quot;rgba(52,211,153,0.9)&quot; font-size=&quot;9&quot; font-weight=&quot;800&quot; letter-spacing=&quot;1.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot; style=&quot;opacity:0;animation:nodePop 0.3s 1.2s ease forwards;&quot;>NEW</text>
+    <text x=&quot;370&quot; y=&quot;295&quot; fill=&quot;rgba(167,139,250,0.9)&quot; font-size=&quot;9&quot; font-weight=&quot;800&quot; letter-spacing=&quot;1.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot; style=&quot;opacity:0;animation:nodePop 0.3s 1.2s ease forwards;&quot;>IMPORT</text>
+
+    <!-- LEFT branch: Create Wallet -->
+    <!-- L1: Create Password -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.15s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;100&quot; y=&quot;345&quot; width=&quot;140&quot; height=&quot;26&quot; rx=&quot;4&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(52,211,153,0.3)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;170&quot; y=&quot;362&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Create Password</text>
+    </g>
+    <line class=&quot;flow-line&quot; x1=&quot;170&quot; y1=&quot;371&quot; x2=&quot;170&quot; y2=&quot;385&quot; stroke=&quot;rgba(52,211,153,0.35)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.3s;&quot;/>
+    <!-- L2: Backup Phrase -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.3s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;100&quot; y=&quot;385&quot; width=&quot;140&quot; height=&quot;26&quot; rx=&quot;4&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(52,211,153,0.3)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;170&quot; y=&quot;402&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Backup Phrase</text>
+    </g>
+    <line class=&quot;flow-line&quot; x1=&quot;170&quot; y1=&quot;411&quot; x2=&quot;170&quot; y2=&quot;425&quot; stroke=&quot;rgba(52,211,153,0.35)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.45s;&quot;/>
+    <!-- L3: Verify Phrase -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.45s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;100&quot; y=&quot;425&quot; width=&quot;140&quot; height=&quot;26&quot; rx=&quot;4&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(52,211,153,0.3)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;170&quot; y=&quot;442&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Verify Phrase</text>
+    </g>
+
+    <!-- RIGHT branch: Import Wallet -->
+    <!-- R1: Set Password -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.15s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;294&quot; y=&quot;345&quot; width=&quot;140&quot; height=&quot;26&quot; rx=&quot;4&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(167,139,250,0.3)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;364&quot; y=&quot;362&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Set Password</text>
+    </g>
+    <line class=&quot;flow-line&quot; x1=&quot;364&quot; y1=&quot;371&quot; x2=&quot;364&quot; y2=&quot;385&quot; stroke=&quot;rgba(167,139,250,0.35)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.3s;&quot;/>
+    <!-- R2: Enter Phrase -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.3s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;294&quot; y=&quot;385&quot; width=&quot;140&quot; height=&quot;26&quot; rx=&quot;4&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(167,139,250,0.3)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;364&quot; y=&quot;402&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Enter Seed Phrase</text>
+    </g>
+    <line class=&quot;flow-line&quot; x1=&quot;364&quot; y1=&quot;411&quot; x2=&quot;364&quot; y2=&quot;425&quot; stroke=&quot;rgba(167,139,250,0.35)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.45s;&quot;/>
+    <!-- R3: Verify Identity -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.45s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;294&quot; y=&quot;425&quot; width=&quot;140&quot; height=&quot;26&quot; rx=&quot;4&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(167,139,250,0.3)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;364&quot; y=&quot;442&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Verify Identity</text>
+    </g>
+
+    <!-- Merge lines to Dashboard -->
+    <path class=&quot;flow-line&quot; d=&quot;M 170 451 L 170 490 L 267 490&quot; fill=&quot;none&quot; stroke=&quot;rgba(139,92,246,0.4)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.6s;stroke-dasharray:200;stroke-dashoffset:200;&quot;/>
+    <path class=&quot;flow-line&quot; d=&quot;M 364 451 L 364 490 L 267 490&quot; fill=&quot;none&quot; stroke=&quot;rgba(139,92,246,0.4)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.6s;stroke-dasharray:200;stroke-dashoffset:200;&quot;/>
+    <line class=&quot;flow-line&quot; x1=&quot;267&quot; y1=&quot;490&quot; x2=&quot;267&quot; y2=&quot;512&quot; stroke=&quot;rgba(139,92,246,0.45)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.75s;&quot;/>
+
+    <!-- N-end: Dashboard -->
+    <g style=&quot;opacity:0;animation:nodePop 0.45s 1.8s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot; filter=&quot;url(#glow-green)&quot;>
+      <rect x=&quot;185&quot; y=&quot;512&quot; width=&quot;164&quot; height=&quot;32&quot; rx=&quot;16&quot; fill=&quot;rgba(52,211,153,0.2)&quot; stroke=&quot;rgba(52,211,153,0.7)&quot; stroke-width=&quot;1.8&quot;/>
+      <text x=&quot;267&quot; y=&quot;532&quot; fill=&quot;white&quot; font-size=&quot;12&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; letter-spacing=&quot;1.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>DASHBOARD</text>
+    </g>
+
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  COL 2: SEND (cx=800)                              -->
+    <!-- ═══════════════════════════════════════════════════ -->
+
+    <g class=&quot;col-title&quot; style=&quot;animation-delay:0.5s;&quot;>
+      <circle cx=&quot;588&quot; cy=&quot;126&quot; r=&quot;5&quot; fill=&quot;#60a5fa&quot;/>
+      <text x=&quot;601&quot; y=&quot;130&quot; fill=&quot;white&quot; font-size=&quot;14&quot; font-weight=&quot;800&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Send</text>
+      <text x=&quot;601&quot; y=&quot;144&quot; fill=&quot;rgba(255,255,255,0.32)&quot; font-size=&quot;10&quot; letter-spacing=&quot;1.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>PRIVATE + PUBLIC</text>
+    </g>
+
+    <!-- N1: Dashboard start -->
+    <g style=&quot;opacity:0;animation:nodePop 0.4s 0.55s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;725&quot; y=&quot;158&quot; width=&quot;150&quot; height=&quot;30&quot; rx=&quot;15&quot; fill=&quot;rgba(96,165,250,0.15)&quot; stroke=&quot;rgba(96,165,250,0.7)&quot; stroke-width=&quot;1.5&quot; filter=&quot;url(#glow-blue)&quot;/>
+      <text x=&quot;800&quot; y=&quot;177&quot; fill=&quot;white&quot; font-size=&quot;11&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; letter-spacing=&quot;1.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>DASHBOARD</text>
+    </g>
+    <line class=&quot;flow-line&quot; x1=&quot;800&quot; y1=&quot;188&quot; x2=&quot;800&quot; y2=&quot;208&quot; stroke=&quot;rgba(96,165,250,0.45)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:0.7s;&quot;/>
+
+    <!-- N2: Select Asset + Enter Recipient (combined for space) -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 0.75s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;715&quot; y=&quot;208&quot; width=&quot;170&quot; height=&quot;28&quot; rx=&quot;5&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(96,165,250,0.22)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;800&quot; y=&quot;226&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10.5&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Select Asset</text>
+    </g>
+    <line class=&quot;flow-line&quot; x1=&quot;800&quot; y1=&quot;236&quot; x2=&quot;800&quot; y2=&quot;252&quot; stroke=&quot;rgba(96,165,250,0.4)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:0.9s;&quot;/>
+
+    <!-- N3: Enter Recipient -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 0.95s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;715&quot; y=&quot;252&quot; width=&quot;170&quot; height=&quot;28&quot; rx=&quot;5&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(96,165,250,0.22)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;800&quot; y=&quot;270&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10.5&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Enter Recipient</text>
+    </g>
+    <line class=&quot;flow-line&quot; x1=&quot;800&quot; y1=&quot;280&quot; x2=&quot;800&quot; y2=&quot;296&quot; stroke=&quot;rgba(96,165,250,0.4)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.1s;&quot;/>
+
+    <!-- N4: Decision -->
+    <g class=&quot;decision-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.15s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;766&quot; y=&quot;294&quot; width=&quot;68&quot; height=&quot;68&quot; rx=&quot;6&quot; fill=&quot;rgba(167,139,250,0.1)&quot; stroke=&quot;rgba(167,139,250,0.5)&quot; stroke-width=&quot;1.5&quot; transform=&quot;rotate(45 800 328)&quot;/>
+      <text x=&quot;800&quot; y=&quot;324&quot; fill=&quot;rgba(167,139,250,0.95)&quot; font-size=&quot;9.5&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Private</text>
+      <text x=&quot;800&quot; y=&quot;337&quot; fill=&quot;rgba(167,139,250,0.95)&quot; font-size=&quot;9.5&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>or Public?</text>
+    </g>
+
+    <!-- Branch lines from diamond -->
+    <path class=&quot;flow-line&quot; d=&quot;M 766 328 L 700 328 L 700 378&quot; fill=&quot;none&quot; stroke=&quot;rgba(52,211,153,0.5)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.3s;stroke-dasharray:200;stroke-dashoffset:200;&quot;/>
+    <path class=&quot;flow-line&quot; d=&quot;M 834 328 L 900 328 L 900 378&quot; fill=&quot;none&quot; stroke=&quot;rgba(96,165,250,0.5)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.3s;stroke-dasharray:200;stroke-dashoffset:200;&quot;/>
+
+    <text x=&quot;640&quot; y=&quot;332&quot; fill=&quot;rgba(52,211,153,0.9)&quot; font-size=&quot;9&quot; font-weight=&quot;800&quot; letter-spacing=&quot;1.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot; style=&quot;opacity:0;animation:nodePop 0.3s 1.42s ease forwards;&quot;>PRIVATE</text>
+    <text x=&quot;908&quot; y=&quot;332&quot; fill=&quot;rgba(96,165,250,0.9)&quot; font-size=&quot;9&quot; font-weight=&quot;800&quot; letter-spacing=&quot;1.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot; style=&quot;opacity:0;animation:nodePop 0.3s 1.42s ease forwards;&quot;>PUBLIC</text>
+
+    <!-- LEFT: ZK Proof Gen -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.38s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;627&quot; y=&quot;378&quot; width=&quot;146&quot; height=&quot;26&quot; rx=&quot;4&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(52,211,153,0.3)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;700&quot; y=&quot;395&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>ZK Proof Gen</text>
+    </g>
+    <line class=&quot;flow-line&quot; x1=&quot;700&quot; y1=&quot;404&quot; x2=&quot;700&quot; y2=&quot;418&quot; stroke=&quot;rgba(52,211,153,0.35)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.52s;&quot;/>
+    <!-- LEFT: Confirm + Sign -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.52s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;627&quot; y=&quot;418&quot; width=&quot;146&quot; height=&quot;26&quot; rx=&quot;4&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(52,211,153,0.3)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;700&quot; y=&quot;435&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Confirm + Sign</text>
+    </g>
+
+    <!-- RIGHT: Enter Amount -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.38s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;827&quot; y=&quot;378&quot; width=&quot;146&quot; height=&quot;26&quot; rx=&quot;4&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(96,165,250,0.3)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;900&quot; y=&quot;395&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Enter Amount</text>
+    </g>
+    <line class=&quot;flow-line&quot; x1=&quot;900&quot; y1=&quot;404&quot; x2=&quot;900&quot; y2=&quot;418&quot; stroke=&quot;rgba(96,165,250,0.35)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.52s;&quot;/>
+    <!-- RIGHT: Confirm + Sign -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.52s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;827&quot; y=&quot;418&quot; width=&quot;146&quot; height=&quot;26&quot; rx=&quot;4&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(96,165,250,0.3)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;900&quot; y=&quot;435&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Confirm + Sign</text>
+    </g>
+
+    <!-- Merge to end -->
+    <path class=&quot;flow-line&quot; d=&quot;M 700 444 L 700 490 L 800 490&quot; fill=&quot;none&quot; stroke=&quot;rgba(96,165,250,0.4)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.65s;stroke-dasharray:200;stroke-dashoffset:200;&quot;/>
+    <path class=&quot;flow-line&quot; d=&quot;M 900 444 L 900 490 L 800 490&quot; fill=&quot;none&quot; stroke=&quot;rgba(96,165,250,0.4)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.65s;stroke-dasharray:200;stroke-dashoffset:200;&quot;/>
+    <line class=&quot;flow-line&quot; x1=&quot;800&quot; y1=&quot;490&quot; x2=&quot;800&quot; y2=&quot;512&quot; stroke=&quot;rgba(96,165,250,0.45)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.8s;&quot;/>
+
+    <!-- End node -->
+    <g style=&quot;opacity:0;animation:nodePop 0.45s 1.88s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot; filter=&quot;url(#glow-blue)&quot;>
+      <rect x=&quot;718&quot; y=&quot;512&quot; width=&quot;164&quot; height=&quot;32&quot; rx=&quot;16&quot; fill=&quot;rgba(96,165,250,0.18)&quot; stroke=&quot;rgba(96,165,250,0.7)&quot; stroke-width=&quot;1.8&quot;/>
+      <text x=&quot;800&quot; y=&quot;532&quot; fill=&quot;white&quot; font-size=&quot;12&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; letter-spacing=&quot;1.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>TX SENT ✓</text>
+    </g>
+
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  COL 3: RECEIVE (cx=1333)                          -->
+    <!-- ═══════════════════════════════════════════════════ -->
+
+    <g class=&quot;col-title&quot; style=&quot;animation-delay:0.7s;&quot;>
+      <circle cx=&quot;1121&quot; cy=&quot;126&quot; r=&quot;5&quot; fill=&quot;#34d399&quot;/>
+      <text x=&quot;1134&quot; y=&quot;130&quot; fill=&quot;white&quot; font-size=&quot;14&quot; font-weight=&quot;800&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Receive</text>
+      <text x=&quot;1134&quot; y=&quot;144&quot; fill=&quot;rgba(255,255,255,0.32)&quot; font-size=&quot;10&quot; letter-spacing=&quot;1.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>PRIVATE + PUBLIC</text>
+    </g>
+
+    <!-- N1: Dashboard start -->
+    <g style=&quot;opacity:0;animation:nodePop 0.4s 0.7s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;1258&quot; y=&quot;158&quot; width=&quot;150&quot; height=&quot;30&quot; rx=&quot;15&quot; fill=&quot;rgba(52,211,153,0.15)&quot; stroke=&quot;rgba(52,211,153,0.7)&quot; stroke-width=&quot;1.5&quot; filter=&quot;url(#glow-green)&quot;/>
+      <text x=&quot;1333&quot; y=&quot;177&quot; fill=&quot;white&quot; font-size=&quot;11&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; letter-spacing=&quot;1.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>DASHBOARD</text>
+    </g>
+    <line class=&quot;flow-line&quot; x1=&quot;1333&quot; y1=&quot;188&quot; x2=&quot;1333&quot; y2=&quot;208&quot; stroke=&quot;rgba(52,211,153,0.45)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:0.85s;&quot;/>
+
+    <!-- N2: Tap Receive -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 0.9s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;1248&quot; y=&quot;208&quot; width=&quot;170&quot; height=&quot;28&quot; rx=&quot;5&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(52,211,153,0.22)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;1333&quot; y=&quot;226&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10.5&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Tap Receive</text>
+    </g>
+    <line class=&quot;flow-line&quot; x1=&quot;1333&quot; y1=&quot;236&quot; x2=&quot;1333&quot; y2=&quot;252&quot; stroke=&quot;rgba(52,211,153,0.4)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.05s;&quot;/>
+
+    <!-- N3: Select Asset -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.1s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;1248&quot; y=&quot;252&quot; width=&quot;170&quot; height=&quot;28&quot; rx=&quot;5&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(52,211,153,0.22)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;1333&quot; y=&quot;270&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10.5&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Select Asset</text>
+    </g>
+    <line class=&quot;flow-line&quot; x1=&quot;1333&quot; y1=&quot;280&quot; x2=&quot;1333&quot; y2=&quot;296&quot; stroke=&quot;rgba(52,211,153,0.4)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.25s;&quot;/>
+
+    <!-- N4: Decision -->
+    <g class=&quot;decision-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.3s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;1299&quot; y=&quot;294&quot; width=&quot;68&quot; height=&quot;68&quot; rx=&quot;6&quot; fill=&quot;rgba(167,139,250,0.1)&quot; stroke=&quot;rgba(167,139,250,0.5)&quot; stroke-width=&quot;1.5&quot; transform=&quot;rotate(45 1333 328)&quot;/>
+      <text x=&quot;1333&quot; y=&quot;324&quot; fill=&quot;rgba(167,139,250,0.95)&quot; font-size=&quot;9.5&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Private</text>
+      <text x=&quot;1333&quot; y=&quot;337&quot; fill=&quot;rgba(167,139,250,0.95)&quot; font-size=&quot;9.5&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>or Public?</text>
+    </g>
+
+    <!-- Branch lines -->
+    <path class=&quot;flow-line&quot; d=&quot;M 1299 328 L 1233 328 L 1233 378&quot; fill=&quot;none&quot; stroke=&quot;rgba(52,211,153,0.5)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.48s;stroke-dasharray:200;stroke-dashoffset:200;&quot;/>
+    <path class=&quot;flow-line&quot; d=&quot;M 1367 328 L 1433 328 L 1433 378&quot; fill=&quot;none&quot; stroke=&quot;rgba(167,139,250,0.5)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.48s;stroke-dasharray:200;stroke-dashoffset:200;&quot;/>
+
+    <text x=&quot;1175&quot; y=&quot;332&quot; fill=&quot;rgba(52,211,153,0.9)&quot; font-size=&quot;9&quot; font-weight=&quot;800&quot; letter-spacing=&quot;1.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot; style=&quot;opacity:0;animation:nodePop 0.3s 1.58s ease forwards;&quot;>PRIVATE</text>
+    <text x=&quot;1442&quot; y=&quot;332&quot; fill=&quot;rgba(167,139,250,0.9)&quot; font-size=&quot;9&quot; font-weight=&quot;800&quot; letter-spacing=&quot;1.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot; style=&quot;opacity:0;animation:nodePop 0.3s 1.58s ease forwards;&quot;>PUBLIC</text>
+
+    <!-- LEFT: Stealth Address -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.55s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;1160&quot; y=&quot;378&quot; width=&quot;146&quot; height=&quot;26&quot; rx=&quot;4&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(52,211,153,0.3)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;1233&quot; y=&quot;395&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Stealth Address</text>
+    </g>
+    <line class=&quot;flow-line&quot; x1=&quot;1233&quot; y1=&quot;404&quot; x2=&quot;1233&quot; y2=&quot;418&quot; stroke=&quot;rgba(52,211,153,0.35)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.68s;&quot;/>
+    <!-- LEFT: Share / QR -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.68s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;1160&quot; y=&quot;418&quot; width=&quot;146&quot; height=&quot;26&quot; rx=&quot;4&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(52,211,153,0.3)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;1233&quot; y=&quot;435&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Share / QR Code</text>
+    </g>
+
+    <!-- RIGHT: Public Address -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.55s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;1360&quot; y=&quot;378&quot; width=&quot;146&quot; height=&quot;26&quot; rx=&quot;4&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(167,139,250,0.3)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;1433&quot; y=&quot;395&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Public Address</text>
+    </g>
+    <line class=&quot;flow-line&quot; x1=&quot;1433&quot; y1=&quot;404&quot; x2=&quot;1433&quot; y2=&quot;418&quot; stroke=&quot;rgba(167,139,250,0.35)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.68s;&quot;/>
+    <!-- RIGHT: Share / QR -->
+    <g class=&quot;step-node&quot; style=&quot;opacity:0;animation:nodePop 0.4s 1.68s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot;>
+      <rect x=&quot;1360&quot; y=&quot;418&quot; width=&quot;146&quot; height=&quot;26&quot; rx=&quot;4&quot; fill=&quot;rgba(14,8,32,0.8)&quot; stroke=&quot;rgba(167,139,250,0.3)&quot; stroke-width=&quot;1.2&quot;/>
+      <text x=&quot;1433&quot; y=&quot;435&quot; fill=&quot;rgba(255,255,255,0.82)&quot; font-size=&quot;10&quot; font-weight=&quot;600&quot; text-anchor=&quot;middle&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>Share / QR Code</text>
+    </g>
+
+    <!-- Merge to end -->
+    <path class=&quot;flow-line&quot; d=&quot;M 1233 444 L 1233 490 L 1333 490&quot; fill=&quot;none&quot; stroke=&quot;rgba(52,211,153,0.4)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.82s;stroke-dasharray:200;stroke-dashoffset:200;&quot;/>
+    <path class=&quot;flow-line&quot; d=&quot;M 1433 444 L 1433 490 L 1333 490&quot; fill=&quot;none&quot; stroke=&quot;rgba(52,211,153,0.4)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.82s;stroke-dasharray:200;stroke-dashoffset:200;&quot;/>
+    <line class=&quot;flow-line&quot; x1=&quot;1333&quot; y1=&quot;490&quot; x2=&quot;1333&quot; y2=&quot;512&quot; stroke=&quot;rgba(52,211,153,0.45)&quot; stroke-width=&quot;1.5&quot; style=&quot;animation-delay:1.97s;&quot;/>
+
+    <!-- End node -->
+    <g style=&quot;opacity:0;animation:nodePop 0.45s 2.05s cubic-bezier(0.34,1.56,0.64,1) forwards;&quot; filter=&quot;url(#glow-green)&quot;>
+      <rect x=&quot;1251&quot; y=&quot;512&quot; width=&quot;164&quot; height=&quot;32&quot; rx=&quot;16&quot; fill=&quot;rgba(52,211,153,0.2)&quot; stroke=&quot;rgba(52,211,153,0.7)&quot; stroke-width=&quot;1.8&quot;/>
+      <text x=&quot;1333&quot; y=&quot;532&quot; fill=&quot;white&quot; font-size=&quot;11&quot; font-weight=&quot;700&quot; text-anchor=&quot;middle&quot; letter-spacing=&quot;1.2&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot;>RECEIVED ✓</text>
+    </g>
+
+    <!-- ── Footer note ── -->
+    <text x=&quot;800&quot; y=&quot;672&quot; fill=&quot;rgba(255,255,255,0.15)&quot; font-size=&quot;10&quot; text-anchor=&quot;middle&quot; letter-spacing=&quot;1.5&quot; font-family=&quot;'SF Pro Display',-apple-system,sans-serif&quot; style=&quot;opacity:0;animation:nodePop 0.5s 2.2s ease forwards;&quot;>
+      MIDEN WALLET · MVP USER FLOW DOCUMENTATION · 2024
+    </text>
+
+  </svg>
+
+</div>
+
+<script>
+  // SVG node hover interactivity
+  document.querySelectorAll('.step-node').forEach(node => {
+    node.addEventListener('mouseenter', () => {
+      const rect = node.querySelector('rect');
+      if (rect) {
+        rect.style.filter = 'brightness(1.5)';
+        rect.style.transition = 'filter 0.2s';
+      }
+    });
+    node.addEventListener('mouseleave', () => {
+      const rect = node.querySelector('rect');
+      if (rect) rect.style.filter = '';
+    });
+  });
+
+  document.querySelectorAll('.decision-node').forEach(node => {
+    node.addEventListener('mouseenter', () => {
+      const rect = node.querySelector('rect');
+      if (rect) {
+        rect.setAttribute('fill', 'rgba(167,139,250,0.2)');
+        rect.setAttribute('stroke', 'rgba(167,139,250,0.9)');
+      }
+    });
+    node.addEventListener('mouseleave', () => {
+      const rect = node.querySelector('rect');
+      if (rect) {
+        rect.setAttribute('fill', 'rgba(167,139,250,0.1)');
+        rect.setAttribute('stroke', 'rgba(167,139,250,0.5)');
+      }
+    });
+  });
+</script>
+</body>
+</html>
+"
+    style="width:100%;aspect-ratio:16/7;border:none;display:block;border-radius:10px;"
+    scrolling="no"
+    title="Miden — MVP user flows">
+  </iframe>
+  <p class="cs-af" style="text-align:center;margin-top:10px">↑ MVP user flows — Onboarding · Send · Receive</p>
+</div>
+<div class="cs-body">
+<h2>The Core Technical Challenge</h2>
+<p>When you send a private Note, you're generating a cryptographic object, submitting it to the blockchain, and waiting for chain sync. None of that should be visible to the user. The whole job was progressive disclosure. Surface the intent, hide the protocol. Make the complexity load-bearing but invisible. That's the entire game with ZK UX.</p>
+<h2>The Outcome</h2>
+<p>The pitch landed. Specific call-out: flow clarity given the technical constraints. A ZK wallet has more edge cases per screen than almost anything else I've worked on: public/private states, chain sync states, file handling. We designed all of them. The feedback: clean, navigable, and appropriate for what's running underneath. That was the whole goal.</p>
+<div class="cs-af"><strong>Artifacts:</strong> App Store &amp; Google Play Sentiment Benchmark · Competitive Analysis (Phantom · Payy · Sentz · MetaMask) · Onboarding Flow (State File) · Send Flow (Private &amp; Public) · Receive Flow (Private &amp; Public) · Dark Mode UI System</div>
+</div>
+<div class="cs-nx"><div><span class="nl">Previous</span><a href="javascript:void(0)" onclick="showCS(&#39;cs1&#39;);return false">← E-Commerce</a></div><div><span class="nl">Next Project</span><a href="javascript:void(0)" onclick="showCS(&#39;cs3&#39;);return false">Tires &amp; Rims →</a></div></div>
+</div>
+
+<!-- ==================== CASE STUDY 3 ==================== -->
+<div class="cs" id="cs3">
+<div style="height:var(--header-h)"></div>
+<div class="container-narrow" style="padding-top:20px"><button class="cs-back">← Back to Work</button></div>
+<div class="cs-hero" style="max-width:var(--max-w);margin:0 auto 56px">
+  <div class="cs-hero-tb"><div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div><span class="url">tires-ecosystem, Marketplace</span></div>
+  <div class="cs-hero-inner thumb-3">📷 Storefront with Year/Make/Model</div>
+</div>
+<div class="cs-hdr"><div class="pc-num">CASE STUDY 03</div><h1>Tires &amp; Rims Ecosystem</h1><p class="cs-tl">Designing a five-party logistics chain into a seamless purchase-to-installation experience, from Year/Make/Model search to signed delivery proof.</p></div>
+<div class="cs-meta"><div class="cs-mi"><span class="lb">Role</span><span class="vl">UX Lead &amp; Service Designer</span></div><div class="cs-mi"><span class="lb">Timeline</span><span class="vl">5 months</span></div><div class="cs-mi"><span class="lb">Team</span><span class="vl">Cross-functional, 6 people</span></div><div class="cs-mi"><span class="lb">Status</span><span class="vl">Soft Launch Q2 2026</span></div></div>
+<div class="cs-body">
+<h2>The Challenge</h2>
+<p>Curacao wanted their tire business online. Sounds like an e-commerce project. It wasn't. Tires don't ship to your door. They end up on a car lift, after passing through five parties, two systems, and a documentation chain that has to be airtight before anyone gets paid.</p>
+<p>The full chain: customer selects tires → Curacao orders from <strong>ATD (American Tire Distributors)</strong> → ATD ships to installer → installer is notified with arrival details → appointment scheduled → tires installed → installer submits <strong>signed documentation and photos</strong> → Curacao processes the invoice. Every handoff automatic. Every party with their own view. This wasn't a storefront problem. It was a full operational system.</p>
+<div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Service blueprint, full logistics chain</span></div>
+<h2>The Four Users</h2>
+<p>Four distinct users. All connected. The <strong>end customer</strong> wants to find tires for their car and book an appointment. That's their whole world. <strong>ATD</strong> needs clean order data routed to the right installer location, no surprises. The <strong>local installer</strong> needs to know what's arriving, when, who the customer is, and exactly what to do with it. <strong>Curacao's operations team</strong> needs full chain visibility and a way to process invoices the moment the installer submits proof of work. Design for all four simultaneously, or the system doesn't hold.</p>
+<h2>What I Did</h2>
+<ol>
+<li><strong>Benchmark the Search Model</strong>. Costco Tires was the reference. They'd already solved this: customers arrive knowing different things. Some have a license plate. Some know year and make. Some have a tire size on a napkin. The design supports four entry points: License Plate + State, Vehicle (Year/Make/Model/Trim), Tire Size, and VIN. Meet people where they are.</li>
+<li><strong>Logic-First Interaction Design</strong>. The Year → Make → Model → Trim funnel is sequentially gated by API constraints. Each field only unlocks once the previous is confirmed. That's a real system requirement, not a design choice. The challenge: make that feel like guidance, not a form that locks you out. Every constraint is real. None of it should feel like friction.</li>
+<li><strong>Design the Ecosystem, Not Just the Storefront</strong>. The B2B installer portal is the other half of this product. It's where tires show up, appointments get scheduled, and proof of installation gets submitted. That submission triggers invoicing. The portal and storefront were designed as one connected system, because they are one.</li>
+</ol>
+</div>
+<div class="cs-iw"><div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Filter logic flows &amp; B2B dashboard</span></div></div>
+<div class="cs-body">
+<h2>The Result</h2>
+<p>A customer buys tires. That's all they do. Behind that: Curacao sends an order to ATD, ATD routes it to the right installer, the installer gets notified automatically, schedules the appointment, installs the tires, submits signed documentation and photos. Curacao processes the invoice. No one had to manually coordinate any of it.</p>
+<p>Soft launch is Q2 2026. First time Curacao's tire business runs as a fully automated, connected ecosystem. We designed the whole chain, then made it invisible to the people using it.</p>
+<div class="cs-af"><strong>Artifacts:</strong> Service Blueprints · B2B Installer Portal · Year/Make/Model/Trim Search Logic · ATD Order Flow · Installation Proof Submission Flow · Operations Dashboard</div>
+</div>
+<div class="cs-nx"><div><span class="nl">Previous</span><a href="javascript:void(0)" onclick="showCS(&#39;cs2&#39;);return false">← Miden Wallet</a></div><div></div></div>
+</div>
+
+<script>
+// ===== CURSOR =====
+const fc=document.getElementById('fc'),fcPath=document.getElementById('fcPath'),fcLabel=document.getElementById('fcLabel');
+let cx=-100,cy=-100,ax=-100,ay=-100,isJuana=false;
+document.addEventListener('mousemove',e=>{cx=e.clientX;cy=e.clientY});
+function animC(){ax+=(cx-ax)*.14;ay+=(cy-ay)*.14;fc.style.transform=`translate(${ax}px,${ay}px)`;requestAnimationFrame(animC)}
+animC();
+if('ontouchstart'in window)fc.style.display='none';
+document.addEventListener('mouseleave',()=>fc.style.opacity='0');
+document.addEventListener('mouseenter',()=>fc.style.opacity='1');
+function setCursorJuana(){if(!isJuana){isJuana=true;fcPath.setAttribute('fill','#0C8CE9');fcLabel.style.background='#0C8CE9';fcLabel.textContent='Juana'}}
+function setCursorAnon(){if(isJuana){isJuana=false;fcPath.setAttribute('fill','#8B9B8B');fcLabel.style.background='#8B9B8B';fcLabel.textContent='Anonymous'}}
+const spPhone=document.getElementById('spPhone');
+if(spPhone){spPhone.addEventListener('mouseenter',setCursorJuana);spPhone.addEventListener('mouseleave',setCursorAnon)}
+
+// ===== SPOTIFY =====
+const songs=[
+  {title:"Promesas Sobre el Bidet",artist:"Charly García",grad:"linear-gradient(135deg,#8B6914,#D4943A,#5C3A0A)",dur:"4:18",emoji:"🎹"},
+  {title:"No Me Importa",artist:"Lali",grad:"linear-gradient(135deg,#C74B8B,#E87BA8,#8B2054)",dur:"3:24",emoji:"💃"},
+  {title:"Mariposa Tecknicolor",artist:"Fito Páez",grad:"linear-gradient(135deg,#1A2A5C,#4B3A8B,#2A1A4A)",dur:"5:02",emoji:"🦋"},
+  {title:"La Fuerza",artist:"Nathy Peluso",grad:"linear-gradient(135deg,#C74B2F,#E0874B,#8B3A1A)",dur:"3:45",emoji:"🔥"},
+  {title:"Te Amo",artist:"Gustavo Cerati",grad:"linear-gradient(135deg,#4B7BA8,#8BB8D4,#2A5C8B)",dur:"4:56",emoji:"🌊"}
+];
+let cur=0,animating=false;
+function renderSong(dir){
+  const s=songs[cur];
+  const inner=document.getElementById('spArtInner');
+  const title=document.getElementById('spTitle');
+  const artist=document.getElementById('spArtist');
+  const dur=document.getElementById('spDur');
+  const bar=document.getElementById('spBar');
+  const time=document.getElementById('spTime');
+  if(dir!==undefined&&!animating){
+    animating=true;
+    inner.classList.add(dir>0?'out-left':'out-right');
+    title.style.opacity='0';artist.style.opacity='0';
+    setTimeout(()=>{
+      inner.style.background=s.grad;inner.textContent=s.emoji;
+      inner.classList.remove('out-left','out-right');
+      inner.classList.add(dir>0?'in-right':'in-left');
+      title.textContent=s.title;title.style.opacity='1';
+      artist.textContent=s.artist;artist.style.opacity='1';
+      dur.textContent=s.dur;time.textContent='0:00';
+      bar.style.transition='none';bar.style.width='0%';
+      setTimeout(()=>{bar.style.transition='width 20s linear';bar.style.width='35%'},50);
+      setTimeout(()=>{inner.classList.remove('in-right','in-left');animating=false},450);
+    },350);
+  }else{
+    inner.style.background=s.grad;inner.textContent=s.emoji;
+    title.textContent=s.title;artist.textContent=s.artist;
+    dur.textContent=s.dur;time.textContent='1:42';
+  }
+}
+function nextSong(){cur=(cur+1)%songs.length;renderSong(1)}
+function prevSong(){cur=(cur-1+songs.length)%songs.length;renderSong(-1)}
+renderSong();
+
+// ===== 3D TILT =====
+function tilt(el,e){const r=el.getBoundingClientRect();const x=(e.clientX-r.left)/r.width;const y=(e.clientY-r.top)/r.height;const tX=(y-.5)*-5;const tY=(x-.5)*5;el.style.transition='transform .08s ease';el.style.transform=`perspective(800px) rotateX(${tX}deg) rotateY(${tY}deg) translateY(-6px)`}
+function untilt(el){el.style.transition='transform .45s ease';el.style.transform='perspective(800px) rotateX(0) rotateY(0) translateY(0)'}
+
+// ===== HEADER =====
+window.addEventListener('scroll',()=>document.getElementById('hdr').classList.toggle('scrolled',window.scrollY>20));
+function cM(){document.getElementById('hnav').classList.remove('open')}
+
+// ===== REVEAL =====
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.07,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+
+// ===== NAV ACTIVE =====
+const nIds=['home','work','about','process','contact'];
+const nLks=document.querySelectorAll('.header-nav a:not(.hdr-cta)');
+const no=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){nLks.forEach(l=>l.classList.remove('active'));const m=document.querySelector(`.header-nav a[href="#${e.target.id}"]`);if(m)m.classList.add('active')}})},{threshold:.25});
+nIds.forEach(id=>{const el=document.getElementById(id);if(el)no.observe(el)});
+
+// ===== CASE STUDY NAV =====
+const mp=document.getElementById('mainPage');
+const csps=document.querySelectorAll('.cs');
+
+// Always reset to homepage on load
+mp.style.display='block';
+csps.forEach(p=>p.classList.remove('active'));
+
+function showCS(id){
+  mp.style.display='none';
+  csps.forEach(p=>p.classList.remove('active'));
+  const t=document.getElementById(id);
+  if(t){t.classList.add('active');window.scrollTo(0,0);}
+}
+function showMain(){
+  csps.forEach(p=>p.classList.remove('active'));
+  mp.style.display='block';
+  window.scrollTo(0,0);
+}
+
+// Bind back buttons via event listeners (most reliable approach)
+document.querySelectorAll('.cs-back').forEach(function(btn){
+  btn.addEventListener('click', showMain);
+});
+</script>
+
+
+</body></html>
