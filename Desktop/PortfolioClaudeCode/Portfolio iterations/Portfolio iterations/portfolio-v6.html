@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<!-- saved from url=(0093)file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v6.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juana Meyer, Product Designer</title>
+<meta name="description" content="Product Designer. Translating intricate business requirements into user &amp; customer centered designs.">
+<meta property="og:title" content="Juana Meyer, Product Designer">
+<meta property="og:description" content="Translating intricate business requirements into user &amp; customer centered designs.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./portfolio-v6_files/css2" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 32 32&#39;&gt;&lt;rect width=&#39;32&#39; height=&#39;32&#39; rx=&#39;8&#39; fill=&#39;%23E04B2F&#39;/&gt;&lt;text x=&#39;50%25&#39; y=&#39;55%25&#39; dominant-baseline=&#39;middle&#39; text-anchor=&#39;middle&#39; fill=&#39;white&#39; font-size=&#39;18&#39; font-family=&#39;serif&#39;&gt;J&lt;/text&gt;&lt;/svg&gt;">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#C0391B;--primary-hover:#A52F14;--primary-soft:rgba(192,57,27,0.08);--primary-border:rgba(192,57,27,0.22);
+  --sage:#B8CCBC;--sage-deep:#6B9B76;--plum:#5C2750;--plum-soft:rgba(92,39,80,0.06);
+  --cream:#F5F0EB;--warm-gray:#C8C1B8;
+  --bg-primary:#FAF8F5;--bg-secondary:#F0ECE6;--bg-elevated:#FFFFFF;--bg-dark:#1A1418;
+  --text-primary:#1A1418;--text-secondary:#5C5550;--text-tertiary:#6B6560;--text-on-dark:#F0ECE6;
+  --figma-blue:#0C8CE9;--figma-purple:#9747FF;
+  --cursor-anon:#8B9B8B;--cursor-juana:#0C8CE9;
+  --canvas-dots:rgba(0,0,0,0.04);--border-light:rgba(0,0,0,0.06);--border-medium:rgba(0,0,0,0.10);
+  --shadow-soft:0 1px 3px rgba(26,20,24,0.04),0 6px 20px rgba(26,20,24,0.03);
+  --shadow-elevated:0 4px 12px rgba(26,20,24,0.06),0 16px 40px rgba(26,20,24,0.05);
+  --font-serif:'Playfair Display',Georgia,serif;
+  --font-sans:'Outfit',sans-serif;
+  --font-mono:'IBM Plex Mono',monospace;
+  --header-h:64px;--max-w:1100px;--max-w-narrow:740px;
+}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg-primary);color:var(--text-primary);font-family:var(--font-sans);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+@media(hover:hover)and (pointer:fine){body,a,button{cursor:none}}
+::selection{background:rgba(224,75,47,0.14)}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+
+/* Noise grain */
+body::after{content:'';position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0.018;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:256px 256px}
+.dot-grid{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(circle,var(--canvas-dots) .7px,transparent .7px);background-size:20px 20px}
+
+/* ===== CURSOR ===== */
+.fc{position:fixed;z-index:10000;pointer-events:none;will-change:transform;transition:opacity .3s}
+.fc svg{width:15px;height:19px;transition:fill .3s}
+.fc-label{position:absolute;top:17px;left:9px;color:#fff;font-family:var(--font-mono);font-size:10.5px;font-weight:500;padding:2px 8px 3px;border-radius:3px;white-space:nowrap;line-height:1.3;transition:background .3s}
+
+/* ===== HEADER ===== */
+.header{position:fixed;top:0;left:0;right:0;z-index:500;height:var(--header-h);display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:rgba(250,248,245,.88);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border-bottom:1px solid var(--border-light);transition:box-shadow .3s}
+.header.scrolled{box-shadow:0 1px 12px rgba(0,0,0,.04)}
+.header-name{font-family:var(--font-serif);font-weight:500;font-size:17px;letter-spacing:-.01em}
+.header-nav{display:flex;align-items:center;gap:30px}
+.header-nav a{font-size:14px;color:var(--text-secondary);transition:color .2s;position:relative}
+.header-nav a:hover{color:var(--text-primary)}
+.header-nav a.active{color:var(--text-primary);font-weight:500}
+.header-nav a.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1.5px;background:var(--primary);border-radius:1px}
+.hdr-cta{font-size:13px!important;font-weight:500!important;color:var(--primary)!important;border:1.5px solid var(--primary-border);padding:7px 20px;border-radius:8px;transition:all .25s}
+.hdr-cta:hover{background:var(--primary);color:#fff!important;border-color:var(--primary)}
+.hdr-cta::after{display:none!important}
+.mob-tog{display:none;background:none;border:none;width:32px;height:32px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+.mob-tog span{display:block;width:20px;height:1.5px;background:var(--text-primary)}
+@media(max-width:768px){.header{padding:0 20px}.header-nav{position:fixed;top:var(--header-h);left:0;right:0;flex-direction:column;background:rgba(250,248,245,.97);backdrop-filter:blur(20px);padding:20px;gap:16px;border-bottom:1px solid var(--border-light);transform:translateY(-120%);opacity:0;transition:all .35s ease}.header-nav.open{transform:translateY(0);opacity:1}.mob-tog{display:flex}}
+
+/* ===== SHARED ===== */
+.section{padding:120px 40px;position:relative;z-index:1}
+.container{max-width:var(--max-w);margin:0 auto}
+.container-narrow{max-width:var(--max-w-narrow);margin:0 auto}
+.slabel{font-family:var(--font-mono);font-size:12px;color:var(--text-tertiary);letter-spacing:.5px;margin-bottom:14px;display:inline-flex;align-items:center;gap:7px;text-transform:uppercase}
+.slabel .dot{width:5px;height:5px;border-radius:50%;background:var(--primary)}
+.stitle{font-family:var(--font-serif);font-size:clamp(32px,4vw,46px);font-weight:400;margin-bottom:52px;letter-spacing:-.02em;line-height:1.1}
+
+.btn-p{background:var(--primary);color:#fff;border:none;padding:14px 30px;border-radius:10px;font-family:var(--font-sans);font-size:14px;font-weight:500;transition:all .3s cubic-bezier(.4,0,.2,1);text-decoration:none;display:inline-flex;align-items:center;gap:8px;letter-spacing:.01em}
+.btn-p:hover{background:var(--primary-hover);transform:translateY(-2px);box-shadow:0 8px 28px rgba(224,75,47,.25)}
+.btn-g{background:transparent;color:var(--text-primary);border:1.5px solid var(--border-medium);padding:13px 30px;border-radius:10px;font-family:var(--font-sans);font-size:14px;font-weight:500;transition:all .3s;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-g:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px)}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;padding:calc(var(--header-h) + 40px) 40px 80px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center;width:100%;max-width:var(--max-w);margin:0 auto}
+.hero-label{font-family:var(--font-mono);font-size:12.5px;color:var(--text-tertiary);margin-bottom:24px}
+.hero h1{font-family:var(--font-serif);font-size:clamp(33px,4.5vw,54px);line-height:1.18;font-weight:400;margin-bottom:28px;letter-spacing:-.02em}
+.hero h1 .hl{color:var(--primary);font-style:italic}
+.hero-specs{font-size:15px;color:var(--text-secondary);margin-bottom:36px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.hero-specs .sep{color:var(--warm-gray);font-size:8px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hline{opacity:0;transform:translateY(16px);animation:hIn .55s forwards}
+@keyframes hIn{to{opacity:1;transform:translateY(0)}}
+
+/* Terminal */
+.cterm{background:var(--bg-dark);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-elevated);max-width:380px;width:100%}
+.ct-hdr{display:flex;align-items:center;gap:8px;padding:11px 16px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06)}
+.ct-dots{display:flex;gap:6px}
+.ct-dots span{width:10px;height:10px;border-radius:50%}
+.ct-title{font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.3);flex:1;text-align:center;margin-right:30px}
+.ct-body{padding:18px 20px;font-family:var(--font-mono);font-size:12.5px;line-height:1.85;color:var(--text-on-dark)}
+.ct-line{opacity:0;transform:translateY(5px);animation:ctIn .4s forwards}
+@keyframes ctIn{to{opacity:1;transform:translateY(0)}}
+.ct-line .pr{color:var(--primary);font-weight:500}
+.ct-line .ck{color:var(--sage-deep);font-weight:500}
+.ct-cur{display:inline-block;width:7px;height:14px;background:var(--primary);margin-left:2px;animation:blk 1s step-end infinite;vertical-align:middle}
+@keyframes blk{0%,100%{opacity:1}50%{opacity:0}}
+
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}.cterm{max-width:100%}.hero{padding-top:calc(var(--header-h) + 24px);min-height:auto}}
+@media(max-width:768px){.hero{padding:calc(var(--header-h) + 20px) 20px 60px}}
+
+/* ===== MARQUEE STRIP ===== */
+.marquee-strip{border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);background:var(--bg-secondary);overflow:hidden;padding:12px 0;position:relative;z-index:1}
+.marquee-track{display:flex;gap:0;white-space:nowrap;animation:marqueeScroll 28s linear infinite}
+.marquee-track:hover{animation-play-state:paused}
+.marquee-inner{display:flex;gap:0;flex-shrink:0}
+.mq-item{font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary);padding:0 20px;display:inline-flex;align-items:center;gap:16px;letter-spacing:.3px;white-space:nowrap}
+.mq-item .mq-dot{width:4px;height:4px;border-radius:50%;background:var(--primary);opacity:.6;flex-shrink:0}
+@keyframes marqueeScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== ABOUT ===== */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
+.about-text h2{font-family:var(--font-serif);font-size:clamp(32px,3.5vw,44px);font-weight:400;margin-bottom:24px;letter-spacing:-.02em;line-height:1.15}
+.about-text p{font-size:15.5px;line-height:1.85;color:var(--text-secondary);margin-bottom:16px}
+.about-text strong{color:var(--text-primary);font-weight:500}
+
+/* ===== SPOTIFY PHONE ===== */
+.phone-wrap{display:flex;justify-content:center}
+.phone{width:280px;background:#fff;border-radius:36px;border:1px solid var(--border-medium);box-shadow:var(--shadow-elevated);overflow:hidden;padding:16px;position:relative}
+.phone-notch{width:80px;height:6px;background:var(--bg-secondary);border-radius:3px;margin:0 auto 20px}
+.sp-art{width:100%;aspect-ratio:1;border-radius:14px;margin-bottom:20px;transition:all .5s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.12)}
+.sp-art-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:36px;transition:all .4s ease;position:absolute;inset:0}
+.sp-art-inner.out-left{transform:translateX(-110%);opacity:0}
+.sp-art-inner.out-right{transform:translateX(110%);opacity:0}
+.sp-art-inner.in-left{animation:slideInLeft .4s forwards}
+.sp-art-inner.in-right{animation:slideInRight .4s forwards}
+@keyframes slideInLeft{from{transform:translateX(-100%);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes slideInRight{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
+.sp-title{font-family:var(--font-serif);font-size:17px;font-weight:600;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:opacity .3s}
+.sp-artist{font-family:var(--font-sans);font-size:13px;color:var(--text-secondary);margin-bottom:18px;transition:opacity .3s}
+.sp-progress{position:relative;height:3px;background:var(--border-light);border-radius:2px;margin-bottom:6px}
+.sp-bar{height:100%;background:var(--primary);border-radius:2px;width:35%;transition:width 20s linear}
+.sp-dot{position:absolute;top:50%;right:0;transform:translate(50%,-50%);width:10px;height:10px;background:var(--primary);border-radius:50%;opacity:0;transition:opacity .2s}
+.phone:hover .sp-dot{opacity:1}
+.sp-times{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:10px;color:var(--text-tertiary);margin-bottom:20px}
+.sp-controls{display:flex;align-items:center;justify-content:center;gap:28px;margin-bottom:16px}
+.sp-ctrl{background:none;border:none;font-size:18px;color:var(--text-secondary);transition:color .2s;padding:4px}
+.sp-ctrl:hover{color:var(--text-primary)}
+.sp-play{width:44px;height:44px;border-radius:50%;background:var(--text-primary);color:#fff;border:none;font-size:16px;display:flex;align-items:center;justify-content:center;transition:transform .2s,box-shadow .2s}
+.sp-play:hover{transform:scale(1.07);box-shadow:0 4px 16px rgba(26,20,24,.2)}
+.sp-footer{font-family:var(--font-mono);font-size:10.5px;color:var(--text-tertiary);text-align:center;margin-top:8px;line-height:1.5}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:52px}.phone{width:260px}}
+
+/* ===== PROJECTS ===== */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pcard{background:var(--bg-elevated);border-radius:16px;overflow:hidden;position:relative;box-shadow:var(--shadow-soft);border:1px solid var(--border-light);transition:box-shadow .4s,border-color .4s,transform .4s;transform-style:preserve-3d;will-change:transform}
+.pcard:hover{box-shadow:0 8px 28px rgba(224,75,47,.08),0 24px 56px rgba(26,20,24,.08);border-color:rgba(12,140,233,.22);transform:translateY(-4px)}
+
+/* Figma selection handles */
+.pcard::before,.pcard::after{content:'';position:absolute;width:7px;height:7px;border:1.5px solid var(--figma-blue);border-radius:1px;background:#fff;opacity:0;transition:opacity .3s;z-index:5;pointer-events:none}
+.pcard:hover::before,.pcard:hover::after{opacity:1}
+.pcard::before{top:-4px;left:-4px}.pcard::after{top:-4px;right:-4px}
+.phl,.phb{position:absolute;width:7px;height:7px;border:1.5px solid var(--figma-blue);border-radius:1px;background:#fff;opacity:0;transition:opacity .3s;z-index:5;pointer-events:none}
+.pcard:hover .phl,.pcard:hover .phb{opacity:1}
+.phl{bottom:-4px;left:-4px}.phb{bottom:-4px;right:-4px}
+
+.pc-frame{font-family:var(--font-mono);font-size:10px;color:var(--figma-purple);margin-bottom:7px;display:flex;align-items:center;gap:4px;padding-left:2px}
+.pc-frame::before{content:'▢';font-size:8px}
+
+.pc-tb{display:flex;align-items:center;gap:7px;padding:9px 14px;background:var(--bg-secondary);border-bottom:1px solid var(--border-light)}
+.pc-tb-dots{display:flex;gap:5px}
+.pc-tb-dots span{width:8px;height:8px;border-radius:50%}
+.pc-tb-t{font-family:var(--font-mono);font-size:10px;color:var(--text-tertiary);flex:1;text-align:center;margin-right:28px}
+
+.pc-img{width:100%;aspect-ratio:4/3;overflow:hidden;position:relative}
+.pc-img-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;transition:transform .6s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+.pcard:hover .pc-img-inner{transform:scale(1.03)}
+
+/* ===== THUMBNAIL ART ===== */
+
+/* Thumb 1 — E-Commerce: warm golden editorial grid */
+.thumb-1{background:linear-gradient(145deg,#F0D5A0 0%,#E4A96B 45%,#C26038 100%)}
+.thumb-1 .th-svg{position:absolute;inset:0;width:100%;height:100%}
+
+/* Thumb 2 — Miden Wallet: dark cosmic */
+.thumb-2{background:linear-gradient(145deg,#060412 0%,#0E0820 55%,#0A1228 100%)}
+.thumb-2 .th-svg{position:absolute;inset:0;width:100%;height:100%}
+
+/* Thumb 3 — Tires Ecosystem: industrial dark */
+.thumb-3{background:linear-gradient(145deg,#161616 0%,#262626 55%,#1C1C1C 100%)}
+.thumb-3 .th-svg{position:absolute;inset:0;width:100%;height:100%}
+
+.pc-body{padding:22px 22px 16px}
+.pc-num{font-family:var(--font-mono);font-size:10px;color:var(--primary);letter-spacing:.8px;margin-bottom:8px;font-weight:500;text-transform:uppercase}
+.pc-body h3{font-family:var(--font-serif);font-size:21px;font-weight:400;margin-bottom:4px;line-height:1.2;letter-spacing:-.01em}
+.pc-sub{font-size:12.5px;color:var(--text-tertiary);margin-bottom:14px}
+.pc-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:16px}
+.tag{padding:3px 10px;border-radius:16px;font-size:11px;font-family:var(--font-sans);background:var(--primary-soft);color:var(--primary);border:1px solid var(--primary-border)}
+.tag.sg{background:rgba(107,155,118,.08);color:var(--sage-deep);border-color:rgba(107,155,118,.15)}
+.tag.pl{background:var(--plum-soft);color:var(--plum);border-color:rgba(92,39,80,.12)}
+.rdm{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;border-bottom:1px solid transparent;padding-bottom:2px;transition:all .25s}
+.rdm:hover{color:var(--primary);border-bottom-color:var(--primary)}
+.rdm .arr{transition:transform .25s}
+.rdm:hover .arr{transform:translateX(5px)}
+.pc-ft{padding:10px 22px;border-top:1px solid var(--border-light);font-family:var(--font-mono);font-size:10px;color:var(--text-tertiary)}
+@media(max-width:900px){.pgrid{grid-template-columns:1fr 1fr;gap:16px}}
+@media(max-width:600px){.pgrid{grid-template-columns:1fr}}
+
+/* ===== CASE STUDIES ===== */
+.cs{padding:0 40px;display:none}.cs.active{display:block}
+.cs-back{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:var(--text-secondary);padding:24px 0;transition:color .2s;background:none;border:none;font-family:var(--font-sans);cursor:pointer}
+.cs-back:hover{color:var(--primary)}
+.cs-hero{width:100%;max-width:var(--max-w);margin:0 auto 56px;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-elevated);border:1px solid var(--border-light)}
+.cs-hero-tb{display:flex;align-items:center;gap:8px;padding:10px 16px;background:var(--bg-secondary);border-bottom:1px solid var(--border-light)}
+.cs-hero-tb .url{font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary);flex:1;text-align:center;margin-right:34px}
+.cs-hero-inner{aspect-ratio:16/8;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:14px}
+.cs-hdr{max-width:var(--max-w-narrow);margin:0 auto 44px}
+.cs-hdr h1{font-family:var(--font-serif);font-size:clamp(30px,4vw,46px);font-weight:400;line-height:1.2;margin-bottom:16px}
+.cs-tl{font-family:var(--font-serif);font-size:19px;font-style:italic;color:var(--text-secondary);line-height:1.5}
+.cs-meta{display:flex;gap:36px;padding:24px 0;border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);margin-bottom:52px;max-width:var(--max-w-narrow);margin-left:auto;margin-right:auto;flex-wrap:wrap}
+.cs-mi .lb{font-family:var(--font-mono);font-size:10.5px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:4px}
+.cs-mi .vl{font-size:14px;font-weight:500}
+.cs-body{max-width:var(--max-w-narrow);margin:0 auto}
+.cs-body h2{font-family:var(--font-serif);font-size:26px;font-weight:400;margin:52px 0 18px}.cs-body h2:first-child{margin-top:0}
+.cs-body p{font-size:15.5px;line-height:1.85;color:var(--text-secondary);margin-bottom:16px}
+.cs-body p strong{color:var(--text-primary);font-weight:500}
+.cs-body p em{color:var(--primary);font-style:italic}
+.cs-body ol{list-style:none;counter-reset:s;margin:18px 0 24px;padding:0}
+.cs-body ol li{counter-increment:s;padding:12px 0 12px 46px;position:relative;font-size:15.5px;line-height:1.7;color:var(--text-secondary);border-left:1px solid var(--border-light);margin-left:13px}
+.cs-body ol li::before{content:counter(s);position:absolute;left:-13px;top:12px;width:26px;height:26px;background:var(--bg-elevated);border:1.5px solid var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:11px;color:var(--primary);font-weight:500}
+.cs-body ol li strong{color:var(--text-primary);font-weight:600}
+.iph{width:100%;aspect-ratio:16/9;background:var(--bg-secondary);border:1.5px dashed var(--border-medium);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;margin:32px 0}
+.iph svg{width:28px;height:28px;color:var(--text-tertiary);opacity:.4}
+.iph span{font-family:var(--font-mono);font-size:12px;color:var(--text-tertiary);text-align:center;padding:0 16px}
+.cs-iw{max-width:var(--max-w);margin:44px auto}.cs-iw .iph{aspect-ratio:16/7;margin:0}
+.mtbl{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.mtbl th{text-align:left;padding:11px 16px;background:var(--bg-secondary);color:var(--text-tertiary);font-weight:500;font-family:var(--font-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border-light)}
+.mtbl td{padding:13px 16px;border-bottom:1px solid var(--border-light);color:var(--text-secondary)}
+.mtbl tr:last-child td{border-bottom:none}
+.mp{color:var(--sage-deep);font-weight:600}
+.cs-co{background:var(--primary-soft);border-left:3px solid var(--primary);border-radius:0 10px 10px 0;padding:22px 26px;margin:24px 0}
+.cs-co p{margin:0;font-size:15px;line-height:1.8}.cs-co strong{color:var(--text-primary);font-weight:600}
+.cs-af{font-family:var(--font-mono);font-size:12px;color:var(--text-tertiary);padding:24px 0;border-top:1px solid var(--border-light);margin-top:44px}
+.cs-af strong{color:var(--text-secondary)}
+.cs-nx{display:flex;align-items:center;justify-content:space-between;padding:44px 0 80px;border-top:1px solid var(--border-light);margin-top:52px;max-width:var(--max-w-narrow);margin-left:auto;margin-right:auto}
+.cs-nx a{font-weight:500;font-size:15px;display:inline-flex;align-items:center;gap:8px;transition:color .2s}
+.cs-nx a:hover{color:var(--primary)}
+.cs-nx .nl{font-family:var(--font-mono);font-size:10.5px;color:var(--text-tertiary);display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}
+
+/* ===== PROCESS ===== */
+.proc{background:var(--bg-dark);border-top:none;border-bottom:none;position:relative;overflow:hidden}
+.proc::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.025) .7px,transparent .7px);background-size:20px 20px;pointer-events:none}
+.proc .slabel{color:rgba(240,236,230,.35)}
+.proc .stitle{color:var(--text-on-dark)}
+.proc .rv{color:var(--text-on-dark)}
+.proc-intro{font-size:15.5px;color:rgba(240,236,230,.5);max-width:520px;margin-bottom:0;line-height:1.7}
+.proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;margin-top:48px}
+.pstep{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:28px 22px;border-radius:12px;position:relative;transition:all .35s;backdrop-filter:blur(4px)}
+.pstep:hover{background:rgba(255,255,255,.07);border-color:rgba(224,75,47,.3);transform:translateY(-3px)}
+.pstep-n{font-family:var(--font-mono);font-size:11px;color:var(--primary);font-weight:500;margin-bottom:14px;opacity:.8}
+.pstep h3{font-family:var(--font-sans);font-size:16px;font-weight:600;margin-bottom:10px;color:var(--text-on-dark)}
+.pstep p{font-size:13px;color:rgba(240,236,230,.45);line-height:1.7}
+.pstep:not(:last-child)::after{content:'→';position:absolute;right:-13px;top:50%;transform:translateY(-50%);font-size:14px;color:rgba(255,255,255,.15);z-index:2}
+@media(max-width:900px){.proc-grid{grid-template-columns:1fr;gap:8px}.pstep::after{display:none}}
+
+/* ===== CONTACT ===== */
+.cta-sec{text-align:center;max-width:560px;margin:0 auto}
+.cta-sec h2{font-family:var(--font-serif);font-size:clamp(32px,4.5vw,52px);font-weight:400;margin-bottom:18px;letter-spacing:-.02em;line-height:1.1}
+.cta-sec p{font-size:15.5px;color:var(--text-secondary);line-height:1.75;margin-bottom:40px}
+.clinks{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.clk{display:inline-flex;align-items:center;gap:7px;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:500;transition:all .25s;color:var(--text-secondary);border:1.5px solid var(--border-medium);background:var(--bg-elevated)}
+.clk:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px);box-shadow:var(--shadow-soft)}
+.clk.cp{background:var(--primary);border-color:var(--primary);color:#fff}
+.clk.cp:hover{background:var(--primary-hover);border-color:var(--primary-hover);transform:translateY(-2px);box-shadow:0 6px 24px rgba(224,75,47,.25)}
+
+/* ===== FOOTER ===== */
+.footer{padding:40px 40px;border-top:1px solid var(--border-light);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-m{font-size:13px;color:var(--text-tertiary)}
+.footer-t{font-family:var(--font-serif);font-style:italic;color:var(--text-tertiary);font-size:13.5px}
+@media(max-width:600px){.footer{flex-direction:column;text-align:center;padding:32px 20px}}
+
+/* ===== REVEAL ===== */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.rv.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+
+/* proc rv overrides for dark bg */
+.proc .rv{opacity:0;transform:translateY(18px)}
+.proc .rv.vis{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){.section{padding:80px 20px}.hero{padding:calc(var(--header-h) + 20px) 20px 60px}.cs{padding:0 20px}.cs-meta{gap:20px}.clinks{flex-direction:column;align-items:center}.clk{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+<div class="dot-grid"></div>
+
+<!-- Custom Cursor -->
+<div class="fc" id="fc" style="transform: translate(1010.2px, 553.88px); opacity: 1;">
+  <svg viewBox="0 0 16 20" fill="none"><path id="fcPath" d="M1 1L1 15.5L4.5 12L8.5 19L11 17.5L7 11L12 11L1 1Z" fill="#8B9B8B" stroke="#fff" stroke-width=".7"></path></svg>
+  <div class="fc-label" id="fcLabel" style="background: rgb(139, 155, 139);">Anonymous</div>
+</div>
+
+<div id="mainPage" style="display: none;">
+<header class="header" id="hdr">
+  <a href="javascript:void(0)" class="header-name" onclick="showMain();return false">Juana Meyer</a>
+  <button class="mob-tog" onclick="document.getElementById(&#39;hnav&#39;).classList.toggle(&#39;open&#39;)" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav class="header-nav" id="hnav">
+    <a href="javascript:void(0)" onclick="showMain();cM();return false">Work</a>
+    <a href="javascript:void(0)" onclick="showMain();cM();return false">About</a>
+    <a href="javascript:void(0)" onclick="showMain();cM();return false">Process</a>
+    <a href="javascript:void(0)" class="hdr-cta" onclick="showMain();cM();return false">Let's Talk</a>
+  </nav>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="section hero" id="home">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-label hline" style="animation-delay:0s">Product Designer, UX/CX Strategy</div>
+      <h1>
+        <span class="hline" style="animation-delay:.12s">Translating intricate</span><br>
+        <span class="hline" style="animation-delay:.24s">business requirements into</span><br>
+        <span class="hline" style="animation-delay:.36s"><span class="hl">user &amp; customer centered</span></span><br>
+        <span class="hline" style="animation-delay:.48s">designs.</span>
+      </h1>
+      <div class="hero-specs hline" style="animation-delay:.64s"><span>E-commerce</span><span class="sep">◆</span><span>Banking</span><span class="sep">◆</span><span>Crypto &amp; Tech</span></div>
+      <div class="hero-ctas hline" style="animation-delay:.78s">
+        <a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v6.html#work" class="btn-p">View Selected Work ↓</a>
+        <a href="file:///Users/juanameyer/Desktop/PortfolioClaudeCode/Portfolio%20iterations/portfolio-v6.html#contact" class="btn-g">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hline" style="animation-delay:.4s">
+      <div class="cterm">
+        <div class="ct-hdr"><div class="ct-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div><span class="ct-title">strategy</span></div>
+        <div class="ct-body">
+          <div class="ct-line" style="animation-delay:.9s"><span class="pr">&gt;</span> juana.approach --first-principles</div>
+          <div class="ct-line" style="animation-delay:1.6s"><span class="ck">✓</span> Understand the business, not just the brief</div>
+          <div class="ct-line" style="animation-delay:2.2s"><span class="ck">✓</span> Map the system, not just the screen</div>
+          <div class="ct-line" style="animation-delay:2.8s"><span class="ck">✓</span> Design for autonomy, not dependency</div>
+          <div class="ct-line" style="animation-delay:3.4s"><span class="pr">&gt;</span> Shipping with intention.<span class="ct-cur"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MARQUEE ==================== -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <!-- Two copies for seamless loop -->
+    <div class="marquee-inner">
+      <span class="mq-item">UX Strategy<span class="mq-dot"></span></span>
+      <span class="mq-item">Information Architecture<span class="mq-dot"></span></span>
+      <span class="mq-item">Design Systems<span class="mq-dot"></span></span>
+      <span class="mq-item">User Research<span class="mq-dot"></span></span>
+      <span class="mq-item">Figma<span class="mq-dot"></span></span>
+      <span class="mq-item">Service Design<span class="mq-dot"></span></span>
+      <span class="mq-item">Prototyping<span class="mq-dot"></span></span>
+      <span class="mq-item">E-Commerce<span class="mq-dot"></span></span>
+      <span class="mq-item">Product Strategy<span class="mq-dot"></span></span>
+      <span class="mq-item">Usability Testing<span class="mq-dot"></span></span>
+      <span class="mq-item">Component Libraries<span class="mq-dot"></span></span>
+      <span class="mq-item">Shopify<span class="mq-dot"></span></span>
+      <span class="mq-item">Banking UX<span class="mq-dot"></span></span>
+      <span class="mq-item">Crypto &amp; Web3<span class="mq-dot"></span></span>
+    </div>
+    <div class="marquee-inner" aria-hidden="true">
+      <span class="mq-item">UX Strategy<span class="mq-dot"></span></span>
+      <span class="mq-item">Information Architecture<span class="mq-dot"></span></span>
+      <span class="mq-item">Design Systems<span class="mq-dot"></span></span>
+      <span class="mq-item">User Research<span class="mq-dot"></span></span>
+      <span class="mq-item">Figma<span class="mq-dot"></span></span>
+      <span class="mq-item">Service Design<span class="mq-dot"></span></span>
+      <span class="mq-item">Prototyping<span class="mq-dot"></span></span>
+      <span class="mq-item">E-Commerce<span class="mq-dot"></span></span>
+      <span class="mq-item">Product Strategy<span class="mq-dot"></span></span>
+      <span class="mq-item">Usability Testing<span class="mq-dot"></span></span>
+      <span class="mq-item">Component Libraries<span class="mq-dot"></span></span>
+      <span class="mq-item">Shopify<span class="mq-dot"></span></span>
+      <span class="mq-item">Banking UX<span class="mq-dot"></span></span>
+      <span class="mq-item">Crypto &amp; Web3<span class="mq-dot"></span></span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== ABOUT ==================== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="slabel rv vis"><span class="dot"></span> About</div>
+        <h2 class="rv d1 vis">Hello, I'm Juana.</h2>
+        <p class="rv d2 vis">I'm a <strong>product designer</strong> who translates complex business requirements into clear, user-centered experiences.</p>
+        <p class="rv d3 vis">My background in <strong>fine art</strong> trained my eye for composition and detail. My work across <strong>e-commerce, banking, and emerging tech</strong> sharpened my strategic thinking.</p>
+        <p class="rv d4 vis">Originally from <strong>Argentina</strong> 🇦🇷, I work primarily with US-based teams and products. I love to travel and embrace new perspectives, and I'm <strong>open to relocation</strong> for the right opportunity.</p>
+      </div>
+      <!-- Spotify Phone -->
+      <div class="phone-wrap rv d3 vis">
+        <div class="phone" id="spPhone">
+          <div class="phone-notch"></div>
+          <div class="sp-art" id="spArt">
+            <div class="sp-art-inner" id="spArtInner" style="background: linear-gradient(135deg, rgb(139, 105, 20), rgb(212, 148, 58), rgb(92, 58, 10));">🎹</div>
+          </div>
+          <div class="sp-title" id="spTitle" style="opacity: 1;">Promesas Sobre el Bidet</div>
+          <div class="sp-artist" id="spArtist" style="opacity: 1;">Charly García</div>
+          <div class="sp-progress"><div class="sp-bar" id="spBar" style="transition: width 20s linear; width: 35%;"></div><div class="sp-dot" style="left:35%"></div></div>
+          <div class="sp-times"><span id="spTime">1:42</span><span id="spDur">4:18</span></div>
+          <div class="sp-controls">
+            <button class="sp-ctrl" onclick="prevSong()">⏮</button>
+            <button class="sp-play" id="spPlay">▶</button>
+            <button class="sp-ctrl" onclick="nextSong()">⏭</button>
+          </div>
+          <div class="sp-footer">🎧 What Juana plays<br>while designing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROJECTS ==================== -->
+<section class="section" id="work" style="background:var(--bg-secondary)">
+  <div class="container">
+    <div class="slabel rv vis"><span class="dot"></span> Selected Work</div>
+    <h2 class="stitle rv d1 vis">Case Studies</h2>
+    <div class="pgrid">
+
+      <!-- Card 1: E-Commerce -->
+      <div class="rv d1 vis">
+        <div class="pc-frame">Frame: "Case Study 01"</div>
+        <div class="pcard" onclick="showCS(&#39;cs1&#39;)" onmousemove="tilt(this,event)" onmouseleave="untilt(this)" style="transition: transform 0.45s; transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px);">
+          <div class="phl"></div><div class="phb"></div>
+          <div class="pc-tb">
+            <div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div>
+            <span class="pc-tb-t">case_study_01.fig</span>
+          </div>
+          <div class="pc-img">
+            <div class="pc-img-inner thumb-1">
+              <!-- E-Commerce SVG art: product grid + warm editorial feel -->
+              <svg class="th-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <!-- ambient light -->
+                <radialgradient id="g1a" cx="75%" cy="20%" r="55%">
+                  <stop offset="0%" stop-color="#fff" stop-opacity=".25"></stop>
+                  <stop offset="100%" stop-color="#fff" stop-opacity="0"></stop>
+                </radialgradient>
+                <rect width="400" height="300" fill="url(#g1a)"></rect>
+                <!-- product cards grid -->
+                <g opacity=".55">
+                  <rect x="28" y="36" width="90" height="110" rx="6" fill="none" stroke="#fff" stroke-width="1.2"></rect>
+                  <rect x="28" y="36" width="90" height="68" rx="6" fill="rgba(255,255,255,.18)"></rect>
+                  <rect x="36" y="116" width="50" height="6" rx="2" fill="rgba(255,255,255,.45)"></rect>
+                  <rect x="36" y="126" width="34" height="5" rx="2" fill="rgba(255,255,255,.25)"></rect>
+
+                  <rect x="132" y="36" width="90" height="110" rx="6" fill="none" stroke="#fff" stroke-width="1.2"></rect>
+                  <rect x="132" y="36" width="90" height="68" rx="6" fill="rgba(255,255,255,.12)"></rect>
+                  <rect x="140" y="116" width="50" height="6" rx="2" fill="rgba(255,255,255,.45)"></rect>
+                  <rect x="140" y="126" width="34" height="5" rx="2" fill="rgba(255,255,255,.25)"></rect>
+
+                  <rect x="236" y="36" width="90" height="110" rx="6" fill="none" stroke="#fff" stroke-width="1.2"></rect>
+                  <rect x="236" y="36" width="90" height="68" rx="6" fill="rgba(255,255,255,.22)"></rect>
+                  <rect x="244" y="116" width="50" height="6" rx="2" fill="rgba(255,255,255,.45)"></rect>
+                  <rect x="244" y="126" width="34" height="5" rx="2" fill="rgba(255,255,255,.25)"></rect>
+                </g>
+                <!-- nav bar suggestion -->
+                <rect x="20" y="12" width="360" height="18" rx="4" fill="rgba(255,255,255,.2)"></rect>
+                <rect x="28" y="17" width="48" height="7" rx="2" fill="rgba(255,255,255,.5)"></rect>
+                <circle cx="370" cy="21" r="5" fill="rgba(255,255,255,.35)"></circle>
+                <!-- bottom CTA bar -->
+                <rect x="28" y="168" width="118" height="28" rx="7" fill="rgba(255,255,255,.3)" stroke="rgba(255,255,255,.5)" stroke-width="1"></rect>
+                <rect x="36" y="177" width="70" height="8" rx="3" fill="rgba(255,255,255,.6)"></rect>
+                <!-- second row product cards (partial) -->
+                <g opacity=".35">
+                  <rect x="28" y="204" width="90" height="80" rx="6" fill="none" stroke="#fff" stroke-width="1"></rect>
+                  <rect x="28" y="204" width="90" height="48" rx="6" fill="rgba(255,255,255,.12)"></rect>
+                  <rect x="132" y="204" width="90" height="80" rx="6" fill="none" stroke="#fff" stroke-width="1"></rect>
+                  <rect x="132" y="204" width="90" height="48" rx="6" fill="rgba(255,255,255,.08)"></rect>
+                  <rect x="236" y="204" width="90" height="80" rx="6" fill="none" stroke="#fff" stroke-width="1"></rect>
+                  <rect x="236" y="204" width="90" height="48" rx="6" fill="rgba(255,255,255,.15)"></rect>
+                </g>
+                <!-- decorative diagonal sweep -->
+                <line x1="340" y1="0" x2="400" y2="300" stroke="rgba(255,255,255,.07)" stroke-width="40"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-num">Case Study 01</div>
+            <h3>E-Commerce Migration</h3>
+            <div class="pc-sub">Magento → Shopify Plus</div>
+            <div class="pc-tags"><span class="tag">UX Strategy</span><span class="tag sg">IA</span><span class="tag pl">Design System</span></div>
+            <span class="rdm">View Case Study <span class="arr">→</span></span>
+          </div>
+          <div class="pc-ft">◇ 4 layers · Sep 2024 – Apr 2025</div>
+        </div>
+      </div>
+
+      <!-- Card 2: Miden Wallet -->
+      <div class="rv d2 vis">
+        <div class="pc-frame">Frame: "Case Study 02"</div>
+        <div class="pcard" onclick="showCS(&#39;cs2&#39;)" onmousemove="tilt(this,event)" onmouseleave="untilt(this)" style="transition: transform 0.45s; transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px);">
+          <div class="phl"></div><div class="phb"></div>
+          <div class="pc-tb">
+            <div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div>
+            <span class="pc-tb-t">miden_wallet.fig</span>
+          </div>
+          <div class="pc-img">
+            <div class="pc-img-inner thumb-2">
+              <!-- Miden SVG art: concentric hexagons, dark cosmic -->
+              <svg class="th-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <radialgradient id="g2core" cx="50%" cy="50%" r="40%">
+                    <stop offset="0%" stop-color="#8B5CF6" stop-opacity=".7"></stop>
+                    <stop offset="60%" stop-color="#3B82F6" stop-opacity=".2"></stop>
+                    <stop offset="100%" stop-color="#000" stop-opacity="0"></stop>
+                  </radialgradient>
+                  <radialgradient id="g2outer" cx="50%" cy="50%" r="70%">
+                    <stop offset="0%" stop-color="#1E1B4B" stop-opacity=".6"></stop>
+                    <stop offset="100%" stop-color="#000" stop-opacity="0"></stop>
+                  </radialgradient>
+                </defs>
+                <!-- outer glow -->
+                <circle cx="200" cy="150" r="160" fill="url(#g2outer)"></circle>
+                <circle cx="200" cy="150" r="90" fill="url(#g2core)"></circle>
+                <!-- concentric rings -->
+                <circle cx="200" cy="150" r="110" fill="none" stroke="rgba(139,92,246,.18)" stroke-width="1"></circle>
+                <circle cx="200" cy="150" r="85" fill="none" stroke="rgba(139,92,246,.22)" stroke-width="1"></circle>
+                <circle cx="200" cy="150" r="60" fill="none" stroke="rgba(139,92,246,.3)" stroke-width="1.5"></circle>
+                <circle cx="200" cy="150" r="38" fill="none" stroke="rgba(139,92,246,.45)" stroke-width="1.5"></circle>
+                <circle cx="200" cy="150" r="20" fill="rgba(139,92,246,.35)" stroke="rgba(139,92,246,.8)" stroke-width="1"></circle>
+                <!-- shield/hex outline -->
+                <polygon points="200,42 282,92 282,208 200,258 118,208 118,92" fill="none" stroke="rgba(139,92,246,.15)" stroke-width="1"></polygon>
+                <polygon points="200,68 260,102 260,198 200,232 140,198 140,102" fill="none" stroke="rgba(99,102,241,.2)" stroke-width="1"></polygon>
+                <!-- node dots on ring -->
+                <circle cx="200" cy="40" r="3" fill="#8B5CF6" opacity=".7"></circle>
+                <circle cx="310" cy="105" r="3" fill="#8B5CF6" opacity=".5"></circle>
+                <circle cx="310" cy="195" r="3" fill="#6366F1" opacity=".5"></circle>
+                <circle cx="200" cy="260" r="3" fill="#8B5CF6" opacity=".7"></circle>
+                <circle cx="90" cy="195" r="3" fill="#6366F1" opacity=".5"></circle>
+                <circle cx="90" cy="105" r="3" fill="#8B5CF6" opacity=".5"></circle>
+                <!-- connection lines -->
+                <line x1="200" y1="40" x2="200" y2="150" stroke="rgba(139,92,246,.15)" stroke-width="1" stroke-dasharray="3,4"></line>
+                <line x1="310" y1="105" x2="200" y2="150" stroke="rgba(99,102,241,.12)" stroke-width="1" stroke-dasharray="3,4"></line>
+                <line x1="90" y1="195" x2="200" y2="150" stroke="rgba(139,92,246,.12)" stroke-width="1" stroke-dasharray="3,4"></line>
+                <!-- background hex grid (subtle) -->
+                <g opacity=".06" stroke="rgba(139,92,246,1)" stroke-width=".7" fill="none">
+                  <polygon points="50,20 70,8 90,20 90,44 70,56 50,44"></polygon>
+                  <polygon points="330,240 350,228 370,240 370,264 350,276 330,264"></polygon>
+                  <polygon points="10,170 30,158 50,170 50,194 30,206 10,194"></polygon>
+                  <polygon points="355,60 375,48 395,60 395,84 375,96 355,84"></polygon>
+                </g>
+                <!-- small data bits at edges -->
+                <g font-family="monospace" font-size="8" fill="rgba(139,92,246,.3)">
+                  <text x="16" y="28">0x4f</text>
+                  <text x="332" y="16">zkp://</text>
+                  <text x="16" y="280">0b1101</text>
+                  <text x="318" y="290">note.zk</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-num">Case Study 02</div>
+            <h3>Miden Crypto Wallet</h3>
+            <div class="pc-sub">Privacy-First Wallet</div>
+            <div class="pc-tags"><span class="tag">Product Design</span><span class="tag sg">Research</span><span class="tag pl">Strategy</span></div>
+            <span class="rdm">View Case Study <span class="arr">→</span></span>
+          </div>
+          <div class="pc-ft">◇ 6 layers · April 2025</div>
+        </div>
+      </div>
+
+      <!-- Card 3: Tires Ecosystem -->
+      <div class="rv d3 vis">
+        <div class="pc-frame">Frame: "Case Study 03"</div>
+        <div class="pcard" onclick="showCS(&#39;cs3&#39;)" onmousemove="tilt(this,event)" onmouseleave="untilt(this)" style="transition: transform 0.45s; transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px);">
+          <div class="phl"></div><div class="phb"></div>
+          <div class="pc-tb">
+            <div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div>
+            <span class="pc-tb-t">tires_ecosystem.fig</span>
+          </div>
+          <div class="pc-img">
+            <div class="pc-img-inner thumb-3">
+              <!-- Tires SVG art: concentric wheel cross-section, industrial -->
+              <svg class="th-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <radialgradient id="g3rim" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#555" stop-opacity=".9"></stop>
+                    <stop offset="100%" stop-color="#1a1a1a" stop-opacity=".3"></stop>
+                  </radialgradient>
+                </defs>
+                <!-- outer tire -->
+                <circle cx="200" cy="150" r="135" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="22"></circle>
+                <!-- tire tread marks -->
+                <circle cx="200" cy="150" r="135" fill="none" stroke="rgba(255,255,255,.04)" stroke-width="16" stroke-dasharray="8,6"></circle>
+                <!-- tire sidewall -->
+                <circle cx="200" cy="150" r="112" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1.5"></circle>
+                <!-- rim outer -->
+                <circle cx="200" cy="150" r="100" fill="url(#g3rim)" stroke="rgba(255,255,255,.15)" stroke-width="1"></circle>
+                <!-- spokes (5-spoke rim) -->
+                <g stroke="rgba(255,255,255,.22)" stroke-width="10" stroke-linecap="round">
+                  <line x1="200" y1="150" x2="200" y2="58"></line>
+                  <line x1="200" y1="150" x2="285" y2="203"></line>
+                  <line x1="200" y1="150" x2="249" y2="240"></line>
+                  <line x1="200" y1="150" x2="151" y2="240"></line>
+                  <line x1="200" y1="150" x2="115" y2="203"></line>
+                </g>
+                <!-- spoke highlights -->
+                <g stroke="rgba(255,255,255,.08)" stroke-width="4" stroke-linecap="round">
+                  <line x1="200" y1="150" x2="200" y2="58"></line>
+                  <line x1="200" y1="150" x2="285" y2="203"></line>
+                  <line x1="200" y1="150" x2="249" y2="240"></line>
+                  <line x1="200" y1="150" x2="151" y2="240"></line>
+                  <line x1="200" y1="150" x2="115" y2="203"></line>
+                </g>
+                <!-- hub ring -->
+                <circle cx="200" cy="150" r="28" fill="#2a2a2a" stroke="rgba(255,255,255,.2)" stroke-width="1.5"></circle>
+                <circle cx="200" cy="150" r="16" fill="#333" stroke="rgba(255,255,255,.3)" stroke-width="1"></circle>
+                <circle cx="200" cy="150" r="6" fill="rgba(255,255,255,.5)"></circle>
+                <!-- lug nuts -->
+                <circle cx="200" cy="124" r="4" fill="rgba(255,255,255,.35)" stroke="rgba(255,255,255,.2)" stroke-width="1"></circle>
+                <circle cx="223" cy="163" r="4" fill="rgba(255,255,255,.35)" stroke="rgba(255,255,255,.2)" stroke-width="1"></circle>
+                <circle cx="211" cy="188" r="4" fill="rgba(255,255,255,.35)" stroke="rgba(255,255,255,.2)" stroke-width="1"></circle>
+                <circle cx="189" cy="188" r="4" fill="rgba(255,255,255,.35)" stroke="rgba(255,255,255,.2)" stroke-width="1"></circle>
+                <circle cx="177" cy="163" r="4" fill="rgba(255,255,255,.35)" stroke="rgba(255,255,255,.2)" stroke-width="1"></circle>
+                <!-- year/make/model label -->
+                <rect x="16" y="14" width="120" height="22" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.1)" stroke-width="1"></rect>
+                <text x="24" y="29" font-family="monospace" font-size="9" fill="rgba(255,255,255,.5)">YEAR / MAKE / MODEL</text>
+                <!-- data readout -->
+                <g font-family="monospace" font-size="8" fill="rgba(255,255,255,.25)">
+                  <text x="16" y="278">225/45R17</text>
+                  <text x="290" y="278">B2B · B2C</text>
+                  <text x="338" y="16">17"</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="pc-body">
+            <div class="pc-num">Case Study 03</div>
+            <h3>Tires &amp; Rims Ecosystem</h3>
+            <div class="pc-sub">B2C &amp; B2B Business Strategy</div>
+            <div class="pc-tags"><span class="tag">UX Lead</span><span class="tag sg">Design System</span><span class="tag pl">End-to-end</span></div>
+            <span class="rdm">View Case Study <span class="arr">→</span></span>
+          </div>
+          <div class="pc-ft">◇ 5 layers · Sep 2025 – Ongoing</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROCESS ==================== -->
+<section class="section proc" id="process">
+  <div class="container">
+    <div class="slabel rv vis"><span class="dot"></span> Approach</div>
+    <h2 class="stitle rv d1 vis">How I Design</h2>
+    <p class="proc-intro rv d2 vis">Design Thinking was my gospel. Empathise, define, ideate, prototype, test. A structured path I trusted completely. Then AI changed the pace, and the framework stopped being the point. Discovery happens in production now. Vision travels through working prototypes, not decks. The loop between design and engineering collapsed. My base didn't change. How tightly I hold it did.</p>
+    <div class="proc-grid">
+      <div class="pstep rv d1 vis"><div class="pstep-n">◇ 01</div><h3>Discover</h3><p>Talk to stakeholders. Dig into the data. But don't wait for it to be perfect. Discovery happens in production too. Real users interacting with real systems reveal what no research brief ever could.</p></div>
+      <div class="pstep rv d2 vis"><div class="pstep-n">◇ 02</div><h3>Define</h3><p>Map the flows. Clarify direction. But static Figma screens stopped being the primary communication tool. A working prototype says more than any deck, faster.</p></div>
+      <div class="pstep rv d3 vis"><div class="pstep-n">◇ 03</div><h3>Specify</h3><p>Write the PRD. Every requirement, every edge case, every state. The spec still matters, but it follows the prototype now, not the other way around. What you can articulate is what gets built well.</p></div>
+      <div class="pstep rv d4 vis"><div class="pstep-n">◇ 04</div><h3>Generate</h3><p>Drop the spec into Claude Code or Figma Make. Weeks collapse into hours. AI is getting better at taste, but what actually matters is still my call. That judgment stays mine.</p></div>
+      <div class="pstep rv d5 vis"><div class="pstep-n">◇ 05</div><h3>Ship &amp; Iterate</h3><p>Ship. Watch what happens. AI systems don't behave the same way twice. You can't mock every state in advance. Real use cases only emerge from real data. The loop is the validation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section class="section" id="contact">
+  <div class="cta-sec">
+    <h2 class="rv vis">Let's build something<br><em style="font-style:italic;color:var(--primary)">together.</em></h2>
+    <p class="rv d1 vis">I'm exploring new opportunities and would love to discuss how I can contribute to your team.</p>
+    <div class="clinks rv d2 vis">
+      <a class="clk cp" href="mailto:jm@jmeyerdesign.com">✉ jm@jmeyerdesign.com</a>
+      <a href="https://www.linkedin.com/in/juana-meyer/" class="clk" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a href="javascript:void(0)" class="clk">↓ Resume</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-m">© 2026 Juana Meyer. Designed in Figma, built with intention.</div>
+  <div class="footer-t">"Every pixel is a decision."</div>
+</footer>
+</div><!-- /mainPage -->
+
+<!-- ==================== CASE STUDY 1 ==================== -->
+<div class="cs" id="cs1">
+<div style="height:var(--header-h)"></div>
+<div class="container-narrow" style="padding-top:20px"><button class="cs-back">← Back to Work</button></div>
+<div class="cs-hero" style="max-width:var(--max-w);margin:0 auto 56px">
+  <div class="cs-hero-tb"><div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div><span class="url">curacao.com, Shopify Plus</span></div>
+  <div class="cs-hero-inner thumb-1" style="aspect-ratio:16/8">
+    
+  </div>
+</div>
+<div class="cs-hdr"><div class="pc-num">CASE STUDY 01</div><h1>E-Commerce Platform Migration</h1><p class="cs-tl">Re-platforming a 13-store Latino retail operation from Magento to Shopify Plus, and converting a post-migration traffic drop into a profitability breakthrough.</p></div>
+<div class="cs-meta"><div class="cs-mi"><span class="lb">Role</span><span class="vl">Lead UX Strategist &amp; Architect</span></div><div class="cs-mi"><span class="lb">Timeline</span><span class="vl">8 months</span></div><div class="cs-mi"><span class="lb">Year</span><span class="vl">2024–2025</span></div><div class="cs-mi"><span class="lb">Team</span><span class="vl">Cross-functional, 12 people</span></div></div>
+<div class="cs-body">
+<h2>The Challenge</h2>
+<p>Curacao isn't your average retailer. 13 stores across California, Nevada, and Arizona, serving Latino families who often can't get a credit card anywhere else. Their in-house financing program, <em>CPay</em>, is how customers buy a TV, build credit, and come back. That trust is the actual product.</p>
+<p>The problem: their Magento site hadn't kept up. Every update needed a dev ticket. In a business that refreshes campaigns every two weeks, that's not slow. That's broken.</p>
+<p>But the bigger issue wasn't the platform. It was the architecture underneath. The site was organized like the company's internal departments, not how a customer thinks when they go shopping online. I benchmarked Walmart, Best Buy, and Amazon to prove it.</p>
+<div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Before/after site map comparison</span></div>
+<h2>What I Found</h2>
+<p><em>"Beauty &amp; Men's Grooming"</em> was buried inside Fashion. <em>"Kids &amp; Babies"</em> mixed bassinets with video gaming consoles. Nobody else organized it that way, because customers don't shop that way.</p>
+<p>Every change I made was backed by what the benchmark showed. Toys &amp; Gaming became its own department. Baby became its own. Health &amp; Beauty moved out of Fashion and became a top-level destination. Simple moves, real difference in how people find things.</p>
+<h2>How I Approached It</h2>
+<ol>
+<li><strong>Competitive Benchmark</strong>. Mapped how Walmart, Best Buy, and Amazon structured their categories. Used that as the baseline, not Curacao's org chart.</li>
+<li><strong>IA Restructuring</strong>. Rebuilt the navigation around how customers shop, not how the company is organized. Documented every decision so the external dev agency could actually build it.</li>
+<li><strong>Component-Based Design System</strong>. Built a modular UI library so the marketing team could run campaigns, update catalogs, and manage promotions on their own. No more dev tickets for a banner change.</li>
+</ol>
+</div>
+<div class="cs-iw"><div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Component library &amp; design system overview</span></div></div>
+<div class="cs-body">
+<h2>The Hard Parts</h2>
+<p><em>Agency coordination:</em> We didn't have in-house dev capacity for this, so a third-party agency built it. The problem: everything Curacao knew about their own system lived in people's heads. I had to design the system and document it at the same time, writing requirements that had never been written before, for a team that had never worked with Curacao.</p>
+<p><em>Shopify vs. Curacao's custom logic:</em> Shopify doesn't do custom checkouts. CPay, Curacao's in-house financing, had to live in checkout. The fix was building a dedicated <strong>CPay Shopify app</strong> that plugged into native checkout without replacing it. Then there was the <strong>Club Membership program</strong>. Its discount logic was complex enough that it pushed against Shopify's theme limits too. Every constraint needed a solution that didn't break the platform.</p>
+<p><em>Scope:</em> Ten years of Magento custom code. Every feature had to be evaluated: rebuild it, replace it, or cut it. The answer was different every time.</p>
+<h2>What Changed</h2>
+<p>Before: every campaign update needed a dev ticket. After: the e-commerce team handled it themselves. Bi-weekly campaigns, catalog updates, promotions, all without touching dev. Developer involvement in routine work dropped by about <strong>50%</strong>. For a business that moves at retail speed, that's everything.</p>
+<h2>Post-Launch: The Login Problem</h2>
+<p>We launched without SSO. It came months later. That meant thousands of existing customers hit a new platform with no account on it. I mapped what that actually looked like: four distinct states, each with a different resolution.</p>
+<ol>
+<li><strong>My Account holders (customers with active financing)</strong>. Had a Magento account with an active CPay credit line, but no Shopify account. The most sensitive case: these customers had a financial relationship with Curacao, and losing their login meant losing access to payment history and credit tools.</li>
+<li><strong>Non-My Account holders</strong>. Had a legacy Magento account (purchase history, no credit) but no Shopify account. Key risk: these users might attempt a password reset on the My Account credit portal instead of the Shopify storefront, triggering the wrong system entirely. Account state detected: <em>disabled / invited / declined</em>.</li>
+<li><strong>Customers with an existing Shopify account</strong>. The simplest case. Account state: <em>enabled</em>. Standard login flow, no conflicts.</li>
+<li><strong>New customers creating an account</strong>. Where the system could detect a pre-existing Shopify record from a prior transaction, surfacing a confusing "email already in use" state with no explanation.</li>
+</ol>
+<p>Every state needed its own flow: what the user sees, what the system knows, what happens next. Getting it wrong meant customers couldn't access their financing history. Getting it right meant the transition was invisible.</p>
+<h2>The Results</h2>
+<table class="mtbl"><thead><tr><th>Metric</th><th>Before</th><th>After</th><th>Change</th></tr></thead><tbody>
+<tr><td>Bounce Rate</td><td>42%</td><td>32.67%</td><td class="mp">-22%</td></tr>
+<tr><td>ROAS (Q4)</td><td>$21</td><td>$29.18</td><td class="mp">+39% YoY</td></tr>
+<tr><td>Revenue (Oct)</td><td>Baseline</td><td>+6.6% YoY</td><td class="mp">↑ Despite lower traffic</td></tr>
+<tr><td>Dev dependency</td><td>High</td><td>Near-zero</td><td class="mp">Team autonomy</td></tr>
+</tbody></table>
+<div class="cs-co"><p>Traffic dropped 38% after launch. We knew it would. Re-platforming always does that, and the paid budget got cut hard that year too. But revenue still grew and ROAS hit all-time highs. Less traffic, more money. We stopped buying people who weren't going to buy.</p></div>
+<div class="cs-af"><strong>Artifacts:</strong> Site Maps · Taxonomy Restructure · Migration Strategy Deck · Component Library · Checkout Flow Prototypes · Account State Login Flows</div>
+</div>
+<div class="cs-nx"><div></div><div><span class="nl">Next Project</span><a href="javascript:void(0)" onclick="showCS(&#39;cs2&#39;);return false">Miden Crypto Wallet →</a></div></div>
+</div>
+
+<!-- ==================== CASE STUDY 2 ==================== -->
+<div class="cs active" id="cs2">
+<div style="height:var(--header-h)"></div>
+<div class="container-narrow" style="padding-top:20px"><button class="cs-back">← Back to Work</button></div>
+<div class="cs-hero" style="max-width:var(--max-w);margin:0 auto 56px">
+  <div class="cs-hero-tb"><div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div><span class="url">miden.io, Privacy Wallet</span></div>
+  <div class="cs-hero-inner thumb-2">📷 Miden wallet main screen</div>
+</div>
+<div class="cs-hdr"><div class="pc-num">CASE STUDY 02</div><h1>Miden Crypto Wallet</h1><p class="cs-tl">A design pitch for Fat Solutions. Making Zero-Knowledge privacy feel like sending a text message, not running a cryptographic protocol.</p></div>
+<div class="cs-meta"><div class="cs-mi"><span class="lb">Role</span><span class="vl">Lead Product Designer</span></div><div class="cs-mi"><span class="lb">Type</span><span class="vl">Agency Pitch</span></div><div class="cs-mi"><span class="lb">Agency</span><span class="vl">Fat Solutions</span></div><div class="cs-mi"><span class="lb">Client</span><span class="vl">Miden (Polygon)</span></div><div class="cs-mi"><span class="lb">Timeline</span><span class="vl">2 months</span></div><div class="cs-mi"><span class="lb">Team</span><span class="vl">Core team of 5</span></div></div>
+<div class="cs-body">
+<h2>The Context</h2>
+<p><strong>Fat Solutions</strong> brought me in on a pitch. The client: <strong>Miden</strong>, a privacy-first wallet running on the Polygon blockchain. The ask: make Zero-Knowledge privacy accessible to people who've never heard the words "Zero-Knowledge." Two months. Let's go.</p>
+<h2>The Challenge</h2>
+<p>ZK proofs are remarkable. Transactions verified without exposing any underlying data. Privacy at the protocol level, built in, not bolted on. The problem: every wallet in the space designs like the user has a computer science degree. The complexity surfaces everywhere: in the terminology, the flows, the error states. It shuts people out before they ever get started.</p>
+<h2>The Competitive Landscape</h2>
+<p>The benchmark covered App Store and Google Play data across four wallets (Feb 2024–Feb 2025). The pattern: the market leader carries significant UX debt, and the alternatives either fail on mobile or lack the adoption to validate their approach at scale.</p>
+<table class="mtbl"><thead><tr><th>Wallet</th><th>Score (Android / iOS)</th><th>Avg Stars</th><th>Reviews</th><th>Key Signal</th></tr></thead><tbody>
+<tr><td><strong>MetaMask</strong></td><td>72 / 65</td><td>3.6 / 3.3</td><td>21,640+</td><td class="mp">~5,500 one-star reviews (~26%), dominant but deeply frustrating</td></tr>
+<tr><td><strong>Phantom</strong></td><td>81 / 53</td><td>4.0 / 2.7</td><td>10,805+</td><td class="mp">Strong Android; iOS feels like a different, worse product</td></tr>
+<tr><td><strong>Sentz</strong></td><td>73 / 53</td><td>3.7 / 2.7</td><td>~604</td><td class="mp">Same iOS gap as Phantom, mobile is the industry's blind spot</td></tr>
+<tr><td><strong>Payy</strong></td><td>72 / 100</td><td>3.6 / 5.0</td><td>~21</td><td class="mp">Near-perfect satisfaction, but no user base yet to prove it</td></tr>
+</tbody></table>
+<p>MetaMask owns the market. It also has 26% one-star reviews. Phantom is the best experience on Android and falls apart on iOS. The smaller players haven't proven anything at scale yet. The gap was obvious: nobody had built a privacy wallet that actually respected the user's time.</p>
+<h2>The Insight</h2>
+<p>The breakthrough was reframing what a ZK note actually is. It's not a cryptographic object. It's a message. A private one. <em>Public:</em> share your address. <em>Private:</em> generate a one-time ZK note, send it through WhatsApp, iMessage, Telegram, whatever the recipient already uses. Privacy becomes <em>how</em> you send, not a setting you configure first.</p>
+<p>Worked this out with Fat Solutions' engineering team. Once we had the mental model right, the rest of the design snapped into place.</p>
+<div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Competitive analysis, Phantom · Payy · Sentz · MetaMask</span></div>
+<h2>What I Did</h2>
+<ol>
+<li><strong>Competitive Benchmark</strong>. Pulled App Store and Google Play data across four wallets over 12 months. Mapped sentiment, scores, review volume. The pattern kept repeating: technical complexity surfaces exactly where trust should be.</li>
+<li><strong>Mental Model Work</strong>. Miden calls transaction objects "Notes." That word already does the work. A Note is something you send privately to someone. Built the whole UX around that metaphor and didn't look back.</li>
+<li><strong>End-to-End Flow Design</strong>. Three flows, two modes each. Onboarding, Send, Receive. Public and private variants for all of them. Every scenario in the system, designed and documented.</li>
+</ol>
+<h2>The Three Flows</h2>
+<p><strong>Onboarding</strong>. Two paths: new wallet, or import an existing one. Both involve the <em>State File</em>, the cryptographic record of your wallet state. New user: set password → wallet created → download your State File. Required, not optional. The challenge: making "download this cryptographic backup file" feel like a normal step, not a warning sign you'd skip on instinct.</p>
+<p><strong>Send</strong>. The decision happens first. Private or public? Private: pick a token, enter an amount, a Note is generated, then you choose how to deliver it. Pick your messaging app. Choose your contact. Done. Public: token, amount, address. Standard crypto, untouched. Privacy isn't a feature you find later. It's the first question.</p>
+<p><strong>Receive</strong>. Mirror of Send. Public: QR code, copy address, share. Private: enter the Note manually or upload the file. Note imported, transaction complete. The mental model is the same on both ends. That was deliberate. Consistency is how trust gets built.</p>
+</div>
+<div class="cs-iw"><div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>MVP user flows, Onboarding · Send · Receive</span></div></div>
+<div class="cs-body">
+<h2>The Core Technical Challenge</h2>
+<p>When you send a private Note, you're generating a cryptographic object, submitting it to the blockchain, and waiting for chain sync. None of that should be visible to the user. The whole job was progressive disclosure. Surface the intent, hide the protocol. Make the complexity load-bearing but invisible. That's the entire game with ZK UX.</p>
+<h2>The Outcome</h2>
+<p>The pitch landed. Specific call-out: flow clarity given the technical constraints. A ZK wallet has more edge cases per screen than almost anything else I've worked on: public/private states, chain sync states, file handling. We designed all of them. The feedback: clean, navigable, and appropriate for what's running underneath. That was the whole goal.</p>
+<div class="cs-af"><strong>Artifacts:</strong> App Store &amp; Google Play Sentiment Benchmark · Competitive Analysis (Phantom · Payy · Sentz · MetaMask) · Onboarding Flow (State File) · Send Flow (Private &amp; Public) · Receive Flow (Private &amp; Public) · Dark Mode UI System</div>
+</div>
+<div class="cs-nx"><div><span class="nl">Previous</span><a href="javascript:void(0)" onclick="showCS(&#39;cs1&#39;);return false">← E-Commerce</a></div><div><span class="nl">Next Project</span><a href="javascript:void(0)" onclick="showCS(&#39;cs3&#39;);return false">Tires &amp; Rims →</a></div></div>
+</div>
+
+<!-- ==================== CASE STUDY 3 ==================== -->
+<div class="cs" id="cs3">
+<div style="height:var(--header-h)"></div>
+<div class="container-narrow" style="padding-top:20px"><button class="cs-back">← Back to Work</button></div>
+<div class="cs-hero" style="max-width:var(--max-w);margin:0 auto 56px">
+  <div class="cs-hero-tb"><div class="pc-tb-dots"><span style="background:var(--primary)"></span><span style="background:var(--sage-deep)"></span><span style="background:var(--plum)"></span></div><span class="url">tires-ecosystem, Marketplace</span></div>
+  <div class="cs-hero-inner thumb-3">📷 Storefront with Year/Make/Model</div>
+</div>
+<div class="cs-hdr"><div class="pc-num">CASE STUDY 03</div><h1>Tires &amp; Rims Ecosystem</h1><p class="cs-tl">Designing a five-party logistics chain into a seamless purchase-to-installation experience, from Year/Make/Model search to signed delivery proof.</p></div>
+<div class="cs-meta"><div class="cs-mi"><span class="lb">Role</span><span class="vl">UX Lead &amp; Service Designer</span></div><div class="cs-mi"><span class="lb">Timeline</span><span class="vl">5 months</span></div><div class="cs-mi"><span class="lb">Team</span><span class="vl">Cross-functional, 6 people</span></div><div class="cs-mi"><span class="lb">Status</span><span class="vl">Soft Launch Q2 2026</span></div></div>
+<div class="cs-body">
+<h2>The Challenge</h2>
+<p>Curacao wanted their tire business online. Sounds like an e-commerce project. It wasn't. Tires don't ship to your door. They end up on a car lift, after passing through five parties, two systems, and a documentation chain that has to be airtight before anyone gets paid.</p>
+<p>The full chain: customer selects tires → Curacao orders from <strong>ATD (American Tire Distributors)</strong> → ATD ships to installer → installer is notified with arrival details → appointment scheduled → tires installed → installer submits <strong>signed documentation and photos</strong> → Curacao processes the invoice. Every handoff automatic. Every party with their own view. This wasn't a storefront problem. It was a full operational system.</p>
+<div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Service blueprint, full logistics chain</span></div>
+<h2>The Four Users</h2>
+<p>Four distinct users. All connected. The <strong>end customer</strong> wants to find tires for their car and book an appointment. That's their whole world. <strong>ATD</strong> needs clean order data routed to the right installer location, no surprises. The <strong>local installer</strong> needs to know what's arriving, when, who the customer is, and exactly what to do with it. <strong>Curacao's operations team</strong> needs full chain visibility and a way to process invoices the moment the installer submits proof of work. Design for all four simultaneously, or the system doesn't hold.</p>
+<h2>What I Did</h2>
+<ol>
+<li><strong>Benchmark the Search Model</strong>. Costco Tires was the reference. They'd already solved this: customers arrive knowing different things. Some have a license plate. Some know year and make. Some have a tire size on a napkin. The design supports four entry points: License Plate + State, Vehicle (Year/Make/Model/Trim), Tire Size, and VIN. Meet people where they are.</li>
+<li><strong>Logic-First Interaction Design</strong>. The Year → Make → Model → Trim funnel is sequentially gated by API constraints. Each field only unlocks once the previous is confirmed. That's a real system requirement, not a design choice. The challenge: make that feel like guidance, not a form that locks you out. Every constraint is real. None of it should feel like friction.</li>
+<li><strong>Design the Ecosystem, Not Just the Storefront</strong>. The B2B installer portal is the other half of this product. It's where tires show up, appointments get scheduled, and proof of installation gets submitted. That submission triggers invoicing. The portal and storefront were designed as one connected system, because they are one.</li>
+</ol>
+</div>
+<div class="cs-iw"><div class="iph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg><span>Filter logic flows &amp; B2B dashboard</span></div></div>
+<div class="cs-body">
+<h2>The Result</h2>
+<p>A customer buys tires. That's all they do. Behind that: Curacao sends an order to ATD, ATD routes it to the right installer, the installer gets notified automatically, schedules the appointment, installs the tires, submits signed documentation and photos. Curacao processes the invoice. No one had to manually coordinate any of it.</p>
+<p>Soft launch is Q2 2026. First time Curacao's tire business runs as a fully automated, connected ecosystem. We designed the whole chain, then made it invisible to the people using it.</p>
+<div class="cs-af"><strong>Artifacts:</strong> Service Blueprints · B2B Installer Portal · Year/Make/Model/Trim Search Logic · ATD Order Flow · Installation Proof Submission Flow · Operations Dashboard</div>
+</div>
+<div class="cs-nx"><div><span class="nl">Previous</span><a href="javascript:void(0)" onclick="showCS(&#39;cs2&#39;);return false">← Miden Wallet</a></div><div></div></div>
+</div>
+
+<script>
+// ===== CURSOR =====
+const fc=document.getElementById('fc'),fcPath=document.getElementById('fcPath'),fcLabel=document.getElementById('fcLabel');
+let cx=-100,cy=-100,ax=-100,ay=-100,isJuana=false;
+document.addEventListener('mousemove',e=>{cx=e.clientX;cy=e.clientY});
+function animC(){ax+=(cx-ax)*.14;ay+=(cy-ay)*.14;fc.style.transform=`translate(${ax}px,${ay}px)`;requestAnimationFrame(animC)}
+animC();
+if('ontouchstart'in window)fc.style.display='none';
+document.addEventListener('mouseleave',()=>fc.style.opacity='0');
+document.addEventListener('mouseenter',()=>fc.style.opacity='1');
+function setCursorJuana(){if(!isJuana){isJuana=true;fcPath.setAttribute('fill','#0C8CE9');fcLabel.style.background='#0C8CE9';fcLabel.textContent='Juana'}}
+function setCursorAnon(){if(isJuana){isJuana=false;fcPath.setAttribute('fill','#8B9B8B');fcLabel.style.background='#8B9B8B';fcLabel.textContent='Anonymous'}}
+const spPhone=document.getElementById('spPhone');
+if(spPhone){spPhone.addEventListener('mouseenter',setCursorJuana);spPhone.addEventListener('mouseleave',setCursorAnon)}
+
+// ===== SPOTIFY =====
+const songs=[
+  {title:"Promesas Sobre el Bidet",artist:"Charly García",grad:"linear-gradient(135deg,#8B6914,#D4943A,#5C3A0A)",dur:"4:18",emoji:"🎹"},
+  {title:"No Me Importa",artist:"Lali",grad:"linear-gradient(135deg,#C74B8B,#E87BA8,#8B2054)",dur:"3:24",emoji:"💃"},
+  {title:"Mariposa Tecknicolor",artist:"Fito Páez",grad:"linear-gradient(135deg,#1A2A5C,#4B3A8B,#2A1A4A)",dur:"5:02",emoji:"🦋"},
+  {title:"La Fuerza",artist:"Nathy Peluso",grad:"linear-gradient(135deg,#C74B2F,#E0874B,#8B3A1A)",dur:"3:45",emoji:"🔥"},
+  {title:"Te Amo",artist:"Gustavo Cerati",grad:"linear-gradient(135deg,#4B7BA8,#8BB8D4,#2A5C8B)",dur:"4:56",emoji:"🌊"}
+];
+let cur=0,animating=false;
+function renderSong(dir){
+  const s=songs[cur];
+  const inner=document.getElementById('spArtInner');
+  const title=document.getElementById('spTitle');
+  const artist=document.getElementById('spArtist');
+  const dur=document.getElementById('spDur');
+  const bar=document.getElementById('spBar');
+  const time=document.getElementById('spTime');
+  if(dir!==undefined&&!animating){
+    animating=true;
+    inner.classList.add(dir>0?'out-left':'out-right');
+    title.style.opacity='0';artist.style.opacity='0';
+    setTimeout(()=>{
+      inner.style.background=s.grad;inner.textContent=s.emoji;
+      inner.classList.remove('out-left','out-right');
+      inner.classList.add(dir>0?'in-right':'in-left');
+      title.textContent=s.title;title.style.opacity='1';
+      artist.textContent=s.artist;artist.style.opacity='1';
+      dur.textContent=s.dur;time.textContent='0:00';
+      bar.style.transition='none';bar.style.width='0%';
+      setTimeout(()=>{bar.style.transition='width 20s linear';bar.style.width='35%'},50);
+      setTimeout(()=>{inner.classList.remove('in-right','in-left');animating=false},450);
+    },350);
+  }else{
+    inner.style.background=s.grad;inner.textContent=s.emoji;
+    title.textContent=s.title;artist.textContent=s.artist;
+    dur.textContent=s.dur;time.textContent='1:42';
+  }
+}
+function nextSong(){cur=(cur+1)%songs.length;renderSong(1)}
+function prevSong(){cur=(cur-1+songs.length)%songs.length;renderSong(-1)}
+renderSong();
+
+// ===== 3D TILT =====
+function tilt(el,e){const r=el.getBoundingClientRect();const x=(e.clientX-r.left)/r.width;const y=(e.clientY-r.top)/r.height;const tX=(y-.5)*-5;const tY=(x-.5)*5;el.style.transition='transform .08s ease';el.style.transform=`perspective(800px) rotateX(${tX}deg) rotateY(${tY}deg) translateY(-6px)`}
+function untilt(el){el.style.transition='transform .45s ease';el.style.transform='perspective(800px) rotateX(0) rotateY(0) translateY(0)'}
+
+// ===== HEADER =====
+window.addEventListener('scroll',()=>document.getElementById('hdr').classList.toggle('scrolled',window.scrollY>20));
+function cM(){document.getElementById('hnav').classList.remove('open')}
+
+// ===== REVEAL =====
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:.07,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+
+// ===== NAV ACTIVE =====
+const nIds=['home','work','about','process','contact'];
+const nLks=document.querySelectorAll('.header-nav a:not(.hdr-cta)');
+const no=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){nLks.forEach(l=>l.classList.remove('active'));const m=document.querySelector(`.header-nav a[href="#${e.target.id}"]`);if(m)m.classList.add('active')}})},{threshold:.25});
+nIds.forEach(id=>{const el=document.getElementById(id);if(el)no.observe(el)});
+
+// ===== CASE STUDY NAV =====
+const mp=document.getElementById('mainPage');
+const csps=document.querySelectorAll('.cs');
+
+// Always reset to homepage on load
+mp.style.display='block';
+csps.forEach(p=>p.classList.remove('active'));
+
+function showCS(id){
+  mp.style.display='none';
+  csps.forEach(p=>p.classList.remove('active'));
+  const t=document.getElementById(id);
+  if(t){t.classList.add('active');window.scrollTo(0,0);}
+}
+function showMain(){
+  csps.forEach(p=>p.classList.remove('active'));
+  mp.style.display='block';
+  window.scrollTo(0,0);
+}
+
+// Bind back buttons via event listeners (most reliable approach)
+document.querySelectorAll('.cs-back').forEach(function(btn){
+  btn.addEventListener('click', showMain);
+});
+</script>
+
+
+</body></html>
