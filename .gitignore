@@ -1,10 +1,19 @@
 # Ignore everything in home directory by default
 /*
 !.gitignore
-
-# Allow the portfolio iterations folder
 !Desktop/
+
+# Allow only the portfolio folder inside Desktop
 Desktop/*
 !Desktop/PortfolioClaudeCode/
+
+# Allow everything inside portfolio iterations
 Desktop/PortfolioClaudeCode/*
-!Desktop/PortfolioClaudeCode/Portfolio iterations/
+!Desktop/PortfolioClaudeCode/Portfolio\ iterations/
+
+# Allow the nested portfolio iterations folder and its assets
+Desktop/PortfolioClaudeCode/Portfolio\ iterations/*
+!Desktop/PortfolioClaudeCode/Portfolio\ iterations/Portfolio\ iterations/
+
+Desktop/PortfolioClaudeCode/Portfolio\ iterations/Portfolio\ iterations/*
+!Desktop/PortfolioClaudeCode/Portfolio\ iterations/Portfolio\ iterations/assets/
